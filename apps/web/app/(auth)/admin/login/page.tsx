@@ -76,54 +76,57 @@ export default function AdminLoginPage() {
 
   useEffect(() => {
     try {
-      const accountsMap = new Map<string, { email: string; name: string; role?: string }>();
+      const legacyDummies = new Set([
+        'madasamym.ug.25.ec@francisxavier.ac.in',
+        'revathi@francisxavier.ac.in',
+        'santhosh.21ec104@francisxavier.ac.in',
+        'santhosh.personal@gmail.com',
+        'kumar.ug.25.ec@francisxavier.ac.in',
+        'madssms0@gmail.com',
+        'santhosh30122005@gmail.com',
+        'santhoshsuresh231@gmail.com',
+      ]);
 
-      // 1. Check existing device accounts
+      let validAccounts: Array<{ email: string; name: string; role?: string }> = [];
+
+      // 1. Read existing device accounts and purge any legacy dummies
       const raw = localStorage.getItem('fxec_device_google_accounts');
       if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) {
-          parsed.forEach((a: any) => {
-            if (a?.email) accountsMap.set(a.email.toLowerCase(), a);
-          });
-        }
+        try {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            validAccounts = parsed.filter(
+              (a: any) =>
+                a?.email &&
+                a.email.endsWith('@francisxavier.ac.in') &&
+                !legacyDummies.has(a.email.toLowerCase())
+            );
+          }
+        } catch (e) {}
       }
 
-      // 2. Check current logged in user
+      // 2. Read saved current user on this device if valid admin
       const savedUser = localStorage.getItem('fxec_user');
       if (savedUser) {
-        const u = JSON.parse(savedUser);
-        if (u?.email && !accountsMap.has(u.email.toLowerCase())) {
-          accountsMap.set(u.email.toLowerCase(), {
-            email: u.email,
-            name: u.name || u.email.split('@')[0],
-            role: u.role
-          });
-        }
+        try {
+          const u = JSON.parse(savedUser);
+          if (
+            u?.email &&
+            u.email.endsWith('@francisxavier.ac.in') &&
+            !legacyDummies.has(u.email.toLowerCase()) &&
+            !validAccounts.some(a => a.email.toLowerCase() === u.email.toLowerCase())
+          ) {
+            validAccounts.push({
+              email: u.email,
+              name: u.name || 'Administrator',
+              role: 'ADMIN',
+            });
+          }
+        } catch (e) {}
       }
 
-      // 3. Check registered users on this device
-      const regRaw = localStorage.getItem('fxec_registered_users');
-      if (regRaw) {
-        const regList = JSON.parse(regRaw);
-        if (Array.isArray(regList)) {
-          regList.forEach((r: any) => {
-            if (r?.email && !accountsMap.has(r.email.toLowerCase())) {
-              accountsMap.set(r.email.toLowerCase(), {
-                email: r.email,
-                name: r.name || r.email.split('@')[0],
-                role: r.role
-              });
-            }
-          });
-        }
-      }
-
-      const list = Array.from(accountsMap.values());
-      if (list.length > 0) {
-        setDeviceAccounts(list);
-        localStorage.setItem('fxec_device_google_accounts', JSON.stringify(list));
-      }
+      setDeviceAccounts(validAccounts);
+      localStorage.setItem('fxec_device_google_accounts', JSON.stringify(validAccounts));
     } catch (e) {}
   }, []);
 
