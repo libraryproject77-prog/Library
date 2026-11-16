@@ -77,24 +77,72 @@ export default function StudentStaffLogin() {
   const [googleError, setGoogleError] = useState<string | null>(null);
   const [deviceAccounts, setDeviceAccounts] = useState<Array<{ email: string; name: string; role?: string }>>([]);
 
+  const getGoogleAvatarBg = (str: string) => {
+    const colors = [
+      'bg-[#4285F4]', // Google Blue
+      'bg-[#EA4335]', // Google Red
+      'bg-[#34A853]', // Google Green
+      'bg-[#FBBC05]', // Google Yellow
+      'bg-[#8E24AA]', // Google Purple
+      'bg-[#00897B]', // Teal
+      'bg-[#E65100]', // Deep Orange
+    ];
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return colors[Math.abs(hash) % colors.length];
+  };
+
   useEffect(() => {
     try {
+      const accountsMap = new Map<string, { email: string; name: string; role?: string }>();
+
+      // 1. Check existing device accounts
       const raw = localStorage.getItem('fxec_device_google_accounts');
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          setDeviceAccounts(parsed);
+        if (Array.isArray(parsed)) {
+          parsed.forEach((a: any) => {
+            if (a?.email) accountsMap.set(a.email.toLowerCase(), a);
+          });
         }
-      } else {
-        const savedUser = localStorage.getItem('fxec_user');
-        if (savedUser) {
-          const u = JSON.parse(savedUser);
-          if (u.email && u.email.endsWith('@francisxavier.ac.in')) {
-            const list = [{ email: u.email, name: u.name, role: u.role }];
-            setDeviceAccounts(list);
-            localStorage.setItem('fxec_device_google_accounts', JSON.stringify(list));
-          }
+      }
+
+      // 2. Check current logged in user
+      const savedUser = localStorage.getItem('fxec_user');
+      if (savedUser) {
+        const u = JSON.parse(savedUser);
+        if (u?.email && !accountsMap.has(u.email.toLowerCase())) {
+          accountsMap.set(u.email.toLowerCase(), {
+            email: u.email,
+            name: u.name || u.email.split('@')[0],
+            role: u.role
+          });
         }
+      }
+
+      // 3. Check registered users on this device
+      const regRaw = localStorage.getItem('fxec_registered_users');
+      if (regRaw) {
+        const regList = JSON.parse(regRaw);
+        if (Array.isArray(regList)) {
+          regList.forEach((r: any) => {
+            if (r?.email && !accountsMap.has(r.email.toLowerCase())) {
+              accountsMap.set(r.email.toLowerCase(), {
+                email: r.email,
+                name: r.name || r.email.split('@')[0],
+                role: r.role
+              });
+            }
+          });
+        }
+      }
+
+      const list = Array.from(accountsMap.values());
+      if (list.length > 0) {
+        setDeviceAccounts(list);
+        localStorage.setItem('fxec_device_google_accounts', JSON.stringify(list));
       }
     } catch (e) {}
   }, []);
@@ -856,7 +904,7 @@ export default function StudentStaffLogin() {
                       onClick={() => executeGoogleLogin(acc.email, acc.name, acc.role as any)}
                       className="w-full py-3.5 px-2 hover:bg-slate-50 transition-colors text-left flex items-center gap-3.5 group rounded-xl"
                     >
-                      <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">
+                      <div className={`w-9 h-9 rounded-full ${getGoogleAvatarBg(acc.email)} text-white flex items-center justify-center text-sm font-semibold shrink-0 shadow-sm`}>
                         {acc.name ? acc.name.charAt(0).toUpperCase() : acc.email.charAt(0).toUpperCase()}
                       </div>
                       <div className="flex-1 min-w-0">
