@@ -183,6 +183,7 @@ class SupabaseService {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
+          skipBrowserRedirect: true,
           redirectTo: redirectUrl,
           queryParams: {
             hd: 'francisxavier.ac.in',
@@ -200,6 +201,19 @@ class SupabaseService {
       return { success: true };
     } catch (err: any) {
       return { success: false, error: err.message || 'Supabase Google OAuth failed.' };
+    }
+  }
+
+  /**
+   * Directly upsert profile to Supabase database without requiring OAuth provider
+   */
+  public async upsertProfile(profile: any): Promise<void> {
+    const supabase = this.getClient();
+    if (!supabase) return;
+    try {
+      await supabase.from('profiles').upsert(profile, { onConflict: 'email' });
+    } catch (e) {
+      console.warn('[Supabase] upsertProfile warning:', e);
     }
   }
 

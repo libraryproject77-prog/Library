@@ -183,9 +183,19 @@ export default function StudentStaffLogin() {
         localStorage.setItem('fxec_device_google_accounts', JSON.stringify(updatedAccounts));
       } catch (e) {}
 
-      // Attempt Supabase Google OAuth if configured
+      // Sync user profile directly into Supabase database
       try {
-        await supabaseService.signInWithGoogle({ loginHint: cleanEmail });
+        await supabaseService.upsertProfile({
+          id: user.id,
+          email: cleanEmail,
+          name: user.name || displayName,
+          role: user.role || roleToUse,
+          department: user.department || 'ECE',
+          rollNumber: user.rollNumber,
+          staffId: user.staffId,
+          status: 'ACTIVE',
+          updatedAt: new Date().toISOString(),
+        });
       } catch (e) {}
 
       setGoogleModalOpen(false);

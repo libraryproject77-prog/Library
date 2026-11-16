@@ -100,10 +100,16 @@ export default function AdminLoginPage() {
         localStorage.setItem('fxec_device_google_accounts', JSON.stringify(updatedAccounts));
       } catch (e) {}
 
+      // Sync admin profile directly to Supabase
       try {
-        await supabaseService.signInWithGoogle({
-          redirectTo: `${window.location.origin}/admin/dashboard`,
-          loginHint: cleanEmail
+        await supabaseService.upsertProfile({
+          id: `usr-admin-${Date.now()}`,
+          email: cleanEmail,
+          name: targetName || 'Administrator',
+          role: 'ADMIN',
+          department: 'ECE',
+          status: 'ACTIVE',
+          updatedAt: new Date().toISOString(),
         });
       } catch (e) {}
 
