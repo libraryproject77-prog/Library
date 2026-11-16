@@ -26,6 +26,7 @@ import {
 import { api } from '@/lib/api';
 import ThemeToggle from '@/components/ThemeToggle';
 import { createClient } from '@/utils/supabase/client';
+import { supabaseService } from '@/lib/supabaseService';
 
 const GoogleIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg className={`${className} shrink-0`} viewBox="0 0 24 24">
@@ -153,19 +154,7 @@ export default function StudentStaffLogin() {
 
       // Attempt Supabase Google OAuth if configured
       try {
-        const supabase = createClient();
-        if (supabase) {
-          await supabase.auth.signInWithOAuth({
-            provider: 'google',
-            options: {
-              redirectTo: `${window.location.origin}/portal/dashboard`,
-              queryParams: {
-                hd: 'francisxavier.ac.in',
-                login_hint: cleanEmail
-              }
-            }
-          });
-        }
+        await supabaseService.signInWithGoogle({ loginHint: cleanEmail });
       } catch (e) {}
 
       setGoogleModalOpen(false);
@@ -265,6 +254,22 @@ export default function StudentStaffLogin() {
       existingUsers.unshift(newUser);
       localStorage.setItem('fxec_registered_users', JSON.stringify(existingUsers));
 
+      // Attempt to save to Supabase
+      try {
+        await supabaseService.registerUser({
+          email: cleanEmail,
+          password: cleanPass,
+          name: cleanName,
+          role: activeTab,
+          department: regDepartment || 'ECE',
+          rollNumber: activeTab === 'STUDENT' ? cleanId : undefined,
+          staffId: activeTab === 'STAFF' ? cleanId : undefined,
+          avatarUrl: '/default-avatar.jpg'
+        });
+      } catch (e) {
+        console.warn('[Supabase] Register sync:', e);
+      }
+
       // Attempt to save to backend
       try {
         await api.register(newUser);
@@ -314,6 +319,19 @@ export default function StudentStaffLogin() {
     }
 
     setLoading(true);
+
+    // 0. First attempt Supabase Auth if available
+    try {
+      const supaRes = await supabaseService.loginUser(cleanEmail, cleanPass);
+      if (supaRes.success && supaRes.user) {
+        localStorage.setItem('fxec_user', JSON.stringify(supaRes.user));
+        localStorage.setItem('fxec_token', supaRes.user.role === 'STAFF' ? 'staff-token' : 'student-token');
+        router.push('/portal/dashboard');
+        return;
+      }
+    } catch (e) {
+      // Graceful fallback to local/registered credentials
+    }
 
     // 1. First check registered users in localStorage
     let registeredUsers: any[] = [];

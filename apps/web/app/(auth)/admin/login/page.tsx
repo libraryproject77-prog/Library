@@ -19,6 +19,7 @@ import {
 import { api } from '@/lib/api';
 import ThemeToggle from '@/components/ThemeToggle';
 import { createClient } from '@/utils/supabase/client';
+import { supabaseService } from '@/lib/supabaseService';
 
 const GoogleIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg className={`${className} shrink-0`} viewBox="0 0 24 24">
@@ -67,19 +68,10 @@ export default function AdminLoginPage() {
       await api.login(cleanEmail, 'ADMIN');
 
       try {
-        const supabase = createClient();
-        if (supabase) {
-          await supabase.auth.signInWithOAuth({
-            provider: 'google',
-            options: {
-              redirectTo: `${window.location.origin}/admin/dashboard`,
-              queryParams: {
-                hd: 'francisxavier.ac.in',
-                login_hint: cleanEmail
-              }
-            }
-          });
-        }
+        await supabaseService.signInWithGoogle({
+          redirectTo: `${window.location.origin}/admin/dashboard`,
+          loginHint: cleanEmail
+        });
       } catch (e) {}
 
       setGoogleModalOpen(false);
@@ -116,6 +108,23 @@ export default function AdminLoginPage() {
     setLoading(true);
 
     try {
+      try {
+        const supaRes = await supabaseService.loginUser(cleanEmail, cleanPassword);
+        if (supaRes.success) {
+          localStorage.setItem('fxec_token', 'admin-token');
+          localStorage.setItem('fxec_user', JSON.stringify({
+            id: supaRes.user?.id || 'usr-admin-1',
+            name: supaRes.user?.name || 'Dr. S. K. Rajan',
+            email: cleanEmail,
+            role: 'ADMIN',
+            avatarUrl: '/default-avatar.jpg',
+            department: 'ECE'
+          }));
+          router.push('/admin/dashboard');
+          return;
+        }
+      } catch (e) {}
+
       await api.login(cleanEmail, 'ADMIN');
       router.push('/admin/dashboard');
     } catch (err: any) {
