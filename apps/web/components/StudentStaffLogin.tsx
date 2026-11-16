@@ -434,7 +434,7 @@ export default function StudentStaffLogin() {
                     type="text"
                     value={regName}
                     onChange={(e) => setRegName(e.target.value)}
-                    placeholder={activeTab === 'STUDENT' ? 'e.g. Kumar' : 'e.g. Prof. M. Revathi'}
+                    placeholder={activeTab === 'STUDENT' ? 'e.g. Kumar S' : 'e.g. Prof. M. Revathi'}
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-semibold"
                     required
                   />
