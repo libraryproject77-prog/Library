@@ -21,13 +21,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                var saved = localStorage.getItem('fxec_theme');
-                if (saved === 'dark') {
-                  document.documentElement.classList.add('dark');
-                } else {
-                  // Default to light theme!
-                  document.documentElement.classList.remove('dark');
-                }
+                localStorage.removeItem('fxec_theme');
+                document.documentElement.classList.remove('dark');
               } catch (e) {}
             `,
           }}

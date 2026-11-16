@@ -244,9 +244,9 @@ export default function VirtualBookRackPage() {
               </div>
 
               {/* Realistic Wooden Bookshelf Unit */}
-              <div className="bookshelf-unit keep-white p-6 md:p-8 min-h-[380px] flex flex-col justify-end">
+              <div className="wooden-bookcase bookshelf-unit keep-white relative rounded-3xl overflow-hidden border-8 border-[#2e170c] shadow-2xl bg-gradient-to-b from-[#1b1008] via-[#24140b] to-[#120803] p-6 md:p-8 min-h-[380px] flex flex-col justify-end">
                 {/* Brass Shelf Label Plate */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#e6ca65] to-[#997a21] px-4 py-1 rounded-sm shadow-md border border-[#fce99f] text-[10px] font-black tracking-widest text-[#2b1704] uppercase">
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#fcd34d] via-[#f59e0b] to-[#d97706] px-4 py-1 rounded shadow border border-[#fef3c7] text-[10px] font-black tracking-widest text-[#2b1704] uppercase">
                   {selectedBook.rackLocation} &bull; {selectedBook.category?.code || 'ECE'}
                 </div>
 
@@ -272,7 +272,7 @@ export default function VirtualBookRackPage() {
                         {/* Top Spine LED Status Light */}
                         <div className="flex flex-col items-center pt-1 w-full">
                           <span className={`w-2.5 h-2.5 rounded-full ${style.dot} ${style.ledGlow}`} />
-                          <span className="text-[7.5px] font-mono text-white/50 mt-0.5 font-bold">#{(index + 1).toString().padStart(2, '0')}</span>
+                          <span className="wooden-spine-num text-[8px] font-mono text-white mt-0.5 font-black tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">#{(index + 1).toString().padStart(2, '0')}</span>
                         </div>
 
                         {/* Center of Spine: BOOK TITLE WRITTEN BOTTOM-TO-TOP ("keela irunthu mela") */}
@@ -282,7 +282,7 @@ export default function VirtualBookRackPage() {
                             <div className="flex-1 flex items-center justify-center my-1 overflow-hidden w-full px-0.5">
                               <div className="flex flex-row items-center justify-center gap-1 overflow-hidden max-h-[145px]">
                                 <span
-                                  className="font-bold text-[9.5px] tracking-tight text-amber-100/95 select-none drop-shadow whitespace-nowrap"
+                                  className="wooden-spine-title font-black text-[10px] tracking-tight text-white select-none whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,1)]"
                                   style={{
                                     writingMode: 'vertical-rl',
                                     transform: 'rotate(180deg)',
@@ -294,7 +294,7 @@ export default function VirtualBookRackPage() {
                                 </span>
                                 {isMulti && (
                                   <span
-                                    className="font-bold text-[9px] tracking-tight text-amber-200/80 select-none drop-shadow whitespace-nowrap"
+                                    className="wooden-spine-title-2 font-extrabold text-[9px] tracking-tight text-amber-200 select-none whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,1)]"
                                     style={{
                                       writingMode: 'vertical-rl',
                                       transform: 'rotate(180deg)',
@@ -312,10 +312,10 @@ export default function VirtualBookRackPage() {
 
                         {/* Bottom Embossed Gold Trim & Copy Number */}
                         <div className="w-full flex flex-col items-center pb-1 border-t border-white/20 pt-1">
-                          <span className="text-[8px] font-mono font-black text-amber-200/90 tracking-tighter whitespace-nowrap">
+                          <span className="wooden-spine-acc text-[8.5px] font-mono font-black text-amber-300 tracking-tight whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
                             {copy.copyNumber}
                           </span>
-                          <span className="w-3/4 h-[2px] bg-amber-400/60 rounded-full mt-0.5" />
+                          <span className="w-3/4 h-[2px] bg-amber-400/80 rounded-full mt-0.5" />
                         </div>
                       </div>
                     );
@@ -323,7 +323,14 @@ export default function VirtualBookRackPage() {
                 </div>
 
                 {/* The Wooden Shelf Plank */}
-                <div className="bookshelf-shelf w-full rounded-sm" />
+                <div className="h-7 w-full bg-gradient-to-r from-[#422517] via-[#5c341f] to-[#3a1f13] border-t-2 border-[#8c522f] shadow-[0_12px_20px_rgba(0,0,0,0.8)] rounded-b-lg flex items-center justify-between px-6 mt-1">
+                  <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                    {selectedBook.rackLocation} &bull; SOLID TIMBER STACK
+                  </span>
+                  <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                    DEPT. OF ECE &bull; FXEC
+                  </span>
+                </div>
               </div>
 
               {/* Spine Click Inspection Drawer */}

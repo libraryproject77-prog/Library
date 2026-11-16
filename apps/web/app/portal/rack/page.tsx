@@ -597,7 +597,7 @@ export default function StudentVirtualRackPage() {
               <div
                 key={meta.id}
                 id={`rack-${meta.id}`}
-                className="keep-white relative rounded-3xl overflow-hidden border-8 border-[#2e170c] shadow-[0_25px_60px_rgba(0,0,0,0.95)] bg-gradient-to-b from-[#1b1008] via-[#24140b] to-[#120803] p-4 sm:p-6 md:p-8 space-y-8"
+                className="wooden-bookcase keep-white relative rounded-3xl overflow-hidden border-8 border-[#2e170c] shadow-[0_25px_60px_rgba(0,0,0,0.95)] bg-gradient-to-b from-[#1b1008] via-[#24140b] to-[#120803] p-4 sm:p-6 md:p-8 space-y-8"
               >
                 {/* Ambient Overhead Downlights */}
                 <div className="absolute top-0 inset-x-0 h-16 flex justify-around pointer-events-none opacity-40">
@@ -613,7 +613,7 @@ export default function StudentVirtualRackPage() {
                   <div className="space-y-1">
                     <div className="flex flex-wrap items-center gap-2">
                       {/* Brass Rack Badge */}
-                      <div className="bg-gradient-to-b from-[#e6ca65] to-[#997a21] px-3.5 py-1 rounded shadow border border-[#fce99f] text-[11px] font-black tracking-widest text-[#2b1704] uppercase flex items-center gap-1.5">
+                      <div className="bg-gradient-to-b from-[#fcd34d] via-[#f59e0b] to-[#d97706] px-3.5 py-1 rounded shadow border border-[#fef3c7] text-[11px] font-black tracking-widest text-[#2b1704] uppercase flex items-center gap-1.5">
                         {renderTopicIcon(meta.iconName, 'w-3.5 h-3.5')}
                         <span>{meta.rackNum}</span>
                         <span>&bull;</span>
@@ -621,32 +621,32 @@ export default function StudentVirtualRackPage() {
                       </div>
 
                       {/* Main Topic Name */}
-                      <h2 className="text-lg md:text-xl font-black text-white tracking-tight">
+                      <h2 className="wooden-rack-title text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
                         {meta.title}
                       </h2>
                     </div>
 
                     {/* Subtitle Description */}
-                    <p className="text-xs text-[#c4a482] font-serif italic">
+                    <p className="wooden-rack-subtitle text-xs md:text-sm text-amber-200 font-serif italic drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                       {meta.subtitle}
                     </p>
                   </div>
 
                   {/* Rack Availability Counters */}
                   <div className="flex items-center gap-2 shrink-0 self-start md:self-auto flex-wrap">
-                    <span className="px-2.5 py-1 rounded-lg bg-black/50 border border-white/10 text-white font-mono text-xs font-bold">
+                    <span className="wooden-rack-badge px-3 py-1 rounded-lg bg-black/75 border border-white/20 text-white font-mono text-xs font-bold">
                       {totalCopies} Volumes
                     </span>
-                    <span className="px-2 py-0.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono text-[11px]">
+                    <span className="status-avail px-2.5 py-1 rounded-lg bg-emerald-500/25 border border-emerald-400/50 text-emerald-300 font-mono text-[11px] font-bold">
                       🟢 {availableCount} Avail
                     </span>
                     {reservedCount > 0 && (
-                      <span className="px-2 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-[11px]">
+                      <span className="status-held px-2.5 py-1 rounded-lg bg-amber-500/25 border border-amber-400/50 text-amber-300 font-mono text-[11px] font-bold">
                         🟠 {reservedCount} Held
                       </span>
                     )}
                     {borrowedCount > 0 && (
-                      <span className="px-2 py-0.5 rounded-lg bg-blue-500/15 border border-blue-500/30 text-blue-300 font-mono text-[11px]">
+                      <span className="status-out px-2.5 py-1 rounded-lg bg-blue-500/25 border border-blue-400/50 text-blue-300 font-mono text-[11px] font-bold">
                         🔵 {borrowedCount} Out
                       </span>
                     )}
@@ -661,12 +661,12 @@ export default function StudentVirtualRackPage() {
                     {/* Shelf Tier Plate */}
                     <div className="flex items-center justify-between px-2 mb-2">
                       <div className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                        <span className="text-[10px] uppercase tracking-widest font-mono font-bold text-amber-200/90">
+                        <span className="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]" />
+                        <span className="wooden-shelf-tier-title text-xs uppercase tracking-widest font-mono font-extrabold text-amber-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
                           {shelf.title}
                         </span>
                       </div>
-                      <span className="text-[9px] text-[#8d6e63] font-mono">
+                      <span className="wooden-shelf-tier-sub text-[10px] text-amber-100 font-mono font-bold drop-shadow">
                         {shelf.subtitle}
                       </span>
                     </div>
@@ -728,7 +728,7 @@ export default function StudentVirtualRackPage() {
                                 <span
                                   className={`w-2.5 h-2.5 rounded-full ${style.dot} ${style.ledGlow}`}
                                 />
-                                <span className="text-[7.5px] font-mono text-white/60 mt-0.5 font-bold tracking-tighter">
+                                <span className="wooden-spine-num text-[8px] font-mono text-white mt-0.5 font-black tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
                                   #{(copyIndex + 1).toString().padStart(2, '0')}
                                 </span>
                               </div>
@@ -742,7 +742,7 @@ export default function StudentVirtualRackPage() {
                                     <div className="flex flex-row items-center justify-center gap-1 overflow-hidden max-h-[155px]">
                                       {/* Line 1 (Upper line when tilted: "konjam mela", runs bottom-to-top) */}
                                       <span
-                                        className="font-bold text-[9.5px] tracking-tight text-amber-100/95 select-none drop-shadow whitespace-nowrap"
+                                        className="wooden-spine-title font-black text-[10px] tracking-tight text-white select-none whitespace-nowrap drop-shadow-[0_1px_3px_rgba(0,0,0,1)]"
                                         style={{
                                           writingMode: 'vertical-rl',
                                           transform: 'rotate(180deg)',
@@ -756,7 +756,7 @@ export default function StudentVirtualRackPage() {
                                       {/* Line 2 (Lower line when tilted: "konjam athukku keela", runs bottom-to-top) */}
                                       {isMulti && (
                                         <span
-                                          className="font-bold text-[9px] tracking-tight text-amber-200/80 select-none drop-shadow whitespace-nowrap"
+                                          className="wooden-spine-title-2 font-extrabold text-[9px] tracking-tight text-amber-200 select-none whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,1)]"
                                           style={{
                                             writingMode: 'vertical-rl',
                                             transform: 'rotate(180deg)',
@@ -774,10 +774,10 @@ export default function StudentVirtualRackPage() {
 
                               {/* Bottom of Spine: Accession No & Embossed Brass Trim */}
                               <div className="w-full flex flex-col items-center pb-1 border-t border-white/20 pt-1">
-                                <span className="text-[8px] font-mono font-black text-amber-300/90 tracking-tighter whitespace-nowrap">
+                                <span className="wooden-spine-acc text-[8.5px] font-mono font-black text-amber-300 tracking-tight whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
                                   {copy.copyNumber}
                                 </span>
-                                <span className="w-3/4 h-[2px] bg-amber-400/60 rounded-full mt-0.5" />
+                                <span className="w-3/4 h-[2px] bg-amber-400/80 rounded-full mt-0.5" />
                               </div>
                             </div>
 
@@ -786,13 +786,13 @@ export default function StudentVirtualRackPage() {
                             {/* ============================================================== */}
                             {isSelected && (
                               <div
-                                className="shrink-0 w-80 sm:w-96 rounded-2xl p-4 bg-[#190f26]/95 backdrop-blur-xl border-2 border-aura-neon/80 shadow-[0_15px_40px_rgba(0,0,0,0.9),0_0_30px_rgba(221,183,255,0.3)] flex flex-col justify-between self-end mb-2 z-40 transition-all duration-300 animate-in fade-in zoom-in-95"
+                                className="shrink-0 w-80 sm:w-96 rounded-2xl p-5 bg-white border-2 border-aura-purple shadow-[0_20px_50px_rgba(0,0,0,0.7)] flex flex-col justify-between self-end mb-2 z-40 transition-all duration-300 animate-in fade-in zoom-in-95 text-slate-900"
                                 style={{ minHeight: '220px' }}
                               >
                                 {/* Card Header: Copy Code, Status Badge & Close Button */}
-                                <div className="flex items-center justify-between pb-2 border-b border-white/10">
+                                <div className="flex items-center justify-between pb-2 border-b border-slate-200">
                                   <div className="flex items-center gap-1.5">
-                                    <span className="font-mono text-xs font-black text-aura-neon bg-aura-purple/30 px-2 py-0.5 rounded border border-aura-purple/40">
+                                    <span className="font-mono text-xs font-black text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded border border-purple-200">
                                       {copy.copyNumber}
                                     </span>
                                     <span
@@ -806,7 +806,7 @@ export default function StudentVirtualRackPage() {
                                       e.stopPropagation();
                                       setActiveCopy(null);
                                     }}
-                                    className="p-1 rounded-lg text-content-subtle hover:text-white hover:bg-surface-high transition-colors"
+                                    className="p-1 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-colors"
                                     title="Close inspection"
                                   >
                                     <X className="w-4 h-4" />
@@ -815,29 +815,29 @@ export default function StudentVirtualRackPage() {
 
                                 {/* Card Body: Full Book Title, Author & Location */}
                                 <div className="py-2.5 space-y-1">
-                                  <h4 className="text-sm font-extrabold text-white line-clamp-2 leading-snug">
+                                  <h4 className="text-sm font-extrabold text-slate-900 line-clamp-2 leading-snug">
                                     {copy.bookTitle}
                                   </h4>
-                                  <p className="text-xs text-content-muted line-clamp-1">
-                                    By <span className="text-white font-medium">{copy.bookAuthor}</span>
+                                  <p className="text-xs text-slate-600 line-clamp-1">
+                                    By <span className="text-slate-900 font-semibold">{copy.bookAuthor}</span>
                                     {copy.bookPublisher && ` &bull; ${copy.bookPublisher}`}
                                   </p>
-                                  <div className="flex items-center gap-3 text-[10px] text-content-subtle pt-1 font-mono">
-                                    <span className="flex items-center gap-1 text-aura-neon">
+                                  <div className="flex items-center gap-3 text-[10px] text-slate-500 pt-1 font-mono">
+                                    <span className="flex items-center gap-1 text-purple-700 font-bold">
                                       <MapPin className="w-3 h-3" />
                                       {meta.rackNum}, {shelf.title.split('•')[0].trim()}
                                     </span>
-                                    <span className="text-amber-200/70">
+                                    <span className="text-slate-600 font-medium">
                                       {meta.title}
                                     </span>
                                   </div>
-                                  <div className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 inline-block mt-1">
+                                  <div className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200 inline-block mt-1 font-semibold">
                                     ⏳ 15-Day Return Period &bull; Limit: 1 Book/Day (Student) / 3 (Staff)
                                   </div>
                                 </div>
 
                                 {/* Card Footer: Instant Reservation Button & Full Details Link */}
-                                <div className="pt-2 border-t border-white/10 flex items-center gap-2">
+                                <div className="pt-2 border-t border-slate-200 flex items-center gap-2">
                                   {copy.status === 'AVAILABLE' ? (
                                     <button
                                       onClick={(e) => {
@@ -845,7 +845,7 @@ export default function StudentVirtualRackPage() {
                                         handleReserveCopy(copy.id, copy.copyNumber, copy.bookTitle);
                                       }}
                                       disabled={reserving}
-                                      className="flex-1 aura-gradient-btn py-2 px-3 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-glow hover:scale-[1.02] transition-transform"
+                                      className="flex-1 aura-gradient-btn py-2 px-3 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 shadow-glow hover:scale-[1.02] transition-transform text-white"
                                     >
                                       <BookmarkPlus className="w-3.5 h-3.5" />
                                       <span>
@@ -855,12 +855,12 @@ export default function StudentVirtualRackPage() {
                                       </span>
                                     </button>
                                   ) : copy.status === 'RESERVED' ? (
-                                    <div className="flex-1 py-1.5 px-2.5 rounded-xl bg-amber-500/15 border border-amber-500/30 text-[11px] text-amber-300 font-semibold text-center flex items-center justify-center gap-1.5">
+                                    <div className="flex-1 py-1.5 px-2.5 rounded-xl bg-amber-50 border border-amber-200 text-[11px] text-amber-800 font-semibold text-center flex items-center justify-center gap-1.5">
                                       <Clock className="w-3.5 h-3.5" />
                                       <span>On Hold (24-Hour Pickup Active)</span>
                                     </div>
                                   ) : (
-                                    <div className="flex-1 py-1.5 px-2.5 rounded-xl bg-blue-500/15 border border-blue-500/30 text-[11px] text-blue-300 font-semibold text-center flex items-center justify-center gap-1.5">
+                                    <div className="flex-1 py-1.5 px-2.5 rounded-xl bg-blue-50 border border-blue-200 text-[11px] text-blue-800 font-semibold text-center flex items-center justify-center gap-1.5">
                                       <BookmarkCheck className="w-3.5 h-3.5" />
                                       <span>Currently Borrowed (Due in 15D)</span>
                                     </div>
@@ -869,7 +869,7 @@ export default function StudentVirtualRackPage() {
                                   <Link
                                     href={`/portal/book/${copy.bookId}`}
                                     onClick={(e) => e.stopPropagation()}
-                                    className="py-2 px-2.5 rounded-xl bg-surface-low hover:bg-surface-high border border-stroke-glass text-xs font-semibold text-aura-neon hover:text-white transition-colors shrink-0"
+                                    className="py-2 px-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-semibold text-purple-700 hover:text-purple-900 transition-colors shrink-0"
                                     title="Open Full Book Details Page"
                                   >
                                     <ArrowRight className="w-3.5 h-3.5" />
@@ -883,11 +883,11 @@ export default function StudentVirtualRackPage() {
                     </div>
 
                     {/* Solid Mahogany Wooden Shelf Plank */}
-                    <div className="h-6 w-full bg-gradient-to-r from-[#422517] via-[#5c341f] to-[#3a1f13] border-t-2 border-[#8c522f] shadow-[0_12px_20px_rgba(0,0,0,0.8)] rounded-b-lg flex items-center justify-between px-6">
-                      <span className="text-[9px] text-[#bcaaa4] font-mono tracking-widest uppercase">
+                    <div className="h-7 w-full bg-gradient-to-r from-[#422517] via-[#5c341f] to-[#3a1f13] border-t-2 border-[#8c522f] shadow-[0_12px_20px_rgba(0,0,0,0.8)] rounded-b-lg flex items-center justify-between px-6">
+                      <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                         {meta.rackNum} &bull; TIER {shelfIndex + 1} SOLID TIMBER STACK
                       </span>
-                      <span className="text-[9px] text-[#bcaaa4] font-mono tracking-widest uppercase">
+                      <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
                         DEPT. OF ECE &bull; FXEC
                       </span>
                     </div>

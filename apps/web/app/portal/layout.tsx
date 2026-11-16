@@ -24,7 +24,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { api } from '@/lib/api';
-import ThemeToggle from '@/components/ThemeToggle';
 
 const PORTAL_NAV_ITEMS = [
   { label: 'My Dashboard', href: '/portal/dashboard', icon: LayoutDashboard },
@@ -275,9 +274,6 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
 
         {/* Right Nav Icons */}
         <div className="flex items-center space-x-2.5">
-          {/* Light / Dark Mode Toggle */}
-          <ThemeToggle />
-
           {/* Notifications Dropdown */}
           <div className="relative" ref={notifRef}>
             <button

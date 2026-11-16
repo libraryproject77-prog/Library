@@ -24,7 +24,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { api } from '@/lib/api';
-import ThemeToggle from '@/components/ThemeToggle';
 
 const NAV_ITEMS = [
   { label: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
@@ -188,9 +187,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
         {/* Right Nav Icons */}
         <div className="flex items-center space-x-2.5">
-          {/* Light / Dark Mode Toggle */}
-          <ThemeToggle />
-
           {/* Role badge */}
           <span className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-pill bg-aura-purple/20 border border-aura-purple/40 text-[11px] font-semibold text-aura-neon">
             <Sparkles className="w-3 h-3 text-aura-neon" />

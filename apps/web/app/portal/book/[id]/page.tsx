@@ -276,7 +276,7 @@ export default function BookDetailsPage() {
         </div>
 
         {/* Realistic Wooden Shelf View */}
-        <div className="relative rounded-3xl overflow-hidden border-4 border-[#3e2723] shadow-2xl bg-gradient-to-b from-[#1b1008] via-[#24140b] to-[#120803] p-6">
+        <div className="wooden-bookcase keep-white relative rounded-3xl overflow-hidden border-4 border-[#3e2723] shadow-2xl bg-gradient-to-b from-[#1b1008] via-[#24140b] to-[#120803] p-6">
           {/* Shelf Ambient Overhead Downlights */}
           <div className="absolute top-0 inset-x-0 h-10 flex justify-around pointer-events-none opacity-40">
             <div className="w-40 h-20 bg-amber-200/30 blur-2xl rounded-full"></div>
@@ -290,11 +290,11 @@ export default function BookDetailsPage() {
               <div className="px-3 py-1 rounded bg-[#331b0e] border border-[#6b4226] text-amber-300 font-mono text-xs font-bold tracking-wider shadow-inner">
                 {book.rackLocation}
               </div>
-              <span className="text-xs text-[#b8977e] font-serif tracking-wide italic">
+              <span className="text-xs text-amber-200 font-serif tracking-wide italic">
                 FXEC Department Library Accession Stack
               </span>
             </div>
-            <span className="text-xs text-[#a1887f]">
+            <span className="text-xs text-amber-100/90 font-mono">
               {copies.length} Physical Volume{copies.length > 1 ? 's' : ''} in Register
             </span>
           </div>
@@ -347,20 +347,20 @@ export default function BookDetailsPage() {
                     {/* Top Spine Ribbon & Accession Code */}
                     <div className="flex flex-col items-center">
                       <div className="w-full h-1 bg-amber-400/60 rounded-full mb-1"></div>
-                      <span className="text-[9px] font-bold tracking-tight text-white/90 font-mono text-center">
+                      <span className="wooden-spine-num text-[9px] font-bold tracking-tight text-white font-mono text-center drop-shadow-[0_1px_2px_rgba(0,0,0,1)]">
                         VOL #{index + 1}
                       </span>
                     </div>
 
                     {/* Vertical Title & Accession Number */}
                     <div className="flex-1 flex items-center justify-center py-2 overflow-hidden">
-                      <div className="rotate-90 whitespace-nowrap text-[10px] font-bold tracking-wider text-amber-200/90 font-mono drop-shadow">
+                      <div className="rotate-90 whitespace-nowrap text-[10.5px] font-bold tracking-wider text-amber-300 font-mono drop-shadow-[0_1px_3px_rgba(0,0,0,1)]">
                         {copy.copyNumber}
                       </div>
                     </div>
 
                     {/* Bottom Spine Details with Status LED */}
-                    <div className="flex flex-col items-center gap-1.5 pt-1 border-t border-white/10">
+                    <div className="flex flex-col items-center gap-1.5 pt-1 border-t border-white/20">
                       <div
                         className={`w-3 h-3 rounded-full border border-white/20 transition-all ${
                           isAvailable
@@ -371,7 +371,7 @@ export default function BookDetailsPage() {
                         }`}
                         title={`Status: ${copy.status}`}
                       ></div>
-                      <span className="text-[8px] font-mono text-white/60">
+                      <span className="text-[8px] font-mono text-white/80 font-bold drop-shadow">
                         {copy.status.slice(0, 3)}
                       </span>
                     </div>
@@ -382,12 +382,12 @@ export default function BookDetailsPage() {
           </div>
 
           {/* Heavy Solid Wood Shelf Plank */}
-          <div className="h-6 w-full bg-gradient-to-r from-[#422517] via-[#5c341f] to-[#3a1f13] border-t-2 border-[#8c522f] shadow-[0_12px_20px_rgba(0,0,0,0.8)] rounded-b-lg flex items-center justify-between px-6">
-            <span className="text-[10px] text-[#bcaaa4] font-mono tracking-widest uppercase">
+          <div className="h-7 w-full bg-gradient-to-r from-[#422517] via-[#5c341f] to-[#3a1f13] border-t-2 border-[#8c522f] shadow-[0_12px_20px_rgba(0,0,0,0.8)] rounded-b-lg flex items-center justify-between px-6">
+            <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
               RACK LEVEL: SHELF #2
             </span>
-            <span className="text-[10px] text-[#bcaaa4] font-mono tracking-widest uppercase">
-              DEPT. ECE
+            <span className="wooden-timber-plank-text text-[9.5px] text-amber-100 font-mono tracking-widest uppercase font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+              DEPT. ECE &bull; FXEC
             </span>
           </div>
         </div>

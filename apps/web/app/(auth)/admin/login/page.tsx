@@ -18,7 +18,6 @@ import {
   X
 } from 'lucide-react';
 import { api } from '@/lib/api';
-import ThemeToggle from '@/components/ThemeToggle';
 import { createClient } from '@/utils/supabase/client';
 import { supabaseService } from '@/lib/supabaseService';
 
@@ -160,7 +159,6 @@ export default function AdminLoginPage() {
         </Link>
 
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
           <Link
             href="/portal/login"
             className="text-xs font-semibold px-4 py-2 rounded-xl bg-surface-low hover:bg-surface-high border border-stroke-glass text-content-muted hover:text-white transition-colors flex items-center gap-1.5"
@@ -283,7 +281,7 @@ export default function AdminLoginPage() {
             onClick={() => setGoogleModalOpen(false)}
           >
             <div
-              className="bg-[#131314] text-[#e3e3e3] rounded-3xl max-w-[440px] w-full p-6 sm:p-8 shadow-2xl border border-[#303030] relative overflow-hidden animate-scale-up font-sans"
+              className="google-account-modal bg-[#131314] text-[#e3e3e3] rounded-3xl max-w-[440px] w-full p-6 sm:p-8 shadow-2xl border border-[#303030] relative overflow-hidden animate-scale-up font-sans"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Google Header */}
