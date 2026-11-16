@@ -84,6 +84,63 @@ export class AuthController {
     });
   };
 
+  public register = async (req: Request, res: Response) => {
+    const { name, email, password, role, rollNumber, staffId, department } = req.body;
+
+    if (!name || !email) {
+      return res.status(400).json({ success: false, message: 'Name and email are required.' });
+    }
+
+    const domain = email.split('@')[1];
+    if (domain !== config.collegeEmailDomain) {
+      return res.status(403).json({
+        success: false,
+        message: `Unauthorized email domain. Only @${config.collegeEmailDomain} addresses are allowed.`
+      });
+    }
+
+    const emailLower = email.toLowerCase();
+    let existing = dbStore.profiles.find(p => p.email.toLowerCase() === emailLower);
+    if (existing) {
+      return res.status(409).json({
+        success: false,
+        message: 'An account with this email already exists. Please log in.'
+      });
+    }
+
+    const isStudent = role === 'STUDENT' || emailLower.includes('.ug.') || emailLower.includes('.pg.');
+    const newRole = role || (isStudent ? 'STUDENT' : 'STAFF');
+
+    const newUser = {
+      id: `usr-${Date.now()}`,
+      email: emailLower,
+      name: name.trim(),
+      role: newRole,
+      department: department || 'ECE',
+      rollNumber: newRole === 'STUDENT' ? (rollNumber?.trim().toUpperCase() || undefined) : undefined,
+      staffId: newRole === 'STAFF' ? (staffId?.trim().toUpperCase() || undefined) : undefined,
+      password: password || undefined,
+      status: 'ACTIVE',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    dbStore.profiles.push(newUser as any);
+
+    const token = jwt.sign(
+      { userId: newUser.id, email: newUser.email, role: newUser.role },
+      config.jwtSecret,
+      { expiresIn: '7d' }
+    );
+
+    return res.status(201).json({
+      success: true,
+      message: 'Registration successful!',
+      token,
+      user: newUser
+    });
+  };
+
   public getMe = async (req: AuthenticatedRequest, res: Response) => {
     return res.json({
       success: true,

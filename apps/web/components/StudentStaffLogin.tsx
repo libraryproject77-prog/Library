@@ -15,29 +15,155 @@ import {
   AlertTriangle,
   Library,
   BookmarkCheck,
-  CreditCard
+  CreditCard,
+  UserPlus,
+  LogIn,
+  User,
+  CheckCircle2,
+  Building
 } from 'lucide-react';
 import { api } from '@/lib/api';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function StudentStaffLogin() {
   const router = useRouter();
+  const [mode, setMode] = useState<'LOGIN' | 'REGISTER'>('LOGIN');
   const [activeTab, setActiveTab] = useState<'STUDENT' | 'STAFF'>('STUDENT');
+
+  // Sign In state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  // New Registration state
+  const [regName, setRegName] = useState('');
+  const [regIdentifier, setRegIdentifier] = useState('');
+  const [regDepartment, setRegDepartment] = useState('ECE');
+  const [regEmail, setRegEmail] = useState('');
+  const [regPassword, setRegPassword] = useState('');
+  const [regConfirmPassword, setRegConfirmPassword] = useState('');
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleTabChange = (tab: 'STUDENT' | 'STAFF') => {
     setActiveTab(tab);
     setError(null);
+    setSuccessMessage(null);
   };
 
+  const handleModeChange = (newMode: 'LOGIN' | 'REGISTER') => {
+    setMode(newMode);
+    setError(null);
+    setSuccessMessage(null);
+  };
+
+  // Handle New User Registration
+  const handleRegisterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setSuccessMessage(null);
+
+    const cleanName = regName.trim();
+    const cleanId = regIdentifier.trim().toUpperCase();
+    const cleanEmail = regEmail.trim().toLowerCase();
+    const cleanPass = regPassword.trim();
+    const cleanConfirm = regConfirmPassword.trim();
+
+    if (!cleanName) {
+      setError('Please enter your full name.');
+      return;
+    }
+
+    if (!cleanId) {
+      setError(activeTab === 'STUDENT' ? 'Please enter your Student Roll Number.' : 'Please enter your Faculty Staff ID.');
+      return;
+    }
+
+    if (!cleanEmail) {
+      setError('Please enter your official institutional college email.');
+      return;
+    }
+
+    if (!cleanEmail.endsWith('@francisxavier.ac.in')) {
+      setError('Access denied. Institutional email must end with @francisxavier.ac.in');
+      return;
+    }
+
+    if (!cleanPass || cleanPass.length < 4) {
+      setError('Password must be at least 4 characters long.');
+      return;
+    }
+
+    if (cleanPass !== cleanConfirm) {
+      setError('Passwords do not match. Please verify your password.');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // 1. Check existing users in localStorage
+      let existingUsers: any[] = [];
+      try {
+        existingUsers = JSON.parse(localStorage.getItem('fxec_registered_users') || '[]');
+      } catch (e) {}
+
+      const duplicate = existingUsers.find(u => u.email.toLowerCase() === cleanEmail);
+      if (duplicate) {
+        setError('An account with this institutional email is already registered. Please sign in directly.');
+        setLoading(false);
+        return;
+      }
+
+      const newUser = {
+        id: `usr-${Date.now()}`,
+        name: cleanName,
+        email: cleanEmail,
+        password: cleanPass,
+        role: activeTab,
+        rollNumber: activeTab === 'STUDENT' ? cleanId : undefined,
+        staffId: activeTab === 'STAFF' ? cleanId : undefined,
+        department: regDepartment || 'ECE',
+        status: 'ACTIVE',
+        registeredAt: new Date().toISOString()
+      };
+
+      // Save to localStorage list of registered users
+      existingUsers.unshift(newUser);
+      localStorage.setItem('fxec_registered_users', JSON.stringify(existingUsers));
+
+      // Attempt to save to backend
+      try {
+        await api.register(newUser);
+      } catch (e) {
+        // offline fallback is safe
+      }
+
+      // Switch to login tab, prefill email
+      setEmail(cleanEmail);
+      setPassword('');
+      setRegName('');
+      setRegIdentifier('');
+      setRegEmail('');
+      setRegPassword('');
+      setRegConfirmPassword('');
+      setMode('LOGIN');
+      setSuccessMessage(`Registration successful for ${cleanName}! Please enter your password to sign in.`);
+    } catch (err: any) {
+      setError(err.message || 'Registration failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle Login Submit
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setSuccessMessage(null);
 
-    const cleanEmail = email.trim();
+    const cleanEmail = email.trim().toLowerCase();
     const cleanPass = password.trim();
 
     if (!cleanEmail) {
@@ -57,6 +183,45 @@ export default function StudentStaffLogin() {
 
     setLoading(true);
 
+    // 1. First check registered users in localStorage
+    let registeredUsers: any[] = [];
+    try {
+      registeredUsers = JSON.parse(localStorage.getItem('fxec_registered_users') || '[]');
+    } catch (e) {}
+
+    const registered = registeredUsers.find(u => u.email.toLowerCase() === cleanEmail);
+
+    if (registered) {
+      // Validate password
+      if (registered.password && registered.password !== cleanPass) {
+        setError('Incorrect password. Please enter the password you registered with.');
+        setLoading(false);
+        return;
+      }
+
+      // Password matches! Log in with full registered details
+      const user = {
+        id: registered.id,
+        name: registered.name,
+        email: registered.email,
+        role: registered.role || activeTab,
+        department: registered.department || 'ECE',
+        rollNumber: registered.rollNumber,
+        staffId: registered.staffId,
+      };
+
+      localStorage.setItem('fxec_user', JSON.stringify(user));
+      localStorage.setItem('fxec_token', user.role === 'STAFF' ? 'staff-token' : 'student-token');
+
+      try {
+        await api.login(cleanEmail, user.role);
+      } catch (e) {}
+
+      router.push('/portal/dashboard');
+      return;
+    }
+
+    // 2. Fallback to built-in accounts or auto-parsing
     const prefix = cleanEmail.split('@')[0];
     const namePart = prefix.split('.')[0];
     let displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
@@ -81,6 +246,8 @@ export default function StudentStaffLogin() {
         email: cleanEmail,
         role: activeTab,
         department: 'ECE',
+        rollNumber: activeTab === 'STUDENT' ? '25EC001' : undefined,
+        staffId: activeTab === 'STAFF' ? 'FX-ECE-STF-014' : undefined,
       };
       localStorage.setItem('fxec_user', JSON.stringify(user));
       localStorage.setItem('fxec_token', activeTab === 'STAFF' ? 'staff-token' : 'student-token');
@@ -135,23 +302,53 @@ export default function StudentStaffLogin() {
             Francis Xavier Engineering College &bull; ECE Department
           </div>
           <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-            Student &amp; Staff Portal Login
+            {mode === 'LOGIN' ? 'Student & Staff Portal Login' : 'Create New Scholar Account'}
           </h1>
           <p className="text-xs text-content-muted mt-1 max-w-md mx-auto">
-            Please enter your official institutional credentials to access textbook catalogue and virtual racks.
+            {mode === 'LOGIN'
+              ? 'Please enter your official institutional credentials to access textbook catalogue and virtual racks.'
+              : 'Register your details to create an official Department Library borrowing account.'}
           </p>
         </div>
 
         {/* Card */}
         <div className="glass-panel-card p-6 md:p-8 rounded-3xl border border-stroke-glass shadow-glass">
-          {/* Tab Switcher: Student vs Staff */}
+          {/* Dual-Mode Switcher: Sign In vs New Registration */}
           <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-surface-low border border-stroke-subtle mb-6">
+            <button
+              type="button"
+              onClick={() => handleModeChange('LOGIN')}
+              className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+                mode === 'LOGIN'
+                  ? 'bg-aura-purple text-white shadow-glow'
+                  : 'text-content-muted hover:text-white'
+              }`}
+            >
+              <LogIn className="w-3.5 h-3.5" />
+              <span>Sign In to Portal</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleModeChange('REGISTER')}
+              className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+                mode === 'REGISTER'
+                  ? 'bg-aura-purple text-white shadow-glow'
+                  : 'text-content-muted hover:text-white'
+              }`}
+            >
+              <UserPlus className="w-3.5 h-3.5" />
+              <span>New Registration</span>
+            </button>
+          </div>
+
+          {/* Role Switcher: Student vs Staff */}
+          <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-surface-low/60 border border-stroke-glass mb-6">
             <button
               type="button"
               onClick={() => handleTabChange('STUDENT')}
               className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'STUDENT'
-                  ? 'bg-aura-purple text-white shadow-glow'
+                  ? 'bg-aura-violet text-white shadow-sm'
                   : 'text-content-muted hover:text-white'
               }`}
             >
@@ -163,7 +360,7 @@ export default function StudentStaffLogin() {
               onClick={() => handleTabChange('STAFF')}
               className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'STAFF'
-                  ? 'bg-aura-purple text-white shadow-glow'
+                  ? 'bg-aura-violet text-white shadow-sm'
                   : 'text-content-muted hover:text-white'
               }`}
             >
@@ -172,6 +369,7 @@ export default function StudentStaffLogin() {
             </button>
           </div>
 
+          {/* Notifications */}
           {error && (
             <div className="mb-5 p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
               <AlertTriangle className="w-4 h-4 shrink-0 text-rose-400" />
@@ -179,62 +377,221 @@ export default function StudentStaffLogin() {
             </div>
           )}
 
-          {/* Form */}
-          <form onSubmit={handleLoginSubmit} className="space-y-4">
-            <div>
-              <label className="block text-xs font-semibold text-content-muted mb-1.5">
-                Institutional College Email (@francisxavier.ac.in)
-              </label>
-              <div className="relative">
-                <Mail className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={
-                    activeTab === 'STUDENT'
-                      ? 'name.ug.25.ec@francisxavier.ac.in'
-                      : 'name@francisxavier.ac.in'
-                  }
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
-                  required
-                />
-              </div>
-              <span className="text-[10px] text-content-subtle mt-1.5 block">
-                {activeTab === 'STUDENT'
-                  ? 'Format: name.ug.25.ec@francisxavier.ac.in'
-                  : 'Format: name@francisxavier.ac.in'}
-              </span>
+          {successMessage && (
+            <div className="mb-5 p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400" />
+              <span>{successMessage}</span>
             </div>
+          )}
 
-            <div>
-              <label className="block text-xs font-semibold text-content-muted mb-1.5">
-                Portal Password
-              </label>
-              <div className="relative">
-                <Lock className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••••••"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
-                  required
-                />
+          {/* 1. SIGN IN FORM */}
+          {mode === 'LOGIN' && (
+            <form onSubmit={handleLoginSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                  Institutional College Email (@francisxavier.ac.in)
+                </label>
+                <div className="relative">
+                  <Mail className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={
+                      activeTab === 'STUDENT'
+                        ? 'name.ug.25.ec@francisxavier.ac.in'
+                        : 'name@francisxavier.ac.in'
+                    }
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                    required
+                  />
+                </div>
+                <span className="text-[10px] text-content-subtle mt-1.5 block">
+                  {activeTab === 'STUDENT'
+                    ? 'Format: name.ug.25.ec@francisxavier.ac.in'
+                    : 'Format: name@francisxavier.ac.in'}
+                </span>
               </div>
-            </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full aura-gradient-btn py-3 rounded-xl font-bold text-xs text-white flex items-center justify-center gap-2 shadow-glow hover:scale-[1.01] transition-transform mt-2"
-            >
-              <BookOpen className="w-4 h-4" />
-              {loading
-                ? 'Signing in...'
-                : `Enter Portal as ${activeTab === 'STUDENT' ? 'Student' : 'Staff'}`}
-            </button>
-          </form>
+              <div>
+                <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                  Portal Password
+                </label>
+                <div className="relative">
+                  <Lock className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="••••••••••••"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full aura-gradient-btn py-3 rounded-xl font-bold text-xs text-white flex items-center justify-center gap-2 shadow-glow hover:scale-[1.01] transition-transform mt-2"
+              >
+                <LogIn className="w-4 h-4" />
+                {loading
+                  ? 'Signing in...'
+                  : `Sign In as ${activeTab === 'STUDENT' ? 'Student' : 'Staff'}`}
+              </button>
+
+              <div className="pt-4 text-center border-t border-stroke-subtle">
+                <button
+                  type="button"
+                  onClick={() => handleModeChange('REGISTER')}
+                  className="text-xs text-aura-neon hover:underline font-semibold flex items-center justify-center gap-1 mx-auto"
+                >
+                  <UserPlus className="w-3.5 h-3.5" />
+                  <span>Don&apos;t have an account? Click here for New Registration &rarr;</span>
+                </button>
+              </div>
+            </form>
+          )}
+
+          {/* 2. NEW REGISTRATION FORM */}
+          {mode === 'REGISTER' && (
+            <form onSubmit={handleRegisterSubmit} className="space-y-4">
+              <div>
+                <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                  Full Name (with Initial)
+                </label>
+                <div className="relative">
+                  <User className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                  <input
+                    type="text"
+                    value={regName}
+                    onChange={(e) => setRegName(e.target.value)}
+                    placeholder={activeTab === 'STUDENT' ? 'e.g. Madasamy M' : 'e.g. Prof. M. Revathi'}
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-semibold"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                    {activeTab === 'STUDENT' ? 'Roll Number' : 'Staff ID'}
+                  </label>
+                  <input
+                    type="text"
+                    value={regIdentifier}
+                    onChange={(e) => setRegIdentifier(e.target.value)}
+                    placeholder={activeTab === 'STUDENT' ? 'e.g. 25EC001' : 'e.g. FX-ECE-STF-015'}
+                    className="w-full px-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono uppercase"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                    Department
+                  </label>
+                  <div className="relative">
+                    <Building className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                    <input
+                      type="text"
+                      value={regDepartment}
+                      onChange={(e) => setRegDepartment(e.target.value)}
+                      placeholder="ECE"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-semibold uppercase"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                  Official Institutional College Email (@francisxavier.ac.in)
+                </label>
+                <div className="relative">
+                  <Mail className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                  <input
+                    type="email"
+                    value={regEmail}
+                    onChange={(e) => setRegEmail(e.target.value)}
+                    placeholder={
+                      activeTab === 'STUDENT'
+                        ? 'name.ug.25.ec@francisxavier.ac.in'
+                        : 'name@francisxavier.ac.in'
+                    }
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                    required
+                  />
+                </div>
+                <span className="text-[10px] text-content-subtle mt-1.5 block">
+                  {activeTab === 'STUDENT'
+                    ? 'Format: name.ug.25.ec@francisxavier.ac.in'
+                    : 'Format: name@francisxavier.ac.in'}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                    Create Password
+                  </label>
+                  <div className="relative">
+                    <Lock className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                    <input
+                      type="password"
+                      value={regPassword}
+                      onChange={(e) => setRegPassword(e.target.value)}
+                      placeholder="••••••••••••"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                    Confirm Password
+                  </label>
+                  <div className="relative">
+                    <Lock className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                    <input
+                      type="password"
+                      value={regConfirmPassword}
+                      onChange={(e) => setRegConfirmPassword(e.target.value)}
+                      placeholder="••••••••••••"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full aura-gradient-btn py-3 rounded-xl font-bold text-xs text-white flex items-center justify-center gap-2 shadow-glow hover:scale-[1.01] transition-transform mt-2"
+              >
+                <UserPlus className="w-4 h-4" />
+                {loading
+                  ? 'Creating Account...'
+                  : `Complete Registration for ${activeTab === 'STUDENT' ? 'Student' : 'Staff'}`}
+              </button>
+
+              <div className="pt-4 text-center border-t border-stroke-subtle">
+                <button
+                  type="button"
+                  onClick={() => handleModeChange('LOGIN')}
+                  className="text-xs text-content-muted hover:text-white font-semibold flex items-center justify-center gap-1 mx-auto"
+                >
+                  <LogIn className="w-3.5 h-3.5" />
+                  <span>Already have an account? Back to Sign In &rarr;</span>
+                </button>
+              </div>
+            </form>
+          )}
         </div>
 
         {/* Feature Highlights beneath login */}

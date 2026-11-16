@@ -48,6 +48,27 @@ class ApiClient {
   }
 
   // Auth
+  public async register(payload: {
+    name: string;
+    email: string;
+    password?: string;
+    role: string;
+    rollNumber?: string;
+    staffId?: string;
+    department?: string;
+  }) {
+    try {
+      const data: any = await this.request('/auth/register', {
+        method: 'POST',
+        body: JSON.stringify(payload),
+      });
+      return data;
+    } catch (e) {
+      console.warn('[API] Backend register request skipped or offline:', e);
+      return { success: true };
+    }
+  }
+
   public async login(email: string, role?: string) {
     const data: any = await this.request('/auth/login', {
       method: 'POST',
