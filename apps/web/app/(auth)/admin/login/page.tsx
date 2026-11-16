@@ -14,6 +14,7 @@ import {
   Building,
   CheckCircle2,
   Users,
+  User,
   X
 } from 'lucide-react';
 import { api } from '@/lib/api';
@@ -51,13 +52,15 @@ export default function AdminLoginPage() {
 
   // Google Sign-In state for Admin
   const [googleModalOpen, setGoogleModalOpen] = useState(false);
+  const [showUseAnother, setShowUseAnother] = useState(false);
+  const [customGoogleEmail, setCustomGoogleEmail] = useState('');
   const [googleAuthenticating, setGoogleAuthenticating] = useState(false);
   const [googleError, setGoogleError] = useState<string | null>(null);
 
   const executeGoogleAdminLogin = async (targetEmail: string) => {
     const cleanEmail = targetEmail.trim().toLowerCase();
     if (!cleanEmail.endsWith('@francisxavier.ac.in')) {
-      setGoogleError('Only @francisxavier.ac.in institutional accounts are permitted by FXEC policy.');
+      setGoogleError("Couldn't sign you in. That account isn't authorized for FXEC Admin Console. Only official accounts ending in @francisxavier.ac.in are permitted.");
       return;
     }
 
@@ -273,70 +276,166 @@ export default function AdminLoginPage() {
           </form>
         </div>
 
-        {/* Google Admin Chooser Modal */}
+        {/* Google Admin Chooser Modal (Matching Google Dark Mode Account Chooser) */}
         {googleModalOpen && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fade-in"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
             onClick={() => setGoogleModalOpen(false)}
           >
             <div
-              className="bg-white text-slate-900 rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 relative overflow-hidden animate-scale-up"
+              className="bg-[#131314] text-[#e3e3e3] rounded-3xl max-w-[440px] w-full p-6 sm:p-8 shadow-2xl border border-[#303030] relative overflow-hidden animate-scale-up font-sans"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-start justify-between pb-4 border-b border-slate-100">
-                <div className="flex items-center gap-3">
-                  <GoogleIcon className="w-6 h-6" />
-                  <div>
-                    <h3 className="text-base font-bold text-slate-900">Sign in with Google</h3>
-                    <p className="text-xs text-slate-500">to continue to FXEC Admin Console</p>
-                  </div>
+              {/* Google Header */}
+              <div className="flex items-center justify-between pb-5">
+                <div className="flex items-center gap-2">
+                  <GoogleIcon className="w-4 h-4" />
+                  <span className="text-xs font-medium text-[#e3e3e3]">Sign in with Google</span>
                 </div>
                 <button
                   type="button"
                   onClick={() => setGoogleModalOpen(false)}
-                  className="text-slate-400 hover:text-slate-700 p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                  className="text-[#9aa0a6] hover:text-white p-1 rounded-full hover:bg-[#282a2d] transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="my-4 p-2.5 rounded-xl bg-purple-50 border border-purple-200 text-purple-900 text-[11px] flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-purple-600 shrink-0" />
-                <span>Restricted to authorized Library Administrators & HOD.</span>
+              {/* Triangle Brand Icon & Title (matching screenshot) */}
+              <div className="mb-6">
+                <div className="w-7 h-7 bg-white rounded-md flex items-center justify-center mb-4 shadow-sm">
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-black"></div>
+                </div>
+                <h3 className="text-2xl font-normal text-[#e3e3e3] tracking-tight">
+                  Choose an account
+                </h3>
+                <p className="text-sm text-[#9aa0a6] mt-1">
+                  to continue to <span className="text-[#e3e3e3] font-medium">FXEC Admin Console</span>
+                </p>
               </div>
 
+              {/* Error Alert when non-@francisxavier.ac.in account is selected */}
               {googleError && (
-                <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-red-500 shrink-0" />
-                  <span>{googleError}</span>
+                <div className="mb-4 p-3 rounded-xl bg-[#3c1e1e] border border-[#f28b82]/40 text-[#f6aea9] text-xs flex items-start gap-2.5 animate-shake">
+                  <AlertTriangle className="w-4 h-4 text-[#f28b82] shrink-0 mt-0.5" />
+                  <div className="flex-1 text-[11px] leading-relaxed">
+                    <strong>Access Denied:</strong> {googleError}
+                  </div>
                 </div>
               )}
 
-              <div className="space-y-2 mb-4">
-                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                  Choose Administrator Account
-                </p>
-
+              {/* Accounts List */}
+              <div className="divide-y divide-[#282a2d] border-t border-b border-[#282a2d] mb-4">
+                {/* 1. Dr. S. K. Rajan (HOD/Admin - Institutional VALID) */}
                 <button
                   type="button"
                   disabled={googleAuthenticating}
                   onClick={() => executeGoogleAdminLogin('admin.ece@francisxavier.ac.in')}
-                  className="w-full p-3 rounded-2xl border border-slate-200 hover:border-purple-500 hover:bg-purple-50/50 transition-all text-left flex items-center gap-3 group"
+                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
                 >
-                  <img src="/default-avatar.jpg" alt="Admin" className="w-9 h-9 rounded-full object-cover border border-slate-200" />
-                  <div className="flex-1 min-w-0">
-                    <div className="text-xs font-bold text-slate-900 flex items-center gap-2">
-                      <span>Dr. S. K. Rajan</span>
-                      <span className="text-[9px] bg-purple-100 text-purple-700 font-semibold px-1.5 py-0.2 rounded">HOD / Admin</span>
-                    </div>
-                    <div className="text-[11px] text-slate-500 truncate font-mono">admin.ece@francisxavier.ac.in</div>
+                  <div className="w-9 h-9 rounded-full bg-[#a142f4] text-white flex items-center justify-center text-sm font-semibold shrink-0">
+                    R
                   </div>
-                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-purple-600 transition-colors" />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white truncate">
+                      Dr. S. K. Rajan (HOD)
+                    </div>
+                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
+                      admin.ece@francisxavier.ac.in
+                    </div>
+                  </div>
                 </button>
+
+                {/* 2. Sample Personal Account (@gmail.com - Rejects when clicked!) */}
+                <button
+                  type="button"
+                  disabled={googleAuthenticating}
+                  onClick={() => executeGoogleAdminLogin('rajan.personal@gmail.com')}
+                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg opacity-85 hover:opacity-100"
+                >
+                  <div className="w-9 h-9 rounded-full bg-[#5f6368] text-white flex items-center justify-center text-sm font-semibold shrink-0">
+                    P
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-[#e3e3e3] truncate flex items-center gap-2">
+                      <span>Personal Account</span>
+                      <span className="text-[10px] text-[#f28b82] border border-[#f28b82]/40 px-1 rounded">@gmail.com</span>
+                    </div>
+                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
+                      rajan.personal@gmail.com
+                    </div>
+                  </div>
+                </button>
+
+                {/* 3. Use another account */}
+                {!showUseAnother ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowUseAnother(true);
+                      setGoogleError(null);
+                    }}
+                    className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
+                  >
+                    <div className="w-9 h-9 rounded-full border border-[#5f6368] text-[#9aa0a6] flex items-center justify-center shrink-0">
+                      <User className="w-4 h-4" />
+                    </div>
+                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white">
+                      Use another account
+                    </div>
+                  </button>
+                ) : (
+                  <div className="py-3 px-1">
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        if (customGoogleEmail) {
+                          executeGoogleAdminLogin(customGoogleEmail);
+                        }
+                      }}
+                      className="space-y-3"
+                    >
+                      <div className="text-xs text-[#9aa0a6]">
+                        Enter administrator email (@francisxavier.ac.in):
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="email"
+                          required
+                          autoFocus
+                          value={customGoogleEmail}
+                          onChange={(e) => {
+                            setCustomGoogleEmail(e.target.value);
+                            setGoogleError(null);
+                          }}
+                          placeholder="admin.ece@francisxavier.ac.in"
+                          className="flex-1 px-3 py-2 rounded-xl bg-[#1f1f20] border border-[#3c4043] text-sm text-[#e3e3e3] placeholder:text-[#5f6368] focus:outline-none focus:border-[#8ab4f8] font-mono"
+                        />
+                        <button
+                          type="submit"
+                          disabled={googleAuthenticating || !customGoogleEmail}
+                          className="px-4 py-2 rounded-xl bg-[#8ab4f8] hover:bg-[#aecbfa] text-[#202124] font-medium text-xs transition-colors disabled:opacity-50"
+                        >
+                          {googleAuthenticating ? 'Checking...' : 'Next'}
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setShowUseAnother(false)}
+                        className="text-[11px] text-[#8ab4f8] hover:underline"
+                      >
+                        Cancel
+                      </button>
+                    </form>
+                  </div>
+                )}
               </div>
 
-              <div className="pt-3 border-t border-slate-100 text-[10px] text-slate-400 text-center">
-                To continue, Google securely verifies your institutional identity with FXEC ECE Library.
+              {/* Bottom Notice */}
+              <div className="pt-2 text-xs text-[#9aa0a6] leading-relaxed">
+                Before using this app, you can review FXEC Library's{' '}
+                <span className="text-[#8ab4f8] hover:underline cursor-pointer">Privacy Policy</span> and{' '}
+                <span className="text-[#8ab4f8] hover:underline cursor-pointer">Terms of Service</span>.
               </div>
             </div>
           </div>
