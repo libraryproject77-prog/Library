@@ -302,7 +302,7 @@ export default function StudentStaffLogin() {
             Francis Xavier Engineering College &bull; ECE Department
           </div>
           <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-            {mode === 'LOGIN' ? 'Student & Staff Portal Login' : 'Create New Scholar Account'}
+            {mode === 'LOGIN' ? 'Student & Staff Portal Login' : 'New Registration'}
           </h1>
           <p className="text-xs text-content-muted mt-1 max-w-md mx-auto">
             {mode === 'LOGIN'
@@ -313,42 +313,14 @@ export default function StudentStaffLogin() {
 
         {/* Card */}
         <div className="glass-panel-card p-6 md:p-8 rounded-3xl border border-stroke-glass shadow-glass">
-          {/* Dual-Mode Switcher: Sign In vs New Registration */}
-          <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-surface-low border border-stroke-subtle mb-6">
-            <button
-              type="button"
-              onClick={() => handleModeChange('LOGIN')}
-              className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
-                mode === 'LOGIN'
-                  ? 'bg-aura-purple text-white shadow-glow'
-                  : 'text-content-muted hover:text-white'
-              }`}
-            >
-              <LogIn className="w-3.5 h-3.5" />
-              <span>Sign In to Portal</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleModeChange('REGISTER')}
-              className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
-                mode === 'REGISTER'
-                  ? 'bg-aura-purple text-white shadow-glow'
-                  : 'text-content-muted hover:text-white'
-              }`}
-            >
-              <UserPlus className="w-3.5 h-3.5" />
-              <span>New Registration</span>
-            </button>
-          </div>
-
           {/* Role Switcher: Student vs Staff */}
-          <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-surface-low/60 border border-stroke-glass mb-6">
+          <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-surface-low border border-stroke-subtle mb-6">
             <button
               type="button"
               onClick={() => handleTabChange('STUDENT')}
               className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'STUDENT'
-                  ? 'bg-aura-violet text-white shadow-sm'
+                  ? 'bg-aura-purple text-white shadow-glow'
                   : 'text-content-muted hover:text-white'
               }`}
             >
@@ -360,7 +332,7 @@ export default function StudentStaffLogin() {
               onClick={() => handleTabChange('STAFF')}
               className={`py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'STAFF'
-                  ? 'bg-aura-violet text-white shadow-sm'
+                  ? 'bg-aura-purple text-white shadow-glow'
                   : 'text-content-muted hover:text-white'
               }`}
             >
@@ -440,10 +412,10 @@ export default function StudentStaffLogin() {
                 <button
                   type="button"
                   onClick={() => handleModeChange('REGISTER')}
-                  className="text-xs text-aura-neon hover:underline font-semibold flex items-center justify-center gap-1 mx-auto"
+                  className="text-xs text-aura-neon hover:underline font-semibold flex items-center justify-center gap-1.5 mx-auto"
                 >
                   <UserPlus className="w-3.5 h-3.5" />
-                  <span>Don&apos;t have an account? Click here for New Registration &rarr;</span>
+                  <span>Click here for New Registration &rarr;</span>
                 </button>
               </div>
             </form>
