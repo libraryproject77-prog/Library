@@ -137,20 +137,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-stroke-glass flex items-center gap-3">
+            <div className="pt-6 mt-6 border-t border-stroke-glass flex items-center">
               <Link
                 href="/admin/login"
-                className="flex-1 py-2.5 px-4 rounded-xl aura-gradient-btn text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow-sm"
+                className="w-full py-3 px-4 rounded-xl aura-gradient-btn text-xs font-bold text-center flex items-center justify-center gap-2 shadow-sm"
               >
-                <span>Admin Login Page</span>
+                <span>Chief Librarian & Admin Login</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-              <Link
-                href="/admin/dashboard"
-                className="py-2.5 px-4 rounded-xl bg-surface-low hover:bg-surface-high border border-stroke-glass text-xs font-semibold text-content-muted hover:text-white transition-colors"
-                title="Direct Dashboard Access"
-              >
-                Direct Dashboard
               </Link>
             </div>
           </div>
@@ -191,21 +184,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-stroke-glass flex items-center gap-3">
+            <div className="pt-6 mt-6 border-t border-stroke-glass flex items-center">
               <Link
                 href="/portal/login"
-                className="flex-1 py-2.5 px-4 rounded-xl aura-gradient-btn text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow-sm"
+                className="w-full py-3 px-4 rounded-xl aura-gradient-btn text-xs font-bold text-center flex items-center justify-center gap-2 shadow-sm"
               >
-                <span>Student / Staff Login</span>
+                <span>Student & Staff Login</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-              <Link
-                href="/portal/rack"
-                className="py-2.5 px-4 rounded-xl bg-surface-low hover:bg-surface-high border border-stroke-glass text-xs font-semibold text-aura-neon hover:text-white transition-colors flex items-center gap-1.5"
-                title="Direct Wooden Bookshelf View"
-              >
-                <Library className="w-3.5 h-3.5" />
-                <span>Open Rack</span>
               </Link>
             </div>
           </div>

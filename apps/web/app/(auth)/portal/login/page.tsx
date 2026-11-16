@@ -8,6 +8,7 @@ import {
   Briefcase,
   BookOpen,
   Mail,
+  Lock,
   ArrowRight,
   Sparkles,
   ShieldCheck,
@@ -23,87 +24,64 @@ import ThemeToggle from '@/components/ThemeToggle';
 export default function StudentStaffLoginPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'STUDENT' | 'STAFF'>('STUDENT');
-  const [email, setEmail] = useState('santhosh.21ec104@francisxavier.ac.in');
-  const [identifier, setIdentifier] = useState('21EC104');
+  const [email, setEmail] = useState('');
+  const [identifier, setIdentifier] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Quick Demo Profiles
-  const demoProfiles = [
-    {
-      label: 'Santhosh Kumar K',
-      role: 'STUDENT',
-      sub: 'Roll No: 21EC104 • 1 Book/Day Quota (15 Days Return)',
-      email: 'santhosh.21ec104@francisxavier.ac.in',
-      id: 'usr-student-1',
-      rollNumber: '21EC104',
-      avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
-    },
-    {
-      label: 'Karthik Raja S',
-      role: 'STUDENT',
-      sub: 'Roll No: 22EC045 • 1 Book/Day Quota (15 Days Return)',
-      email: 'karthik.22ec045@francisxavier.ac.in',
-      id: 'usr-student-2',
-      rollNumber: '22EC045',
-      avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80'
-    },
-    {
-      label: 'Prof. M. Revathi',
-      role: 'STAFF',
-      sub: 'Staff ID: FX-ECE-STF-014 • 3 Books/Day Quota (15 Days Return)',
-      email: 'revathi.ece@francisxavier.ac.in',
-      id: 'usr-staff-1',
-      staffId: 'FX-ECE-STF-014',
-      avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80'
-    }
-  ];
 
   const handleTabChange = (tab: 'STUDENT' | 'STAFF') => {
     setActiveTab(tab);
     setError(null);
-    if (tab === 'STUDENT') {
-      setEmail('santhosh.21ec104@francisxavier.ac.in');
-      setIdentifier('21EC104');
-    } else {
-      setEmail('revathi.ece@francisxavier.ac.in');
-      setIdentifier('FX-ECE-STF-014');
-    }
   };
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+
+    const cleanEmail = email.trim();
+    const cleanId = identifier.trim();
+    const cleanPass = password.trim();
+
+    if (!cleanId) {
+      setError(activeTab === 'STUDENT' ? 'Please enter your Student Roll Number.' : 'Please enter your Faculty Staff ID.');
+      return;
+    }
+
+    if (!cleanEmail) {
+      setError('Please enter your official college email address.');
+      return;
+    }
+
+    if (!cleanEmail.endsWith('@francisxavier.ac.in')) {
+      setError('Access denied. Please use your official @francisxavier.ac.in college email.');
+      return;
+    }
+
+    if (!cleanPass) {
+      setError('Please enter your portal password.');
+      return;
+    }
+
     setLoading(true);
 
     try {
-      if (!email.endsWith('@francisxavier.ac.in')) {
-        throw new Error('Access denied. Please use your official @francisxavier.ac.in college email.');
-      }
-
-      await api.login(email, activeTab);
+      const res = await api.login(cleanEmail, activeTab);
+      const user = res.user || {
+        id: `usr-${cleanId.toLowerCase()}`,
+        name: cleanEmail.split('@')[0].replace(/[._]/g, ' ').toUpperCase(),
+        email: cleanEmail,
+        role: activeTab,
+        department: 'ECE',
+        rollNumber: activeTab === 'STUDENT' ? cleanId.toUpperCase() : undefined,
+        staffId: activeTab === 'STAFF' ? cleanId.toUpperCase() : undefined
+      };
+      localStorage.setItem('fxec_user', JSON.stringify(user));
+      localStorage.setItem('fxec_token', activeTab === 'STAFF' ? 'staff-token' : 'student-token');
       // Route straight to Student/Staff portal dashboard
       router.push('/portal/dashboard');
     } catch (err: any) {
       setError(err.message || 'Login failed. Please check credentials.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleInstantDemoLogin = async (profile: any) => {
-    setLoading(true);
-    try {
-      localStorage.setItem('fxec_user', JSON.stringify({
-        ...profile,
-        name: profile.label,
-        department: 'ECE'
-      }));
-      localStorage.setItem('fxec_token', profile.role === 'STAFF' ? 'staff-token' : 'student-token');
-      await api.login(profile.email, profile.role);
-      router.push('/portal/dashboard');
-    } catch (err: any) {
-      setError(err.message || 'Login failed');
     } finally {
       setLoading(false);
     }
@@ -154,7 +132,7 @@ export default function StudentStaffLoginPage() {
             Student & Staff Portal Login
           </h1>
           <p className="text-xs text-content-muted mt-1 max-w-md mx-auto">
-            Log in to view 580+ books on the virtual wooden rack, reserve physical copies, and view your borrowing due dates.
+            Please enter your official institutional credentials to access textbook catalogue and virtual racks.
           </p>
         </div>
 
@@ -206,7 +184,7 @@ export default function StudentStaffLoginPage() {
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
                 placeholder={activeTab === 'STUDENT' ? 'e.g. 21EC104' : 'e.g. FX-ECE-STF-014'}
-                className="w-full px-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-white placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono uppercase"
+                className="w-full px-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono uppercase"
                 required
               />
             </div>
@@ -222,7 +200,24 @@ export default function StudentStaffLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="scholar@francisxavier.ac.in"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-white placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-content-muted mb-1.5">
+                Portal Password
+              </label>
+              <div className="relative">
+                <Lock className="w-4 h-4 text-content-subtle absolute left-3.5 top-3.5" />
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••••••"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
                   required
                 />
               </div>
@@ -231,7 +226,7 @@ export default function StudentStaffLoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full aura-gradient-btn py-3 rounded-xl font-bold text-xs text-white flex items-center justify-center gap-2 shadow-glow hover:scale-[1.01] transition-transform"
+              className="w-full aura-gradient-btn py-3 rounded-xl font-bold text-xs text-white flex items-center justify-center gap-2 shadow-glow hover:scale-[1.01] transition-transform mt-2"
             >
               <BookOpen className="w-4 h-4" />
               {loading
@@ -239,45 +234,6 @@ export default function StudentStaffLoginPage() {
                 : `Enter Portal as ${activeTab === 'STUDENT' ? 'Student' : 'Staff'}`}
             </button>
           </form>
-
-          {/* Divider */}
-          <div className="relative my-6 text-center">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-stroke-subtle"></div>
-            </div>
-            <span className="relative px-3 bg-surface-card text-[10px] uppercase tracking-wider text-content-subtle font-semibold">
-              Or 1-Click Instant Demo Login
-            </span>
-          </div>
-
-          {/* 1-Click Quick Demo Switchers */}
-          <div className="space-y-2">
-            {demoProfiles.map((p) => (
-              <button
-                key={p.id}
-                type="button"
-                onClick={() => handleInstantDemoLogin(p)}
-                disabled={loading}
-                className="w-full p-3 rounded-xl bg-surface-low hover:bg-surface-high border border-stroke-glass transition-all text-left flex items-center justify-between group"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 rounded-lg overflow-hidden border border-stroke-glass shrink-0">
-                    <img src={p.avatarUrl} alt={p.label} className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-white group-hover:text-aura-neon transition-colors flex items-center gap-1.5">
-                      <span>{p.label}</span>
-                      <span className="text-[9px] px-1.5 py-0.2 rounded bg-aura-purple/20 text-aura-neon">
-                        {p.role}
-                      </span>
-                    </div>
-                    <div className="text-[10px] text-content-subtle font-mono">{p.sub}</div>
-                  </div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-content-subtle group-hover:text-white group-hover:translate-x-1 transition-all" />
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Feature Highlights beneath login */}

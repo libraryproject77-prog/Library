@@ -20,22 +20,37 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('admin.ece@francisxavier.ac.in');
-  const [password, setPassword] = useState('••••••••••••');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const handleAdminLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+
+    const cleanEmail = email.trim();
+    const cleanPassword = password.trim();
+
+    if (!cleanEmail) {
+      setError('Please enter your administrator email.');
+      return;
+    }
+
+    if (!cleanEmail.endsWith('@francisxavier.ac.in')) {
+      setError('Access denied. Administrator accounts must use @francisxavier.ac.in domain.');
+      return;
+    }
+
+    if (!cleanPassword) {
+      setError('Please enter your administrator password.');
+      return;
+    }
+
     setLoading(true);
 
     try {
-      if (!email.endsWith('@francisxavier.ac.in')) {
-        throw new Error('Access denied. Administrator accounts must use @francisxavier.ac.in domain.');
-      }
-
-      await api.login(email, 'ADMIN');
+      await api.login(cleanEmail, 'ADMIN');
       router.push('/admin/dashboard');
     } catch (err: any) {
       setError(err.message || 'Authentication failed. Please verify credentials.');
@@ -118,7 +133,7 @@ export default function AdminLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="admin.ece@francisxavier.ac.in"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-white placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
                   required
                 />
               </div>
@@ -138,7 +153,7 @@ export default function AdminLoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-white placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors"
                   required
                 />
               </div>
