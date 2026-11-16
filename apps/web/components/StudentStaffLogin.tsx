@@ -24,7 +24,6 @@ export default function StudentStaffLogin() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'STUDENT' | 'STAFF'>('STUDENT');
   const [email, setEmail] = useState('');
-  const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -39,13 +38,7 @@ export default function StudentStaffLogin() {
     setError(null);
 
     const cleanEmail = email.trim();
-    const cleanId = identifier.trim();
     const cleanPass = password.trim();
-
-    if (!cleanId) {
-      setError(activeTab === 'STUDENT' ? 'Please enter your Student Roll Number.' : 'Please enter your Faculty Staff ID.');
-      return;
-    }
 
     if (!cleanEmail) {
       setError('Please enter your official college email address.');
@@ -67,13 +60,11 @@ export default function StudentStaffLogin() {
     try {
       const res = await api.login(cleanEmail, activeTab);
       const user = res.user || {
-        id: `usr-${cleanId.toLowerCase()}`,
+        id: `usr-${cleanEmail.split('@')[0]}`,
         name: cleanEmail.split('@')[0].replace(/[._]/g, ' ').toUpperCase(),
         email: cleanEmail,
         role: activeTab,
         department: 'ECE',
-        rollNumber: activeTab === 'STUDENT' ? cleanId.toUpperCase() : undefined,
-        staffId: activeTab === 'STAFF' ? cleanId.toUpperCase() : undefined
       };
       localStorage.setItem('fxec_user', JSON.stringify(user));
       localStorage.setItem('fxec_token', activeTab === 'STAFF' ? 'staff-token' : 'student-token');
@@ -174,20 +165,6 @@ export default function StudentStaffLogin() {
 
           {/* Form */}
           <form onSubmit={handleLoginSubmit} className="space-y-4">
-            <div>
-              <label className="block text-xs font-semibold text-content-muted mb-1.5">
-                {activeTab === 'STUDENT' ? 'Student Roll Number' : 'Faculty Staff ID'}
-              </label>
-              <input
-                type="text"
-                value={identifier}
-                onChange={(e) => setIdentifier(e.target.value)}
-                placeholder={activeTab === 'STUDENT' ? 'e.g. 21EC104' : 'e.g. FX-ECE-STF-014'}
-                className="w-full px-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono uppercase"
-                required
-              />
-            </div>
-
             <div>
               <label className="block text-xs font-semibold text-content-muted mb-1.5">
                 Institutional College Email (@francisxavier.ac.in)
