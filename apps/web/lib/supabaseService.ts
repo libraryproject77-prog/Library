@@ -1,4 +1,5 @@
 import { createClient, isSupabaseConfigured } from '@/utils/supabase/client';
+import defaultCatalog from '@/data/dept_library_dataset.json';
 
 export interface SupabaseUserProfile {
   id: string;
@@ -312,81 +313,109 @@ class SupabaseService {
 
   /**
    * Fetch all books with copies and categories from Supabase
+   * Seamlessly falls back to the complete 581 department library books if Supabase is initializing.
    */
   public async getBooks(params?: { search?: string; categoryId?: string; availability?: string }): Promise<any[]> {
     const supabase = this.getClient();
-    if (!supabase) return [];
 
-    try {
-      let query = supabase
-        .from('books')
-        .select('*, copies:book_copies(*), category:categories(*)')
-        .order('createdAt', { ascending: false });
+    if (supabase) {
+      try {
+        let query = supabase
+          .from('books')
+          .select('*, copies:book_copies(*), category:categories(*)')
+          .order('createdAt', { ascending: false });
 
-      if (params?.categoryId && params.categoryId !== 'all') {
-        query = query.eq('categoryId', params.categoryId);
+        if (params?.categoryId && params.categoryId !== 'all') {
+          query = query.eq('categoryId', params.categoryId);
+        }
+        if (params?.search) {
+          query = query.or(`title.ilike.%${params.search}%,author.ilike.%${params.search}%,isbn.ilike.%${params.search}%`);
+        }
+
+        const { data, error } = await query;
+        if (!error && data && data.length > 0) {
+          // Compute copy availability stats for frontend
+          return data.map((b: any) => {
+            const copies = b.copies || [];
+            const availableCopies = copies.filter((c: any) => c.status === 'AVAILABLE').length;
+            const reservedCopies = copies.filter((c: any) => c.status === 'RESERVED').length;
+            const borrowedCopies = copies.filter((c: any) => c.status === 'BORROWED').length;
+
+            return {
+              ...b,
+              totalCopies: copies.length,
+              availableCopies,
+              reservedCopies,
+              borrowedCopies,
+              copies,
+            };
+          });
+        }
+      } catch (err) {
+        console.warn('[Supabase getBooks failed]:', err);
       }
-      if (params?.search) {
-        query = query.or(`title.ilike.%${params.search}%,author.ilike.%${params.search}%,isbn.ilike.%${params.search}%`);
-      }
-
-      const { data, error } = await query;
-      if (error) {
-        console.warn('[Supabase getBooks error]:', error.message);
-        return [];
-      }
-
-      // Compute copy availability stats for frontend
-      return (data || []).map((b: any) => {
-        const copies = b.copies || [];
-        const availableCopies = copies.filter((c: any) => c.status === 'AVAILABLE').length;
-        const reservedCopies = copies.filter((c: any) => c.status === 'RESERVED').length;
-        const borrowedCopies = copies.filter((c: any) => c.status === 'BORROWED').length;
-
-        return {
-          ...b,
-          totalCopies: copies.length,
-          availableCopies,
-          reservedCopies,
-          borrowedCopies,
-          copies,
-        };
-      });
-    } catch (err) {
-      console.warn('[Supabase getBooks failed]:', err);
-      return [];
     }
+
+    // Comprehensive Fallback: 581 Official ECE Department Library volumes
+    let datasetBooks = (defaultCatalog.books as any[]) || [];
+
+    if (params?.categoryId && params.categoryId !== 'all') {
+      datasetBooks = datasetBooks.filter(b => b.categoryId === params.categoryId);
+    }
+    if (params?.search && params.search.trim() !== '') {
+      const s = params.search.toLowerCase().trim();
+      datasetBooks = datasetBooks.filter(b =>
+        b.title?.toLowerCase().includes(s) ||
+        b.author?.toLowerCase().includes(s) ||
+        b.isbn?.toLowerCase().includes(s) ||
+        b.rackLocation?.toLowerCase().includes(s) ||
+        b.copies?.some((c: any) => c.copyNumber?.toLowerCase().includes(s))
+      );
+    }
+    if (params?.availability && params.availability !== 'all') {
+      if (params.availability === 'available') {
+        datasetBooks = datasetBooks.filter(b => b.availableCopies > 0);
+      } else if (params.availability === 'low') {
+        datasetBooks = datasetBooks.filter(b => b.availableCopies > 0 && b.availableCopies <= 2);
+      } else if (params.availability === 'out') {
+        datasetBooks = datasetBooks.filter(b => b.availableCopies === 0);
+      }
+    }
+
+    return datasetBooks;
   }
 
   public async getBookById(id: string): Promise<any | null> {
     const supabase = this.getClient();
-    if (!supabase) return null;
 
-    try {
-      const { data, error } = await supabase
-        .from('books')
-        .select('*, copies:book_copies(*), category:categories(*)')
-        .eq('id', id)
-        .maybeSingle();
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('books')
+          .select('*, copies:book_copies(*), category:categories(*)')
+          .eq('id', id)
+          .maybeSingle();
 
-      if (error || !data) return null;
+        if (!error && data) {
+          const copies = data.copies || [];
+          const availableCopies = copies.filter((c: any) => c.status === 'AVAILABLE').length;
+          const reservedCopies = copies.filter((c: any) => c.status === 'RESERVED').length;
+          const borrowedCopies = copies.filter((c: any) => c.status === 'BORROWED').length;
 
-      const copies = data.copies || [];
-      const availableCopies = copies.filter((c: any) => c.status === 'AVAILABLE').length;
-      const reservedCopies = copies.filter((c: any) => c.status === 'RESERVED').length;
-      const borrowedCopies = copies.filter((c: any) => c.status === 'BORROWED').length;
-
-      return {
-        ...data,
-        totalCopies: copies.length,
-        availableCopies,
-        reservedCopies,
-        borrowedCopies,
-        copies,
-      };
-    } catch (err) {
-      return null;
+          return {
+            ...data,
+            totalCopies: copies.length,
+            availableCopies,
+            reservedCopies,
+            borrowedCopies,
+            copies,
+          };
+        }
+      } catch (err) {}
     }
+
+    const found = (defaultCatalog.books as any[]).find(b => b.id === id);
+    return found || null;
   }
 
   /**
@@ -639,19 +668,18 @@ class SupabaseService {
 
   public async getCategories(): Promise<any[]> {
     const supabase = this.getClient();
-    if (!supabase) return [];
+    if (supabase) {
+      try {
+        const { data, error } = await supabase
+          .from('categories')
+          .select('*')
+          .order('name', { ascending: true });
 
-    try {
-      const { data, error } = await supabase
-        .from('categories')
-        .select('*')
-        .order('name', { ascending: true });
-
-      if (error || !data) return [];
-      return data;
-    } catch (err) {
-      return [];
+        if (!error && data && data.length > 0) return data;
+      } catch (err) {}
     }
+
+    return (defaultCatalog.categories as any[]) || [];
   }
 
   // -------------------------------------------------------------
