@@ -391,7 +391,7 @@ export default function AdminLoginPage() {
                   <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-white"></div>
                 </div>
                 <h3 className="text-2xl font-normal text-slate-900 tracking-tight">
-                  Choose an account
+                  {deviceAccounts.length > 0 && !showUseAnother ? 'Choose an account' : 'Sign in'}
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
                   to continue to <span className="text-slate-800 font-semibold">FXEC Admin Console</span>
@@ -468,6 +468,9 @@ export default function AdminLoginPage() {
                       </label>
                       <input
                         type="email"
+                        id="google-admin-email"
+                        name="email"
+                        autoComplete="email username"
                         required
                         autoFocus
                         value={customGoogleEmail}

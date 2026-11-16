@@ -146,17 +146,7 @@ export default function StudentStaffLogin() {
         } catch (e) {}
       }
 
-      // 3. Strictly on-device account: default to the verified on-device institutional account
-      if (validAccounts.length === 0) {
-        validAccounts = [
-          {
-            email: 'subramaniyam.ug.25.ec@francisxavier.ac.in',
-            name: 'SANTHOSH',
-            role: 'STUDENT',
-          },
-        ];
-      }
-
+      // Only genuine on-device accounts are shown (no hardcoded fallbacks for all devices)
       setDeviceAccounts(validAccounts);
       localStorage.setItem('fxec_device_google_accounts', JSON.stringify(validAccounts));
     } catch (e) {}
@@ -893,7 +883,7 @@ export default function StudentStaffLogin() {
                   <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-white"></div>
                 </div>
                 <h3 className="text-2xl font-normal text-slate-900 tracking-tight">
-                  Choose an account
+                  {deviceAccounts.length > 0 && !showUseAnother ? 'Choose an account' : 'Sign in'}
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
                   to continue to <span className="text-slate-800 font-semibold">FXEC Library</span>
@@ -970,6 +960,9 @@ export default function StudentStaffLogin() {
                       </label>
                       <input
                         type="email"
+                        id="google-device-email"
+                        name="email"
+                        autoComplete="email username"
                         required
                         autoFocus
                         value={customGoogleEmail}
