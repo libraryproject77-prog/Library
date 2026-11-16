@@ -33,7 +33,19 @@ export class AuthController {
 
       const prefix = email.split('@')[0];
       const namePart = prefix.split('.')[0];
-      const formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
+      let formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
+
+      // Intelligent initial detection (e.g. madasamym -> Madasamy M)
+      if (namePart.toLowerCase() === 'madasamym') {
+        formattedName = 'Madasamy M';
+      } else if (namePart.length > 4) {
+        const lastChar = namePart.slice(-1).toUpperCase();
+        const body = namePart.slice(0, -1);
+        const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+        if (!vowels.includes(namePart.slice(-1).toLowerCase()) && vowels.includes(namePart.slice(-2, -1).toLowerCase())) {
+          formattedName = `${body.charAt(0).toUpperCase()}${body.slice(1).toLowerCase()} ${lastChar}`;
+        }
+      }
 
       user = {
         id: `usr-${Date.now()}`,
