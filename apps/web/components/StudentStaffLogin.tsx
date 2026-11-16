@@ -406,11 +406,6 @@ export default function StudentStaffLogin() {
                     required
                   />
                 </div>
-                <span className="text-[10px] text-content-subtle mt-1.5 block">
-                  {activeTab === 'STUDENT'
-                    ? 'Format: name.ug.25.ec@francisxavier.ac.in'
-                    : 'Format: name@francisxavier.ac.in'}
-                </span>
               </div>
 
               <div>
@@ -526,11 +521,6 @@ export default function StudentStaffLogin() {
                     required
                   />
                 </div>
-                <span className="text-[10px] text-content-subtle mt-1.5 block">
-                  {activeTab === 'STUDENT'
-                    ? 'Format: name.ug.25.ec@francisxavier.ac.in'
-                    : 'Format: name@francisxavier.ac.in'}
-                </span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
