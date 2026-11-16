@@ -103,7 +103,7 @@ export default function StudentStaffLogin() {
               FXEC <span className="text-aura-neon">ECE LIBRARY</span>
             </div>
             <div className="text-[10px] text-content-subtle tracking-wide uppercase">
-              Scholar &amp; Faculty Access Portal
+              Student &amp; Staff Access Portal
             </div>
           </div>
         </Link>
@@ -149,7 +149,7 @@ export default function StudentStaffLogin() {
               }`}
             >
               <GraduationCap className="w-4 h-4" />
-              <span>Student Scholar</span>
+              <span>Student</span>
             </button>
             <button
               type="button"
@@ -198,7 +198,7 @@ export default function StudentStaffLogin() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="scholar@francisxavier.ac.in"
+                  placeholder="name@francisxavier.ac.in"
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
                   required
                 />
