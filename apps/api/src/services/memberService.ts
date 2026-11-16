@@ -1,5 +1,16 @@
 import { dbStore } from './store';
 import { UserProfile, UserRole } from '@library/shared';
+import { supabase } from '../config/supabase';
+
+const safeSync = (fn: () => PromiseLike<any>) => {
+  try {
+    Promise.resolve(fn()).catch((e) => {
+      console.warn('[Supabase API Sync]:', e?.message || e);
+    });
+  } catch (err) {
+    console.warn('[Supabase API Sync exception]:', err);
+  }
+};
 
 export class MemberService {
   public getAllMembers(role?: UserRole, search?: string) {
@@ -58,6 +69,10 @@ export class MemberService {
 
     member.status = member.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
     member.updatedAt = new Date().toISOString();
+
+    safeSync(() =>
+      supabase.from('profiles').update({ status: member.status }).eq('id', id)
+    );
 
     dbStore.activityLogs.unshift({
       id: `log-${Date.now()}`,

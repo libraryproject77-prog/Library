@@ -71,8 +71,13 @@ export default function StudentCatalogPage() {
       if (res?.books) {
         setBooks(res.books);
       }
-      if (res?.categories) {
+      if (res?.categories && res.categories.length > 0) {
         setCategories(res.categories);
+      } else {
+        const catRes = await api.getCategories();
+        if (catRes?.categories) {
+          setCategories(catRes.categories);
+        }
       }
     } catch (e) {
       console.error(e);

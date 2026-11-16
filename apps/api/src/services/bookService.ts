@@ -1,5 +1,16 @@
 import { dbStore } from './store';
 import { Book, BookCopy } from '@library/shared';
+import { supabase } from '../config/supabase';
+
+const safeSync = (fn: () => PromiseLike<any>) => {
+  try {
+    Promise.resolve(fn()).catch((e) => {
+      console.warn('[Supabase API Sync]:', e?.message || e);
+    });
+  } catch (err) {
+    console.warn('[Supabase API Sync exception]:', err);
+  }
+};
 
 export class BookService {
   public getAllBooks(query?: { search?: string; categoryId?: string; availability?: string }) {
@@ -108,6 +119,40 @@ export class BookService {
 
     dbStore.books.unshift(newBook);
 
+    // Sync to Supabase
+    safeSync(() =>
+      supabase.from('books').insert({
+        id: newBook.id,
+        isbn: newBook.isbn,
+        title: newBook.title,
+        author: newBook.author,
+        publisher: newBook.publisher,
+        edition: newBook.edition,
+        coverImage: newBook.coverImage,
+        description: newBook.description,
+        rackLocation: newBook.rackLocation,
+        categoryId: newBook.categoryId,
+        createdAt: newBook.createdAt,
+        updatedAt: newBook.updatedAt,
+      })
+    );
+
+    if (copies.length > 0) {
+      safeSync(() =>
+        supabase.from('book_copies').insert(
+          copies.map(c => ({
+            id: c.id,
+            bookId: c.bookId,
+            copyNumber: c.copyNumber,
+            status: c.status,
+            conditionNotes: c.conditionNotes,
+            createdAt: c.createdAt,
+            updatedAt: c.updatedAt,
+          }))
+        )
+      );
+    }
+
     // Activity log
     dbStore.activityLogs.unshift({
       id: `log-${Date.now()}`,
@@ -140,6 +185,21 @@ export class BookService {
 
     dbStore.books[bookIndex] = updated;
 
+    // Sync update to Supabase
+    safeSync(() =>
+      supabase.from('books').update({
+        title: updated.title,
+        author: updated.author,
+        publisher: updated.publisher,
+        edition: updated.edition,
+        coverImage: updated.coverImage,
+        description: updated.description,
+        rackLocation: updated.rackLocation,
+        categoryId: updated.categoryId,
+        updatedAt: updated.updatedAt,
+      }).eq('id', id)
+    );
+
     dbStore.activityLogs.unshift({
       id: `log-${Date.now()}`,
       userId: adminId,
@@ -168,6 +228,12 @@ export class BookService {
     // Remove copies
     dbStore.copies = dbStore.copies.filter(c => c.bookId !== id);
     dbStore.books.splice(bookIndex, 1);
+
+    // Sync delete to Supabase
+    safeSync(async () => {
+      await supabase.from('book_copies').delete().eq('bookId', id);
+      return supabase.from('books').delete().eq('id', id);
+    });
 
     dbStore.activityLogs.unshift({
       id: `log-${Date.now()}`,
@@ -201,6 +267,19 @@ export class BookService {
     dbStore.copies.push(newCopy);
     dbStore.syncBookCounters(bookId);
 
+    // Sync copy to Supabase
+    safeSync(() =>
+      supabase.from('book_copies').insert({
+        id: newCopy.id,
+        bookId: newCopy.bookId,
+        copyNumber: newCopy.copyNumber,
+        status: newCopy.status,
+        conditionNotes: newCopy.conditionNotes,
+        createdAt: newCopy.createdAt,
+        updatedAt: newCopy.updatedAt,
+      })
+    );
+
     return newCopy;
   }
 
@@ -213,6 +292,15 @@ export class BookService {
     copy.updatedAt = new Date().toISOString();
 
     dbStore.syncBookCounters(copy.bookId);
+
+    // Sync copy status to Supabase
+    safeSync(() =>
+      supabase.from('book_copies').update({
+        status: copy.status,
+        conditionNotes: copy.conditionNotes,
+        updatedAt: copy.updatedAt,
+      }).eq('id', copyId)
+    );
 
     return copy;
   }

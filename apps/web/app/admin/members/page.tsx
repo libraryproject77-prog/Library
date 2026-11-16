@@ -12,7 +12,8 @@ import {
   History,
   BookOpen,
   Calendar,
-  X
+  X,
+  Trash2
 } from 'lucide-react';
 import { api } from '@/lib/api';
 
@@ -58,6 +59,17 @@ export default function AdminMembersPage() {
       loadMembers();
     } catch (err: any) {
       alert(err.message || 'Error updating member status');
+    }
+  };
+
+  const handleDeleteMember = async (id: string, name: string) => {
+    if (confirm(`Are you sure you want to remove member "${name}"? This will delete the account from the directory and Supabase.`)) {
+      try {
+        await api.deleteMember(id);
+        loadMembers();
+      } catch (err: any) {
+        alert(err.message || 'Error removing member');
+      }
     }
   };
 
@@ -185,16 +197,25 @@ export default function AdminMembersPage() {
                   </button>
 
                   {m.role !== 'ADMIN' && (
-                    <button
-                      onClick={() => handleToggleStatus(m.id)}
-                      className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
-                        isActive
-                          ? 'text-aura-error hover:bg-aura-errorBg/20'
-                          : 'text-emerald-400 hover:bg-emerald-500/20'
-                      }`}
-                    >
-                      {isActive ? 'Deactivate' : 'Activate'}
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleToggleStatus(m.id)}
+                        className={`px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
+                          isActive
+                            ? 'text-aura-error hover:bg-aura-errorBg/20'
+                            : 'text-emerald-400 hover:bg-emerald-500/20'
+                        }`}
+                      >
+                        {isActive ? 'Deactivate' : 'Activate'}
+                      </button>
+                      <button
+                        onClick={() => handleDeleteMember(m.id, m.name)}
+                        className="p-1 rounded-lg hover:bg-rose-500/20 text-rose-400 transition-colors"
+                        title="Remove Member"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>

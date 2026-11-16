@@ -75,10 +75,18 @@ export default function AdminBooksPage() {
       if (res?.books) {
         setBooks(res.books);
       }
-      if (res?.categories) {
+      if (res?.categories && res.categories.length > 0) {
         setCategories(res.categories);
         if (!formData.categoryId && res.categories.length > 0) {
           setFormData(prev => ({ ...prev, categoryId: res.categories[0].id }));
+        }
+      } else {
+        const catRes = await api.getCategories();
+        if (catRes?.categories && catRes.categories.length > 0) {
+          setCategories(catRes.categories);
+          if (!formData.categoryId) {
+            setFormData(prev => ({ ...prev, categoryId: catRes.categories[0].id }));
+          }
         }
       }
     } catch (e) {
@@ -142,6 +150,19 @@ export default function AdminBooksPage() {
       loadBooks();
     } catch (err: any) {
       alert(err.message || 'Failed to update copy status');
+    }
+  };
+
+  const handleDeleteCopy = async (copyId: string) => {
+    if (confirm('Are you sure you want to remove this copy?')) {
+      try {
+        await api.deleteCopy(copyId);
+        const updatedBook = await api.getBookById(selectedBookForCopies.id);
+        setSelectedBookForCopies(updatedBook?.book || null);
+        loadBooks();
+      } catch (err: any) {
+        alert(err.message || 'Failed to delete copy');
+      }
     }
   };
 
@@ -580,7 +601,7 @@ export default function AdminBooksPage() {
                         )}
                       </div>
 
-                      {/* Quick Status Modifier */}
+                      {/* Quick Status Modifier & Delete Copy */}
                       <div className="flex items-center gap-2">
                         <select
                           value={copy.status}
@@ -593,6 +614,14 @@ export default function AdminBooksPage() {
                           <option value="DAMAGED">DAMAGED</option>
                           <option value="LOST">LOST</option>
                         </select>
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteCopy(copy.id)}
+                          className="p-1.5 rounded-lg hover:bg-rose-500/20 text-rose-400 border border-transparent hover:border-rose-500/30 transition-colors"
+                          title="Remove Copy"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
                       </div>
                     </div>
                   );
