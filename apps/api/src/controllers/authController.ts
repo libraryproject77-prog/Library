@@ -26,11 +26,19 @@ export class AuthController {
 
     if (!user) {
       // Auto-register college user if valid domain
-      const newRole = role || (email.toLowerCase().includes('admin') ? 'ADMIN' : (email.toLowerCase().includes('stf') ? 'STAFF' : 'STUDENT'));
+      const emailLower = email.toLowerCase();
+      const isStudent = role === 'STUDENT' || emailLower.includes('.ug.') || emailLower.includes('.pg.');
+      const isStaff = role === 'STAFF' || (!isStudent && !emailLower.includes('admin'));
+      const newRole = emailLower.includes('admin') ? 'ADMIN' : (isStaff ? 'STAFF' : 'STUDENT');
+
+      const prefix = email.split('@')[0];
+      const namePart = prefix.split('.')[0];
+      const formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
+
       user = {
         id: `usr-${Date.now()}`,
-        email: email.toLowerCase(),
-        name: email.split('@')[0].replace(/[._]/g, ' ').toUpperCase(),
+        email: emailLower,
+        name: formattedName || prefix.toUpperCase(),
         role: newRole,
         department: 'ECE',
         status: 'ACTIVE',

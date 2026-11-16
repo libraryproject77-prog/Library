@@ -58,6 +58,30 @@ class LibraryStore {
         updatedAt: new Date().toISOString()
       },
       {
+        id: 'usr-staff-revathi',
+        email: 'revathi@francisxavier.ac.in',
+        name: 'Prof. M. Revathi (Associate Professor)',
+        role: 'STAFF',
+        department: 'ECE',
+        staffId: 'FX-ECE-STF-014',
+        avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+        status: 'ACTIVE',
+        createdAt: new Date('2024-02-15').toISOString(),
+        updatedAt: new Date().toISOString()
+      },
+      {
+        id: 'usr-student-madasamy',
+        email: 'madasamym.ug.25.ec@francisxavier.ac.in',
+        name: 'Madasamy M',
+        role: 'STUDENT',
+        department: 'ECE',
+        rollNumber: '25EC001',
+        avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        status: 'ACTIVE',
+        createdAt: new Date('2024-03-01').toISOString(),
+        updatedAt: new Date().toISOString()
+      },
+      {
         id: 'usr-student-1',
         email: 'santhosh.21ec104@francisxavier.ac.in',
         name: 'Santhosh Kumar K',

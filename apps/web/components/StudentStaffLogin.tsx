@@ -57,11 +57,15 @@ export default function StudentStaffLogin() {
 
     setLoading(true);
 
+    const prefix = cleanEmail.split('@')[0];
+    const namePart = prefix.split('.')[0];
+    const displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
+
     try {
       const res = await api.login(cleanEmail, activeTab);
       const user = res.user || {
-        id: `usr-${cleanEmail.split('@')[0]}`,
-        name: cleanEmail.split('@')[0].replace(/[._]/g, ' ').toUpperCase(),
+        id: `usr-${prefix}`,
+        name: displayName,
         email: cleanEmail,
         role: activeTab,
         department: 'ECE',
@@ -175,11 +179,20 @@ export default function StudentStaffLogin() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="name@francisxavier.ac.in"
+                  placeholder={
+                    activeTab === 'STUDENT'
+                      ? 'madasamym.ug.25.ec@francisxavier.ac.in'
+                      : 'revathi@francisxavier.ac.in'
+                  }
                   className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-mono"
                   required
                 />
               </div>
+              <span className="text-[10px] text-content-subtle mt-1.5 block">
+                {activeTab === 'STUDENT'
+                  ? 'Format: name.ug.year.dept@francisxavier.ac.in (e.g. madasamym.ug.25.ec@francisxavier.ac.in)'
+                  : 'Format: name@francisxavier.ac.in (e.g. revathi@francisxavier.ac.in)'}
+              </span>
             </div>
 
             <div>
