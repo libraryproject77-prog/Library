@@ -136,13 +136,9 @@ export default function StudentProfilePage() {
 
           {/* Card Body */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pt-6 relative z-10">
-            {/* User Photo */}
-            <div className="w-24 h-28 rounded-2xl overflow-hidden border-2 border-aura-neon/50 shadow-lg bg-surface-high shrink-0">
-              <img
-                src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
-                alt={currentUser.name}
-                className="w-full h-full object-cover"
-              />
+            {/* Institutional User Badge */}
+            <div className="w-24 h-24 rounded-2xl border-2 border-purple-200 bg-purple-50 shadow-md flex items-center justify-center text-purple-700 shrink-0">
+              <User className="w-12 h-12" />
             </div>
 
             {/* Info Columns */}

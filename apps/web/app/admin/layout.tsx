@@ -21,7 +21,8 @@ import {
   CheckCircle,
   Clock,
   AlertTriangle,
-  ArrowRight
+  ArrowRight,
+  User
 } from 'lucide-react';
 import { api } from '@/lib/api';
 
@@ -283,12 +284,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
           {/* User Profile Pill */}
           <div className="flex items-center space-x-2.5 pl-2 border-l border-stroke-subtle">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-aura-purple to-aura-violet p-0.5">
-              <img
-                src="/default-avatar.jpg"
-                alt="Admin Avatar"
-                className="w-full h-full rounded-full object-cover"
-              />
+            <div className="w-8 h-8 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-700 shadow-sm shrink-0">
+              <User className="w-4 h-4" />
             </div>
             <div className="hidden xl:block text-left">
               <p className="text-xs font-semibold text-white leading-tight">Dr. S. K. Rajan</p>

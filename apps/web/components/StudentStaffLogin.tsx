@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -75,6 +75,29 @@ export default function StudentStaffLogin() {
   const [customGoogleEmail, setCustomGoogleEmail] = useState('');
   const [googleAuthenticating, setGoogleAuthenticating] = useState(false);
   const [googleError, setGoogleError] = useState<string | null>(null);
+  const [deviceAccounts, setDeviceAccounts] = useState<Array<{ email: string; name: string; role?: string }>>([]);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('fxec_device_google_accounts');
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setDeviceAccounts(parsed);
+        }
+      } else {
+        const savedUser = localStorage.getItem('fxec_user');
+        if (savedUser) {
+          const u = JSON.parse(savedUser);
+          if (u.email && u.email.endsWith('@francisxavier.ac.in')) {
+            const list = [{ email: u.email, name: u.name, role: u.role }];
+            setDeviceAccounts(list);
+            localStorage.setItem('fxec_device_google_accounts', JSON.stringify(list));
+          }
+        }
+      }
+    } catch (e) {}
+  }, []);
 
   const executeGoogleLogin = async (
     targetEmail: string,
@@ -151,6 +174,14 @@ export default function StudentStaffLogin() {
 
       localStorage.setItem('fxec_user', JSON.stringify(user));
       localStorage.setItem('fxec_token', user.role === 'STAFF' ? 'staff-token' : 'student-token');
+
+      // Save this real device account so it shows on this phone/laptop
+      try {
+        const existing = deviceAccounts.filter(a => a.email.toLowerCase() !== cleanEmail);
+        const updatedAccounts = [...existing, { email: cleanEmail, name: user.name || displayName, role: user.role || roleToUse }];
+        setDeviceAccounts(updatedAccounts);
+        localStorage.setItem('fxec_device_google_accounts', JSON.stringify(updatedAccounts));
+      } catch (e) {}
 
       // Attempt Supabase Google OAuth if configured
       try {
@@ -581,9 +612,6 @@ export default function StudentStaffLogin() {
               >
                 <GoogleIcon />
                 <span>Sign in with Google</span>
-                <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded ml-1">
-                  @francisxavier.ac.in
-                </span>
               </button>
 
               <div className="pt-3 text-center border-t border-stroke-subtle">
@@ -742,9 +770,6 @@ export default function StudentStaffLogin() {
               >
                 <GoogleIcon />
                 <span>Register with Google</span>
-                <span className="text-[10px] font-normal text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded ml-1">
-                  @francisxavier.ac.in
-                </span>
               </button>
 
               <div className="pt-3 text-center border-t border-stroke-subtle">
@@ -761,206 +786,162 @@ export default function StudentStaffLogin() {
           )}
         </div>
 
-        {/* Google Institutional Account Chooser Modal (Matching Google Dark Mode Account Chooser) */}
+        {/* Google Institutional Account Chooser Modal (Clean Google Light Theme) */}
         {googleModalOpen && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
             onClick={() => setGoogleModalOpen(false)}
           >
             <div
-              className="google-account-modal bg-[#131314] text-[#e3e3e3] rounded-3xl max-w-[440px] w-full p-6 sm:p-8 shadow-2xl border border-[#303030] relative overflow-hidden animate-scale-up font-sans"
+              className="bg-white text-slate-900 rounded-3xl max-w-[440px] w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative overflow-hidden animate-scale-up font-sans"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Google Header */}
-              <div className="flex items-center justify-between pb-5">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <GoogleIcon className="w-4 h-4" />
-                  <span className="text-xs font-medium text-[#e3e3e3]">Sign in with Google</span>
+                  <span className="text-xs font-semibold text-slate-700">Sign in with Google</span>
                 </div>
                 <button
                   type="button"
                   onClick={() => setGoogleModalOpen(false)}
-                  className="text-[#9aa0a6] hover:text-white p-1 rounded-full hover:bg-[#282a2d] transition-colors"
+                  className="text-slate-400 hover:text-slate-700 p-1 rounded-full hover:bg-slate-100 transition-colors"
+                  title="Close"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              {/* Triangle Brand Icon & Title (matching user screenshot) */}
-              <div className="mb-6">
-                <div className="w-7 h-7 bg-white rounded-md flex items-center justify-center mb-4 shadow-sm">
-                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-black"></div>
+              {/* Triangle Brand Icon & Title */}
+              <div className="my-5">
+                <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center mb-3 shadow-sm">
+                  <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[10px] border-b-white"></div>
                 </div>
-                <h3 className="text-2xl font-normal text-[#e3e3e3] tracking-tight">
+                <h3 className="text-2xl font-normal text-slate-900 tracking-tight">
                   Choose an account
                 </h3>
-                <p className="text-sm text-[#9aa0a6] mt-1">
-                  to continue to <span className="text-[#e3e3e3] font-medium">FXEC Library</span>
+                <p className="text-xs text-slate-500 mt-1">
+                  to continue to <span className="text-slate-800 font-semibold">FXEC Library</span>
                 </p>
               </div>
 
               {/* Error Alert when invalid non-@francisxavier.ac.in account is selected */}
               {googleError && (
-                <div className="mb-4 p-3 rounded-xl bg-[#3c1e1e] border border-[#f28b82]/40 text-[#f6aea9] text-xs flex items-start gap-2.5 animate-shake">
-                  <AlertTriangle className="w-4 h-4 text-[#f28b82] shrink-0 mt-0.5" />
+                <div className="mb-4 p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start gap-2.5 animate-shake">
+                  <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                   <div className="flex-1 text-[11px] leading-relaxed">
-                    <strong>Access Denied:</strong> {googleError}
+                    <strong className="font-bold">Access Denied:</strong> {googleError}
                   </div>
                 </div>
               )}
 
-              {/* Accounts List */}
-              <div className="divide-y divide-[#282a2d] border-t border-b border-[#282a2d] mb-4">
-                {/* 1. Santhosh Kumar (Institutional - VALID) */}
-                <button
-                  type="button"
-                  disabled={googleAuthenticating}
-                  onClick={() => executeGoogleLogin('santhosh.21ec104@francisxavier.ac.in', 'Santhosh Kumar', activeTab)}
-                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
-                >
-                  <div className="w-9 h-9 rounded-full bg-[#e37400] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                    S
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white truncate">
-                      Santhosh Kumar
-                    </div>
-                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
-                      santhosh.21ec104@francisxavier.ac.in
-                    </div>
-                  </div>
-                </button>
+              {/* Account Chooser / Email Input */}
+              {deviceAccounts.length > 0 && !showUseAnother ? (
+                <div className="divide-y divide-slate-100 border-t border-b border-slate-200 mb-4">
+                  {deviceAccounts.map((acc) => (
+                    <button
+                      key={acc.email}
+                      type="button"
+                      disabled={googleAuthenticating}
+                      onClick={() => executeGoogleLogin(acc.email, acc.name, acc.role as any)}
+                      className="w-full py-3.5 px-2 hover:bg-slate-50 transition-colors text-left flex items-center gap-3.5 group rounded-xl"
+                    >
+                      <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-sm">
+                        {acc.name ? acc.name.charAt(0).toUpperCase() : acc.email.charAt(0).toUpperCase()}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-semibold text-slate-800 group-hover:text-blue-600 truncate">
+                          {acc.name || acc.email.split('@')[0]}
+                        </div>
+                        <div className="text-xs text-slate-500 truncate font-mono">
+                          {acc.email}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
 
-                {/* 2. Madasamy M (Institutional - VALID) */}
-                <button
-                  type="button"
-                  disabled={googleAuthenticating}
-                  onClick={() => executeGoogleLogin('madasamym.ug.25.ec@francisxavier.ac.in', 'Madasamy M', 'STUDENT')}
-                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
-                >
-                  <div className="w-9 h-9 rounded-full bg-[#188038] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                    M
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white truncate">
-                      Madasamy M
-                    </div>
-                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
-                      madasamym.ug.25.ec@francisxavier.ac.in
-                    </div>
-                  </div>
-                </button>
-
-                {/* 3. Prof. M. Revathi (Institutional - VALID) */}
-                <button
-                  type="button"
-                  disabled={googleAuthenticating}
-                  onClick={() => executeGoogleLogin('revathi@francisxavier.ac.in', 'Prof. M. Revathi', 'STAFF')}
-                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
-                >
-                  <div className="w-9 h-9 rounded-full bg-[#a142f4] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                    R
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white truncate">
-                      Prof. M. Revathi
-                    </div>
-                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
-                      revathi@francisxavier.ac.in
-                    </div>
-                  </div>
-                </button>
-
-                {/* 4. Personal Gmail Account (Sample - Clicking this rejects with the requested error) */}
-                <button
-                  type="button"
-                  disabled={googleAuthenticating}
-                  onClick={() => executeGoogleLogin('santhosh.personal@gmail.com', 'Personal Gmail')}
-                  className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg opacity-85 hover:opacity-100"
-                >
-                  <div className="w-9 h-9 rounded-full bg-[#5f6368] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                    P
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm font-medium text-[#e3e3e3] truncate flex items-center gap-2">
-                      <span>Personal Account</span>
-                      <span className="text-[10px] text-[#f28b82] border border-[#f28b82]/40 px-1 rounded">@gmail.com</span>
-                    </div>
-                    <div className="text-xs text-[#9aa0a6] truncate font-mono">
-                      santhosh.personal@gmail.com
-                    </div>
-                  </div>
-                </button>
-
-                {/* 5. Use another account (Row from user screenshot) */}
-                {!showUseAnother ? (
+                  {/* Use another account button */}
                   <button
                     type="button"
                     onClick={() => {
                       setShowUseAnother(true);
                       setGoogleError(null);
                     }}
-                    className="w-full py-3.5 px-1 hover:bg-[#1f1f20] transition-colors text-left flex items-center gap-3.5 group rounded-lg"
+                    className="w-full py-3.5 px-2 hover:bg-slate-50 transition-colors text-left flex items-center gap-3.5 group rounded-xl"
                   >
-                    <div className="w-9 h-9 rounded-full border border-[#5f6368] text-[#9aa0a6] flex items-center justify-center shrink-0">
+                    <div className="w-9 h-9 rounded-full border border-slate-300 text-slate-600 flex items-center justify-center shrink-0">
                       <User className="w-4 h-4" />
                     </div>
-                    <div className="text-sm font-medium text-[#e3e3e3] group-hover:text-white">
+                    <div className="text-sm font-semibold text-slate-700 group-hover:text-blue-600">
                       Use another account
                     </div>
                   </button>
-                ) : (
-                  <div className="py-3 px-1">
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        if (customGoogleEmail) {
-                          executeGoogleLogin(customGoogleEmail);
-                        }
-                      }}
-                      className="space-y-3"
-                    >
-                      <div className="text-xs text-[#9aa0a6]">
-                        Enter institutional email (@francisxavier.ac.in):
-                      </div>
-                      <div className="flex gap-2">
-                        <input
-                          type="email"
-                          required
-                          autoFocus
-                          value={customGoogleEmail}
-                          onChange={(e) => {
-                            setCustomGoogleEmail(e.target.value);
+                </div>
+              ) : (
+                /* Google Email Input Form (Shown when no device accounts or when "Use another account" clicked) */
+                <div className="py-2 mb-4">
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (customGoogleEmail) {
+                        executeGoogleLogin(customGoogleEmail);
+                      }
+                    }}
+                    className="space-y-4"
+                  >
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                        Email or phone
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        autoFocus
+                        value={customGoogleEmail}
+                        onChange={(e) => {
+                          setCustomGoogleEmail(e.target.value);
+                          setGoogleError(null);
+                        }}
+                        placeholder="yourname@francisxavier.ac.in"
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all font-mono"
+                      />
+                      <p className="text-[11px] text-slate-500 mt-1.5">
+                        Only institutional Google accounts ending in <b>@francisxavier.ac.in</b> are permitted.
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-1">
+                      {deviceAccounts.length > 0 ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setShowUseAnother(false);
                             setGoogleError(null);
                           }}
-                          placeholder="rollnumber@francisxavier.ac.in"
-                          className="flex-1 px-3 py-2 rounded-xl bg-[#1f1f20] border border-[#3c4043] text-sm text-[#e3e3e3] placeholder:text-[#5f6368] focus:outline-none focus:border-[#8ab4f8] font-mono"
-                        />
-                        <button
-                          type="submit"
-                          disabled={googleAuthenticating || !customGoogleEmail}
-                          className="px-4 py-2 rounded-xl bg-[#8ab4f8] hover:bg-[#aecbfa] text-[#202124] font-medium text-xs transition-colors disabled:opacity-50"
+                          className="text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
                         >
-                          {googleAuthenticating ? 'Checking...' : 'Next'}
+                          &larr; Back to device accounts
                         </button>
-                      </div>
+                      ) : (
+                        <span />
+                      )}
                       <button
-                        type="button"
-                        onClick={() => setShowUseAnother(false)}
-                        className="text-[11px] text-[#8ab4f8] hover:underline"
+                        type="submit"
+                        disabled={googleAuthenticating || !customGoogleEmail.trim()}
+                        className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs transition-all shadow-md hover:shadow-lg disabled:opacity-50"
                       >
-                        Cancel
+                        {googleAuthenticating ? 'Signing in...' : 'Next'}
                       </button>
-                    </form>
-                  </div>
-                )}
-              </div>
+                    </div>
+                  </form>
+                </div>
+              )}
 
-              {/* Bottom Notice (matching user screenshot) */}
-              <div className="pt-2 text-xs text-[#9aa0a6] leading-relaxed">
+              {/* Bottom Notice */}
+              <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-400 leading-relaxed">
                 Before using this app, you can review FXEC Library's{' '}
-                <span className="text-[#8ab4f8] hover:underline cursor-pointer">Privacy Policy</span> and{' '}
-                <span className="text-[#8ab4f8] hover:underline cursor-pointer">Terms of Service</span>.
+                <span className="text-blue-600 hover:underline cursor-pointer">Privacy Policy</span> and{' '}
+                <span className="text-blue-600 hover:underline cursor-pointer">Terms of Service</span>.
               </div>
             </div>
           </div>

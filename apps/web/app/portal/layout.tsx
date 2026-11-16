@@ -368,12 +368,8 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
               onClick={() => setUserMenuOpen(!userMenuOpen)}
               className="flex items-center space-x-2.5 p-1 rounded-xl hover:bg-surface-high border border-stroke-glass transition-colors"
             >
-              <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-aura-purple to-aura-violet p-0.5">
-                <img
-                  src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
-                  alt={currentUser.name}
-                  className="w-full h-full rounded-full object-cover"
-                />
+              <div className="w-7 h-7 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-700 shadow-sm shrink-0">
+                <User className="w-4 h-4" />
               </div>
               <div className="hidden md:block text-left pr-1">
                 <p className="text-xs font-semibold text-white leading-tight">{currentUser.name}</p>
@@ -387,12 +383,8 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
             {userMenuOpen && (
               <div className="absolute right-0 mt-2 w-64 glass-dropdown rounded-2xl shadow-glass border border-stroke-glass p-4 z-50">
                 <div className="flex items-center space-x-3 pb-3 border-b border-stroke-subtle">
-                  <div className="w-10 h-10 rounded-full overflow-hidden border border-stroke-glass shrink-0">
-                    <img
-                      src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
-                      alt={currentUser.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-10 h-10 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-700 shrink-0">
+                    <User className="w-5 h-5" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-xs font-bold text-white truncate">{currentUser.name}</p>

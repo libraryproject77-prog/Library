@@ -428,28 +428,29 @@ a:not(.aura-gradient-btn):not([class*="bg-purple"]):not([class*="bg-rose"]):not(
 }
 
 /* ============================================================== */
-/* 📱 GOOGLE ACCOUNT CHOOSER MODAL (NATIVE DARK MODE AUTH LOOK)   */
+/* 📱 GOOGLE ACCOUNT CHOOSER MODAL (AUTHENTIC LIGHT THEME)        */
 /* ============================================================== */
 .google-account-modal {
-  background-color: #131314 !important;
-  color: #e3e3e3 !important;
-  border-color: #303030 !important;
+  background-color: #ffffff !important;
+  color: #202124 !important;
+  border-color: #dadce0 !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
 }
 
 .google-account-modal h3,
 .google-account-modal .google-modal-title {
-  color: #f1f3f4 !important;
+  color: #202124 !important;
 }
 
 .google-account-modal p,
 .google-account-modal .google-modal-subtitle {
-  color: #9aa0a6 !important;
+  color: #5f6368 !important;
 }
 
 .google-account-modal .account-name {
-  color: #e3e3e3 !important;
+  color: #202124 !important;
 }
 
 .google-account-modal .account-email {
-  color: #9aa0a6 !important;
+  color: #5f6368 !important;
 }

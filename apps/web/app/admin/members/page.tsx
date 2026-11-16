@@ -13,7 +13,8 @@ import {
   BookOpen,
   Calendar,
   X,
-  Trash2
+  Trash2,
+  User
 } from 'lucide-react';
 import { api } from '@/lib/api';
 
@@ -151,12 +152,8 @@ export default function AdminMembersPage() {
                 className="glass-panel-card p-5 rounded-2xl border border-stroke-subtle hover:border-aura-purple/30 transition-all flex flex-col justify-between space-y-4"
               >
                 <div className="flex items-start space-x-3.5">
-                  <div className="w-12 h-12 rounded-xl bg-surface-low border border-stroke-glass overflow-hidden shrink-0">
-                    <img
-                      src={(m.avatarUrl && !m.avatarUrl.includes('unsplash.com')) ? m.avatarUrl : '/default-avatar.jpg'}
-                      alt={m.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="w-11 h-11 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-700 shrink-0 font-bold text-sm shadow-sm">
+                    {m.name?.charAt(0) || <User className="w-5 h-5" />}
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
