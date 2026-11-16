@@ -141,7 +141,7 @@ export default function AdminMembersPage() {
                 <div className="flex items-start space-x-3.5">
                   <div className="w-12 h-12 rounded-xl bg-surface-low border border-stroke-glass overflow-hidden shrink-0">
                     <img
-                      src={m.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'}
+                      src={(m.avatarUrl && !m.avatarUrl.includes('unsplash.com')) ? m.avatarUrl : '/default-avatar.jpg'}
                       alt={m.name}
                       className="w-full h-full object-cover"
                     />

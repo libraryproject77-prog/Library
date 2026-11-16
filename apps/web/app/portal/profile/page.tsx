@@ -30,7 +30,7 @@ export default function StudentProfilePage() {
     role: 'STUDENT',
     rollNumber: '21EC104',
     department: 'ECE',
-    avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
+    avatarUrl: '/default-avatar.jpg'
   });
 
   const [activeLoansCount, setActiveLoansCount] = useState(0);
@@ -42,6 +42,10 @@ export default function StudentProfilePage() {
     if (saved) {
       try {
         const u = JSON.parse(saved);
+        if (!u.avatarUrl || u.avatarUrl.includes('unsplash.com')) {
+          u.avatarUrl = '/default-avatar.jpg';
+          localStorage.setItem('fxec_user', JSON.stringify(u));
+        }
         if (u.role !== 'ADMIN') {
           setCurrentUser(u);
         }
@@ -135,7 +139,7 @@ export default function StudentProfilePage() {
             {/* User Photo */}
             <div className="w-24 h-28 rounded-2xl overflow-hidden border-2 border-aura-neon/50 shadow-lg bg-surface-high shrink-0">
               <img
-                src={currentUser.avatarUrl}
+                src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
                 alt={currentUser.name}
                 className="w-full h-full object-cover"
               />

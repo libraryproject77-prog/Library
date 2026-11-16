@@ -35,10 +35,8 @@ export class AuthController {
       const namePart = prefix.split('.')[0];
       let formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
 
-      // Intelligent initial detection (e.g. kumars -> Kumar S, madasamym -> Madasamy M)
-      if (namePart.toLowerCase() === 'kumars') {
-        formattedName = 'Kumar S';
-      } else if (namePart.toLowerCase() === 'madasamym') {
+      // Intelligent initial detection (e.g. madasamym -> Madasamy M)
+      if (namePart.toLowerCase() === 'madasamym') {
         formattedName = 'Madasamy M';
       } else if (namePart.length > 4) {
         const lastChar = namePart.slice(-1).toUpperCase();
@@ -55,6 +53,7 @@ export class AuthController {
         name: formattedName || prefix.toUpperCase(),
         role: newRole,
         department: 'ECE',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -122,6 +121,7 @@ export class AuthController {
       rollNumber: newRole === 'STUDENT' ? (rollNumber?.trim().toUpperCase() || undefined) : undefined,
       staffId: newRole === 'STAFF' ? (staffId?.trim().toUpperCase() || undefined) : undefined,
       password: password || undefined,
+      avatarUrl: '/default-avatar.jpg',
       status: 'ACTIVE',
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()

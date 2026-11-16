@@ -50,7 +50,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
     role: 'STUDENT',
     rollNumber: '21EC104',
     department: 'ECE',
-    avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
+    avatarUrl: '/default-avatar.jpg'
   });
   const [notifications, setNotifications] = useState<any[]>([]);
   const [unreadCount, setUnreadCount] = useState(1);
@@ -92,7 +92,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
       role: 'STUDENT',
       rollNumber: '21EC104',
       department: 'ECE',
-      avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
+      avatarUrl: '/default-avatar.jpg'
     },
     {
       id: 'usr-student-2',
@@ -101,7 +101,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
       role: 'STUDENT',
       rollNumber: '22EC045',
       department: 'ECE',
-      avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80'
+      avatarUrl: '/default-avatar.jpg'
     },
     {
       id: 'usr-staff-1',
@@ -110,7 +110,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
       role: 'STAFF',
       staffId: 'FX-ECE-STF-014',
       department: 'ECE',
-      avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80'
+      avatarUrl: '/default-avatar.jpg'
     }
   ];
 
@@ -120,6 +120,10 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
     if (savedUser) {
       try {
         const u = JSON.parse(savedUser);
+        if (!u.avatarUrl || u.avatarUrl.includes('unsplash.com')) {
+          u.avatarUrl = '/default-avatar.jpg';
+          localStorage.setItem('fxec_user', JSON.stringify(u));
+        }
         if (u.role !== 'ADMIN') {
           setCurrentUser(u);
         }
@@ -370,7 +374,7 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
             >
               <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-aura-purple to-aura-violet p-0.5">
                 <img
-                  src={currentUser.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'}
+                  src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
                   alt={currentUser.name}
                   className="w-full h-full rounded-full object-cover"
                 />
@@ -388,7 +392,11 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
               <div className="absolute right-0 mt-2 w-64 glass-dropdown rounded-2xl shadow-glass border border-stroke-glass p-4 z-50">
                 <div className="flex items-center space-x-3 pb-3 border-b border-stroke-subtle">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-stroke-glass shrink-0">
-                    <img src={currentUser.avatarUrl} alt={currentUser.name} className="w-full h-full object-cover" />
+                    <img
+                      src={(currentUser.avatarUrl && !currentUser.avatarUrl.includes('unsplash.com')) ? currentUser.avatarUrl : '/default-avatar.jpg'}
+                      alt={currentUser.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-xs font-bold text-white truncate">{currentUser.name}</p>

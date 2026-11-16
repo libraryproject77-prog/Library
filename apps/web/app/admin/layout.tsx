@@ -289,7 +289,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <div className="flex items-center space-x-2.5 pl-2 border-l border-stroke-subtle">
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-aura-purple to-aura-violet p-0.5">
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+                src="/default-avatar.jpg"
                 alt="Admin Avatar"
                 className="w-full h-full rounded-full object-cover"
               />

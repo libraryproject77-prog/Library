@@ -125,6 +125,7 @@ export default function StudentStaffLogin() {
         rollNumber: activeTab === 'STUDENT' ? cleanId : undefined,
         staffId: activeTab === 'STAFF' ? cleanId : undefined,
         department: regDepartment || 'ECE',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         registeredAt: new Date().toISOString()
       };
@@ -208,6 +209,7 @@ export default function StudentStaffLogin() {
         department: registered.department || 'ECE',
         rollNumber: registered.rollNumber,
         staffId: registered.staffId,
+        avatarUrl: (registered.avatarUrl && !registered.avatarUrl.includes('unsplash.com')) ? registered.avatarUrl : '/default-avatar.jpg',
       };
 
       localStorage.setItem('fxec_user', JSON.stringify(user));
@@ -248,6 +250,7 @@ export default function StudentStaffLogin() {
         department: 'ECE',
         rollNumber: activeTab === 'STUDENT' ? '25EC001' : undefined,
         staffId: activeTab === 'STAFF' ? 'FX-ECE-STF-014' : undefined,
+        avatarUrl: '/default-avatar.jpg',
       };
       localStorage.setItem('fxec_user', JSON.stringify(user));
       localStorage.setItem('fxec_token', activeTab === 'STAFF' ? 'staff-token' : 'student-token');

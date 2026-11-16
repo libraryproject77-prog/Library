@@ -40,7 +40,7 @@ class LibraryStore {
         role: 'ADMIN',
         department: 'ECE',
         staffId: 'FX-ECE-STF-001',
-        avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-01-10').toISOString(),
         updatedAt: new Date().toISOString()
@@ -52,7 +52,7 @@ class LibraryStore {
         role: 'STAFF',
         department: 'ECE',
         staffId: 'FX-ECE-STF-014',
-        avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-02-15').toISOString(),
         updatedAt: new Date().toISOString()
@@ -64,21 +64,9 @@ class LibraryStore {
         role: 'STAFF',
         department: 'ECE',
         staffId: 'FX-ECE-STF-014',
-        avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-02-15').toISOString(),
-        updatedAt: new Date().toISOString()
-      },
-      {
-        id: 'usr-student-kumar',
-        email: 'kumars.ug.25.ec@francisxavier.ac.in',
-        name: 'Kumar S',
-        role: 'STUDENT',
-        department: 'ECE',
-        rollNumber: '25EC001',
-        avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
-        status: 'ACTIVE',
-        createdAt: new Date('2024-03-01').toISOString(),
         updatedAt: new Date().toISOString()
       },
       {
@@ -87,8 +75,8 @@ class LibraryStore {
         name: 'Madasamy M',
         role: 'STUDENT',
         department: 'ECE',
-        rollNumber: '25EC002',
-        avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        rollNumber: '25EC001',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-03-01').toISOString(),
         updatedAt: new Date().toISOString()
@@ -100,7 +88,7 @@ class LibraryStore {
         role: 'STUDENT',
         department: 'ECE',
         rollNumber: '21EC104',
-        avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-03-01').toISOString(),
         updatedAt: new Date().toISOString()
@@ -112,7 +100,7 @@ class LibraryStore {
         role: 'STUDENT',
         department: 'ECE',
         rollNumber: '22EC045',
-        avatarUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-03-05').toISOString(),
         updatedAt: new Date().toISOString()
@@ -124,7 +112,7 @@ class LibraryStore {
         role: 'STUDENT',
         department: 'ECE',
         rollNumber: '23EC012',
-        avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+        avatarUrl: '/default-avatar.jpg',
         status: 'ACTIVE',
         createdAt: new Date('2024-04-12').toISOString(),
         updatedAt: new Date().toISOString()
