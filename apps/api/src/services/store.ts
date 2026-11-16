@@ -70,12 +70,24 @@ class LibraryStore {
         updatedAt: new Date().toISOString()
       },
       {
+        id: 'usr-student-kumar',
+        email: 'kumars.ug.25.ec@francisxavier.ac.in',
+        name: 'Kumar S',
+        role: 'STUDENT',
+        department: 'ECE',
+        rollNumber: '25EC001',
+        avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+        status: 'ACTIVE',
+        createdAt: new Date('2024-03-01').toISOString(),
+        updatedAt: new Date().toISOString()
+      },
+      {
         id: 'usr-student-madasamy',
         email: 'madasamym.ug.25.ec@francisxavier.ac.in',
         name: 'Madasamy M',
         role: 'STUDENT',
         department: 'ECE',
-        rollNumber: '25EC001',
+        rollNumber: '25EC002',
         avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
         status: 'ACTIVE',
         createdAt: new Date('2024-03-01').toISOString(),

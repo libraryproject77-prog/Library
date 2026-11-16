@@ -226,8 +226,10 @@ export default function StudentStaffLogin() {
     const namePart = prefix.split('.')[0];
     let displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
 
-    // Intelligent initial detection (e.g. madasamym -> Madasamy M)
-    if (namePart.toLowerCase() === 'madasamym') {
+    // Intelligent initial detection (e.g. kumars -> Kumar S, madasamym -> Madasamy M)
+    if (namePart.toLowerCase() === 'kumars') {
+      displayName = 'Kumar S';
+    } else if (namePart.toLowerCase() === 'madasamym') {
       displayName = 'Madasamy M';
     } else if (namePart.length > 4) {
       const lastChar = namePart.slice(-1).toUpperCase();
@@ -434,7 +436,7 @@ export default function StudentStaffLogin() {
                     type="text"
                     value={regName}
                     onChange={(e) => setRegName(e.target.value)}
-                    placeholder={activeTab === 'STUDENT' ? 'e.g. Madasamy M' : 'e.g. Prof. M. Revathi'}
+                    placeholder={activeTab === 'STUDENT' ? 'e.g. Kumar S' : 'e.g. Prof. M. Revathi'}
                     className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-low border border-stroke-glass text-xs text-content placeholder:text-content-subtle focus:outline-none focus:border-aura-purple transition-colors font-semibold"
                     required
                   />

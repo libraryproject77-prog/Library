@@ -35,8 +35,10 @@ export class AuthController {
       const namePart = prefix.split('.')[0];
       let formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1).toLowerCase();
 
-      // Intelligent initial detection (e.g. madasamym -> Madasamy M)
-      if (namePart.toLowerCase() === 'madasamym') {
+      // Intelligent initial detection (e.g. kumars -> Kumar S, madasamym -> Madasamy M)
+      if (namePart.toLowerCase() === 'kumars') {
+        formattedName = 'Kumar S';
+      } else if (namePart.toLowerCase() === 'madasamym') {
         formattedName = 'Madasamy M';
       } else if (namePart.length > 4) {
         const lastChar = namePart.slice(-1).toUpperCase();
