@@ -1,0 +1,5274 @@
+[
+  {
+    "source": "DB1",
+    "sNo": 1,
+    "accNo": "ECESC216",
+    "author": "P.Bamesh Babu Electric Circuits and Electron Devices",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 2,
+    "accNo": "ECESC217",
+    "author": "Vijayaraghavan, Sivakumar Principles of Management",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 3,
+    "accNo": "ECESC218",
+    "author": "P. Ramesh Babu Electric Circuits and Electron Devices",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 4,
+    "accNo": "ECESC219",
+    "author": "M. Ezhilmaran",
+    "title": "Control Systems",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 5,
+    "accNo": "ECESC220",
+    "author": "Faculty Reference",
+    "title": "Soumitra Kumar Mandal Microprocessors and Microcontrollers Tata McGraw Hill Edu. Pvt. Limited",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 6,
+    "accNo": "ECESC221",
+    "author": "A. Ramakrishna Rao",
+    "title": "Analog Communication Tata McGraw Hill Edu. Pvt. Limited",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 7,
+    "accNo": "ECESC222",
+    "author": "S. Gayathri Optical Communication & Networking",
+    "title": "Anuradha Publications",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 8,
+    "accNo": "ECESC223",
+    "author": "S. Salaivalanan, S. Arivazhagan",
+    "title": "Digital Electronics Vikas Publishing House Pvt. Ltd",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 9,
+    "accNo": "ECESC224",
+    "author": "B. Paulchamy, J. Jaya",
+    "title": "Digital Signal Processing",
+    "publisher": "Anuradha Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 10,
+    "accNo": "ECESC225",
+    "author": "R.L. Reka, K. Padmapriya",
+    "title": "Digital Image Processing",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 11,
+    "accNo": "ECESC226",
+    "author": "K. Murali Babu, K. Vinoth Babu",
+    "title": "Principles of Communication",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 12,
+    "accNo": "ECESC227",
+    "author": "K. Murali Babu, L. Agilandeeswari",
+    "title": "Analog + Digital Communication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 13,
+    "accNo": "ECESC228",
+    "author": "S. Jaya",
+    "title": "Wireless Communication",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 14,
+    "accNo": "ECESC229",
+    "author": "K. Brindha Data Structures & Object Oriented Programming in C++",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 15,
+    "accNo": "ECESC230",
+    "author": "M. Auxiliya Computer Architecture and Organization",
+    "title": "A.R. Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 16,
+    "accNo": "ECESC231",
+    "author": "Dr. P. Dananjayan Transmission Lines & Waveguides",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 17,
+    "accNo": "ECESC232",
+    "author": "Dr. V. Jayakumar Professional Ethics & Human Values",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 18,
+    "accNo": "ECESC233",
+    "author": "M. Phemínaselvi, P. Sivagamasundhari",
+    "title": "High Speed Networks",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 19,
+    "accNo": "ECESC234",
+    "author": "D. Weslin, R. Vinothini Computer Architecture and Organization",
+    "title": "A.R. Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 20,
+    "accNo": "ECESC235",
+    "author": "R.L. Reka, C. Ravikumar Microprocessors and Microcontrollers",
+    "title": "",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 21,
+    "accNo": "ECESC236",
+    "author": "S. Jaya",
+    "title": "Digital Communication",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 22,
+    "accNo": "ECESC237",
+    "author": "M. Phemínaselvi",
+    "title": "Electronic Circuits - I",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 23,
+    "accNo": "ECESC238",
+    "author": "Mr. S. Prabhu",
+    "title": "Analog & Digital Communication Bharathi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 24,
+    "accNo": "ECESC239",
+    "author": "Mr. S. Prabhu, Mr. V. Pandimuniyan",
+    "title": "Principles of Communication",
+    "publisher": "Bharathi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 25,
+    "accNo": "ECESC240",
+    "author": "J. Sathyapriya",
+    "title": "Mobile Communication Sree Mayuri Publications",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 26,
+    "accNo": "ECESC241",
+    "author": "J.S. Leena Jasmine",
+    "title": "Microprocessors & Microcontroller Snethi Publishers",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 27,
+    "accNo": "ECESC242",
+    "author": "M.A. Padmapriya, K.R. Sarathchandran",
+    "title": "Digital Principles & System Design Sree Mayuri Publications",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 28,
+    "accNo": "ECESC243",
+    "author": "K.G. Shanthi Transmission Lines & Waveguides",
+    "title": "Sruthi Publisher",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 29,
+    "accNo": "ECESC244",
+    "author": "Dr. Sanjay Sharma Question Bank in Electronics & Communication Engg",
+    "title": "S.K. KATARIA & SONS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 30,
+    "accNo": "ECESC245",
+    "author": "Dr. Sanjay Sharma Communication Systems (Analog & Digital)",
+    "title": "S.K. KATARIA & SONS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 31,
+    "accNo": "ECESC246",
+    "author": "J.B. Gupta",
+    "title": "Electronic Devices and Circuits S.K. KATARIA & SONS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 32,
+    "accNo": "ECESC247",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Communication",
+    "publisher": "S.K. KATARIA & SONS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 33,
+    "accNo": "ECESC248",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Signals & Systems",
+    "publisher": "S.K. KATARIA & SONS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 34,
+    "accNo": "ECESC249",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Signal Processing",
+    "publisher": "S.K. KATARIA & SONS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 35,
+    "accNo": "ECESC250",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Basic Electronics",
+    "publisher": "S.K. KATARIA & SONS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 36,
+    "accNo": "ECESC251",
+    "author": "M. Elangovan",
+    "title": "Electronic Circuits - I",
+    "publisher": "S.K. KATARIA & SONS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 37,
+    "accNo": "ECESC252",
+    "author": "K. Murali Babu",
+    "title": "RF and Microwave Engineering Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 38,
+    "accNo": "ECESC253",
+    "author": "S. Kumaresan, G. Venkat Babu Babu Electromagnetic Field Theory",
+    "title": "Sruthi Publisher",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 39,
+    "accNo": "ECESC254",
+    "author": "J.S. Leena Jasmine, S.J. Grace Shoba",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Sruthi Publisher"
+  },
+  {
+    "source": "DB1",
+    "sNo": 40,
+    "accNo": "ECESC255",
+    "author": "U.A. Bakshi, V.U. Bakshi",
+    "title": "Electrical Engineering",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 41,
+    "accNo": "ECESC256",
+    "author": "Dr. K. Bommanna Raja, Dr. S. Sasikumar Electric Circuits & Electron Devices",
+    "title": "Hitech Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 42,
+    "accNo": "ECESC257",
+    "author": "R. Shankar",
+    "title": "Electro Magnetic Field",
+    "publisher": "Hitech Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 43,
+    "accNo": "ECESC258",
+    "author": "S. Sivakumar, K. Madhari Priya",
+    "title": "Electronic Circuits - II",
+    "publisher": "Hitech Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 44,
+    "accNo": "ECESC259",
+    "author": "Dr. H. Rangarathan, S. Sumathy",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Sruthi Publisher"
+  },
+  {
+    "source": "DB1",
+    "sNo": 45,
+    "accNo": "ECESC260",
+    "author": "S.J. Grace Shoba",
+    "title": "Electronic Circuits II",
+    "publisher": "Sruthi Publisher"
+  },
+  {
+    "source": "DB1",
+    "sNo": 46,
+    "accNo": "ECESC261",
+    "author": "M.K. Balachandran",
+    "title": "Circuit Theory",
+    "publisher": "VRB Publisher"
+  },
+  {
+    "source": "DB1",
+    "sNo": 47,
+    "accNo": "ECESC262",
+    "author": "Faculty Reference",
+    "title": "P. Manimegalai, G. Pabitha Electronics & Microprocessors University Science Press",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 48,
+    "accNo": "ECESC263",
+    "author": "M. Phemínaselvi",
+    "title": "Electronic Circuits - I",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 49,
+    "accNo": "ECESC264",
+    "author": "V. Jeyasri Arokiamary",
+    "title": "Wireless Networks",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 50,
+    "accNo": "ECESC265",
+    "author": "V.S. Bagad",
+    "title": "VLSI Design",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 51,
+    "accNo": "ECESC266",
+    "author": "A.P. Godse, U.A. Bakshi",
+    "title": "Electronic Circuits - II",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 52,
+    "accNo": "ECESC267",
+    "author": "Dr. J.S. Chitode",
+    "title": "Communication Theory",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 53,
+    "accNo": "ECESC268",
+    "author": "U.A. Bakshi, A.V. Bakshi",
+    "title": "Measurements & Instrumentation Technical Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 54,
+    "accNo": "ECESC269",
+    "author": "A.P. Godse, D.A. Godse",
+    "title": "Electronics & Microprocessors",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 55,
+    "accNo": "ECESC270",
+    "author": "U.A. Bakshi, A.V. Bakshi",
+    "title": "Electromagnetic Fields",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 56,
+    "accNo": "ECESC271",
+    "author": "U.A. Bakshi, A.P. Godse, A.V. Bakshi",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 57,
+    "accNo": "ECESC272",
+    "author": "U.A. Bakshi, A.V. Bakshi, K.A. Bakshi",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 58,
+    "accNo": "ECESC273",
+    "author": "V.S. Bagad, I.A. Dhotre",
+    "title": "Computer Networks",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 59,
+    "accNo": "ECESC274",
+    "author": "V.S. Bagad",
+    "title": "Principles of Management",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 60,
+    "accNo": "ECESC275",
+    "author": "Visvesvara Rao, Raja Rajeswari, Chalan, Bhaskara Electronic Circuits - II",
+    "title": "Pearson",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 61,
+    "accNo": "ECESC276",
+    "author": "Faculty Reference",
+    "title": "V. Gopinath, S. Kanimokhi Embedded & Realtime System",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 62,
+    "accNo": "ECESC277",
+    "author": "G.K. Vijayaraghavan, M. Sivakumar",
+    "title": "Principles of Management",
+    "publisher": "Lakshmi Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 63,
+    "accNo": "ECESC278",
+    "author": "R.L. Reka, C. Jaya Sri",
+    "title": "Satellite Communication",
+    "publisher": "A.R.S. Publ."
+  },
+  {
+    "source": "DB1",
+    "sNo": 64,
+    "accNo": "ECESC279",
+    "author": "Dr. P. Dananjayan",
+    "title": "Electromagnetic Theory",
+    "publisher": "Lakshmi Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 65,
+    "accNo": "ECESC280",
+    "author": "K. Muralibabu, L. Agiladeeswari",
+    "title": "Computer Networks",
+    "publisher": "A.R.S. Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 66,
+    "accNo": "ECESC281",
+    "author": "Faculty Reference",
+    "title": "S. Syed Baroose, K. Raghupathy, Z. Aysha Yasmin Measurements & Instrumentation A.R.S. Publ",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 67,
+    "accNo": "ECESC282",
+    "author": "V. Thiyagarajan",
+    "title": "Electronics & Microprocessors",
+    "publisher": "A.R.S. Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 68,
+    "accNo": "ECESC283",
+    "author": "R. Lakshmi Rekha, K. Padma Priya",
+    "title": "Wireless Networks",
+    "publisher": "A.R. Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 69,
+    "accNo": "ECESC284",
+    "author": "R. Lakshmi Rekha, C. Ravikumar Bio-Medical Instrumentation / Medical Electronics",
+    "title": "Lakshmi Publ",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 70,
+    "accNo": "ECESC285",
+    "author": "A. Uma Mageswari",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Lakshmi Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 71,
+    "accNo": "ECESC286",
+    "author": "G. Vijayakumar, R. Raja Rajani, A. Riju vana Begam Telecommunication Switching & Networks",
+    "title": "A.R. Publ",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 72,
+    "accNo": "ECESC287",
+    "author": "Dr. Sanjay Sharma",
+    "title": "A course in Computer Networks Kataria Books",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 73,
+    "accNo": "ECESC288",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Communications",
+    "publisher": "KATSON Books"
+  },
+  {
+    "source": "DB1",
+    "sNo": 74,
+    "accNo": "ECESC289",
+    "author": "Dr. Sanjay Sharma Communication systems (Analog & Digital)",
+    "title": "KATSON Books",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 75,
+    "accNo": "ECESC290",
+    "author": "Faculty Reference",
+    "title": "M.A. Padma Priya, K.R. SARATH CHANDRAN Digital Principles and system Design SREE Mayuri Publications",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 76,
+    "accNo": "ECESC291",
+    "author": "K.G. SHANTHI Transmission Lines and Wave Guides",
+    "title": "Sruthi Publishers",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 77,
+    "accNo": "ECESC292",
+    "author": "S.J. Grace Shoba Optical Communication and Networking",
+    "title": "Sruthi Publishers",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 78,
+    "accNo": "ECESC293",
+    "author": "J.S. Leena Jasmine Microprocessors & Microcontrollers",
+    "title": "Sruthi Publishers",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 79,
+    "accNo": "ECESC294",
+    "author": "Murali Babu. K, L. Agilandeeswari",
+    "title": "Communication Theory",
+    "publisher": "ARS Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 80,
+    "accNo": "ECESC295",
+    "author": "Godse, Bakshi",
+    "title": "Electronic Circuits I",
+    "publisher": "Technical Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 81,
+    "accNo": "ECESC296",
+    "author": "S. Baskaran Transmission Lines & Waveguides",
+    "title": "Scitech Publ",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 82,
+    "accNo": "ECESC297",
+    "author": "S. Poornachandra, B. Sasikala",
+    "title": "Electronic Circuits - I",
+    "publisher": "Scitech Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 83,
+    "accNo": "ECESC298",
+    "author": "G. Karpaga Rajesh",
+    "title": "Analog & Digital Communication Charulatha Publ",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 84,
+    "accNo": "ECESC299",
+    "author": "S. Umamaheswar",
+    "title": "Wireless Communication",
+    "publisher": "Charulatha Publ"
+  },
+  {
+    "source": "DB1",
+    "sNo": 85,
+    "accNo": "ECESC300",
+    "author": "GATE BOOK",
+    "title": "-",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 86,
+    "accNo": "ECESC301",
+    "author": "Faculty Reference",
+    "title": "IAT QP",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 87,
+    "accNo": "ECESC302",
+    "author": "K. Murali Babu",
+    "title": "Communication Engineering",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 88,
+    "accNo": "ECESC303",
+    "author": "K. Murali Babu",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 89,
+    "accNo": "ECESC304",
+    "author": "Dr. P. Dananjayan Transmission Lines & Waveguides",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 90,
+    "accNo": "ECESC305",
+    "author": "K. Padma Priya",
+    "title": "Television & Video Engineering Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 91,
+    "accNo": "ECESC306",
+    "author": "K. Murali Babu Optical Communication & Networking",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 92,
+    "accNo": "ECESC307",
+    "author": "M. Auxiliya Computer Architecture & Organization",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 93,
+    "accNo": "ECESC308",
+    "author": "K. Murali Babu",
+    "title": "Principles of Communication",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 94,
+    "accNo": "ECESC309",
+    "author": "S. Jaya",
+    "title": "Wireless Communication",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 95,
+    "accNo": "ECESC310",
+    "author": "S. Jaya",
+    "title": "Digital Communication",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 96,
+    "accNo": "ECESC311",
+    "author": "Dr. M. Sivakumar, R. Saravanan Environmental Science & Engineering",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 97,
+    "accNo": "ECESC312",
+    "author": "D. Weslin, R. Vinothini Computer Architecture & Organization",
+    "title": "A.R. Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 98,
+    "accNo": "ECESC313",
+    "author": "Q.B - 7th Sem",
+    "title": "Magnus Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 99,
+    "accNo": "ECESC314",
+    "author": "Q.B - 7th Sem",
+    "title": "Magnus Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 100,
+    "accNo": "ECESC315",
+    "author": "Q.B - 5th Sem",
+    "title": "Sruthi Publisher",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 101,
+    "accNo": "ECESC316",
+    "author": "Q.B - 5th Sem",
+    "title": "Sruthi Publisher",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 102,
+    "accNo": "ECESC317",
+    "author": "Dr. K.S. Srinivasan",
+    "title": "Electronic Circuits - II",
+    "publisher": "Anuradha Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 103,
+    "accNo": "ECESC318",
+    "author": "E. Punitha TeleCommunication Switching and Networks",
+    "title": "Anuradha Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 104,
+    "accNo": "ECESC319",
+    "author": "Dr. M. Arumugam",
+    "title": "Biomedical Instrumentation",
+    "publisher": "Anuradha Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 105,
+    "accNo": "ECESC320",
+    "author": "J. Gnanavadivel, C. Senthil Kumar Electronic Measurements and Instrumentation",
+    "title": "Anuradha Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 106,
+    "accNo": "ECESC321",
+    "author": "Dr. K.S. Srinivasan, Janaki Rani, Sathiyabhama",
+    "title": "Electronics and Microprocessor Anuradha Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 107,
+    "accNo": "ECESC322",
+    "author": "S. Bhaskar",
+    "title": "Principles of Management",
+    "publisher": "Anuradha Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 108,
+    "accNo": "ECESC323",
+    "author": "Farid N. Najm",
+    "title": "Circuit Simulation",
+    "publisher": "Wiley & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 109,
+    "accNo": "ECESC324",
+    "author": "Faculty Reference",
+    "title": "Chua L.O., Lin P.M. Computer-Aided Analysis of Electronic Circuit Algorithms + Computation Technique —",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 110,
+    "accNo": "ECESC325",
+    "author": "Staudinger, Joseph",
+    "title": "CAD Simulation and Modeling",
+    "publisher": "CRC Press"
+  },
+  {
+    "source": "DB1",
+    "sNo": 111,
+    "accNo": "ECESC326",
+    "author": "Pen-Min-Lin",
+    "title": "Computer Aided Circuit Analysis Pen-Min-Lin",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 112,
+    "accNo": "ECESC327",
+    "author": "Tor A. Fjeldly, Trond Ytterdal Introduction to Device Modeling & Circuit Simulation",
+    "title": "John Wiley & Sons",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 113,
+    "accNo": "ECESC328",
+    "author": "Siegfried Selberherr Analysis & Simulation of Semiconductor Devices",
+    "title": "Springer",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 114,
+    "accNo": "ECESC329",
+    "author": "T. Grasser Advanced Device Modelling & Simulation",
+    "title": "World Scientific",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 115,
+    "accNo": "ECESC330",
+    "author": "Dr. K.S. Srinivasan",
+    "title": "Electronic Devices",
+    "publisher": "Anuradha Publications"
+  },
+  {
+    "source": "DB1",
+    "sNo": 116,
+    "accNo": "ECESC331",
+    "author": "L. Gopinath, S. Kanimozhi",
+    "title": "Embedded & Realtime Systems Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 117,
+    "accNo": "ECESC332",
+    "author": "Uma Mageshwari",
+    "title": "Antenna and Wave Propagation Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 118,
+    "accNo": "ECESC333",
+    "author": "R.L. Reka, Ravikumar Biomedical Instrumentation / Medical Electronics",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 119,
+    "accNo": "ECESC334",
+    "author": "R.L. Reka",
+    "title": "VLSI Design",
+    "publisher": "A.R. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 120,
+    "accNo": "ECESC335",
+    "author": "Jasmine, Priya",
+    "title": "Electronic Devices",
+    "publisher": "Sruthi Publisher"
+  },
+  {
+    "source": "DB1",
+    "sNo": 121,
+    "accNo": "ECESC336",
+    "author": "K. Muralibabu",
+    "title": "Computer Networks",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 122,
+    "accNo": "ECESC337",
+    "author": "R.L. Reka, Jayasri",
+    "title": "Satellite Communication",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 123,
+    "accNo": "ECESC338",
+    "author": "R.L. Reka, Padmapriya",
+    "title": "Wireless Networks",
+    "publisher": "A.R. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 124,
+    "accNo": "ECESC339",
+    "author": "Muralibabu",
+    "title": "Communication Theory",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 125,
+    "accNo": "ECESC340",
+    "author": "Ragupathi, Mishra",
+    "title": "Measurements & Instrumentation A.R.S. Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 126,
+    "accNo": "ECESC341",
+    "author": "R.K. Rajput Electronic Measurements and Instrumentation",
+    "title": "Chand Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 127,
+    "accNo": "ECESC342",
+    "author": "Dr. S. Baskaran Transmission Lines & Waveguides",
+    "title": "Scitech Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 128,
+    "accNo": "ECESC343",
+    "author": "Faculty Reference",
+    "title": "Dr. K. Padmanabhan, P.Swaminathan, Dr. S. Ananth Electric Circuits & Electron Devices University Science Press",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 129,
+    "accNo": "ECESC344",
+    "author": "S. Sivakumar, K. Madhari Priya",
+    "title": "Electronic Circuits - II",
+    "publisher": "Srikrishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 130,
+    "accNo": "ECESC345",
+    "author": "P. Sankar",
+    "title": "Communication Theory",
+    "publisher": "Magnus Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 131,
+    "accNo": "ECESC346",
+    "author": "Thirupurasundari",
+    "title": "Electronics & Microprocessor",
+    "publisher": "Anuradha Agencies"
+  },
+  {
+    "source": "DB1",
+    "sNo": 132,
+    "accNo": "ECESC347",
+    "author": "Arvind M. Dhake",
+    "title": "Television Engineering",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 133,
+    "accNo": "ECESC348",
+    "author": "Faculty Reference",
+    "title": "Thomas H. Lee The Design of CMOS Radio- Frequency Integrated Circuits Cambridge University Press",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 134,
+    "accNo": "ECESC349",
+    "author": "Behzad Razavi",
+    "title": "RF Microelectronics",
+    "publisher": "Prentice Hall"
+  },
+  {
+    "source": "DB1",
+    "sNo": 135,
+    "accNo": "ECESC350",
+    "author": "Robertson, Lucyszyn RFIC and MMIC Design and Technology",
+    "title": "IET / Inspec",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 136,
+    "accNo": "ECESC351",
+    "author": "Gopinath, Kanimozhi",
+    "title": "Digital Signal Processing",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 137,
+    "accNo": "ECESC352",
+    "author": "Dr. G.K. Vijayaraghavan, Dr. M. Sivakumar Environmental Science & Engineering",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 138,
+    "accNo": "ECESC353",
+    "author": "S. Jaya",
+    "title": "Digital Communications",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 139,
+    "accNo": "ECESC354",
+    "author": "M. Somasundaram, Ramesh Electrical Engineering & Instrumentation",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 140,
+    "accNo": "ECESC355",
+    "author": "Dr. V. Jayakumar Professional Ethics & Human Values",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 141,
+    "accNo": "ECESC356",
+    "author": "S. Jaya",
+    "title": "Wireless Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 142,
+    "accNo": "ECESC357",
+    "author": "R. Selvaraj Electrical Engineering & Instrumentation",
+    "title": "Srikrishna",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 143,
+    "accNo": "ECESC358",
+    "author": "S. Umamaheswari",
+    "title": "Wireless Communication",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 144,
+    "accNo": "ECESC359",
+    "author": "K. Padmapriya",
+    "title": "Television & Video Engineering ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 145,
+    "accNo": "ECESC360",
+    "author": "D. Weslin, R. Vinothini Computer Architecture & Organization",
+    "title": "Charulatha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 146,
+    "accNo": "ECESC361",
+    "author": "J. Rangarajan, B. Krishnamoorthi",
+    "title": "Electronic Devices & Circuits",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 147,
+    "accNo": "ECESC362",
+    "author": "Dr. B. Nagaraj, Manojkumar Transmission Lines & Waveguides",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 148,
+    "accNo": "ECESC363",
+    "author": "S. Kanimozhi",
+    "title": "High Speed Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 149,
+    "accNo": "ECESC364",
+    "author": "R.L. Reka, Dr. V. Kann an",
+    "title": "Digital Image Processing",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 150,
+    "accNo": "ECESC365",
+    "author": "Dr. V. Duraisamy, D. Jayakumar",
+    "title": "Digital Image Processing",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 151,
+    "accNo": "ECESC366",
+    "author": "Millman, Halkias",
+    "title": "Integrated Electronics",
+    "publisher": "Tata McGraw Hill"
+  },
+  {
+    "source": "DB1",
+    "sNo": 152,
+    "accNo": "ECESC367",
+    "author": "M. Senthil Sivakumar",
+    "title": "Linear Integrated Circuits",
+    "publisher": "S. Chand"
+  },
+  {
+    "source": "DB1",
+    "sNo": 153,
+    "accNo": "ECESC368",
+    "author": "Dr. Vijayaraghavan, Dr. Sivakumar",
+    "title": "Principles of Management",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 154,
+    "accNo": "ECESC369",
+    "author": "Rajakumar, Vadhapriya",
+    "title": "Digital Image Processing",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 155,
+    "accNo": "ECESC370",
+    "author": "N. Muthukrishnan, R. Kabilan Wireless Communication",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 156,
+    "accNo": "ECESC371",
+    "author": "Senthil Kani, Allwin",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 157,
+    "accNo": "ECESC372",
+    "author": "J. Friska, J.R. Anisha",
+    "title": "Cryptography & Network Security Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 158,
+    "accNo": "ECESC373",
+    "author": "Friska, Stalin Jacob, Kulandai Selvan Optical Communication & Networks",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 159,
+    "accNo": "ECESC374",
+    "author": "Christo Ananth, L.R. Priya",
+    "title": "High Speed Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 160,
+    "accNo": "ECESC375",
+    "author": "—",
+    "title": "Microprocessor & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 161,
+    "accNo": "ECESC376",
+    "author": "Senthil Kani, Esakki Rajavel Transmission Lines & Waveguides",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 162,
+    "accNo": "ECESC377",
+    "author": "Navaneetha, Lakshmi Narayanan",
+    "title": "Digital Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 163,
+    "accNo": "ECESC378",
+    "author": "L.R. Priya, Friska",
+    "title": "Digital Signal Processing",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 164,
+    "accNo": "ECESC379",
+    "author": "Rajakumar, Juli Therese Computer Architecture & Organization",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 165,
+    "accNo": "ECESC380",
+    "author": "Iuang, Christo, Chitra",
+    "title": "Signals & Systems",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 166,
+    "accNo": "ECESC381",
+    "author": "M. Mini Mua, Suresh",
+    "title": "Electronic Circuits - I",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 167,
+    "accNo": "ECESC382",
+    "author": "L. Selvam, Ramkumar, Shanthi Electrical Engineering & Instrumentation",
+    "title": "—",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 168,
+    "accNo": "ECESC383",
+    "author": "L. Veda Priya, Regi, Kanthan Digital Electronics",
+    "title": "—",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 169,
+    "accNo": "ECESC384",
+    "author": "L. Justin David",
+    "title": "Analog & Digital Communication —",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 170,
+    "accNo": "ECESC385",
+    "author": "L. Anisha",
+    "title": "Digital Signal Processing",
+    "publisher": "—"
+  },
+  {
+    "source": "DB1",
+    "sNo": 171,
+    "accNo": "ECESC386",
+    "author": "L. Regi, Narendran",
+    "title": "Digital Signal Processing",
+    "publisher": "—"
+  },
+  {
+    "source": "DB1",
+    "sNo": 172,
+    "accNo": "ECESC387",
+    "author": "—",
+    "title": "Final Year ECE Question Bank —",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 173,
+    "accNo": "ECESC388",
+    "author": "—",
+    "title": "III Year ECE Question Bank",
+    "publisher": "—"
+  },
+  {
+    "source": "DB1",
+    "sNo": 174,
+    "accNo": "ECESC389",
+    "author": "—",
+    "title": "II Year ECE Question Bank",
+    "publisher": "—"
+  },
+  {
+    "source": "DB1",
+    "sNo": 175,
+    "accNo": "ECESC390",
+    "author": "—",
+    "title": "AU Solved QP - 1st Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 176,
+    "accNo": "ECESC391",
+    "author": "—",
+    "title": "AU Solved QP - 3rd Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 177,
+    "accNo": "ECESC392",
+    "author": "—",
+    "title": "AU Solved QP - 7th Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 178,
+    "accNo": "ECESC393",
+    "author": "—",
+    "title": "AU Solved QP - 7th Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 179,
+    "accNo": "ECESC394",
+    "author": "—",
+    "title": "AU Solved QP - 3rd Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 180,
+    "accNo": "ECESC395",
+    "author": "—",
+    "title": "AU Solved QP - 3rd Sem",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 181,
+    "accNo": "ECESC396",
+    "author": "Balamurugan",
+    "title": "Circuit Theory",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 182,
+    "accNo": "ECESC397",
+    "author": "Jasmine, Priya",
+    "title": "Electronic Devices",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 183,
+    "accNo": "ECESC398",
+    "author": "Jasmine, Priya",
+    "title": "Electronic Devices",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 184,
+    "accNo": "ECESC399",
+    "author": "Dr. Rukumani, Dr. Bhargavi Communication Theory",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 185,
+    "accNo": "ECESC400",
+    "author": "Grace Shoba",
+    "title": "Electronic Circuits - II",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 186,
+    "accNo": "ECESC401",
+    "author": "Grace Shoba, Leena Jasmin Linear Integrated Circuits",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 187,
+    "accNo": "ECESC402",
+    "author": "Kumaresan, Elangovan",
+    "title": "Electromagnetic Fields & Theory Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 188,
+    "accNo": "ECESC403",
+    "author": "Kumaresan, Joel",
+    "title": "Digital Principles & System Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 189,
+    "accNo": "ECESC404",
+    "author": "Kumaresan, Joel",
+    "title": "Digital Principles & System Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 190,
+    "accNo": "ECESC405",
+    "author": "Ashfaq Husain, Harroon Ashfaq",
+    "title": "Control Systems",
+    "publisher": "Dhanpat Rai & Co."
+  },
+  {
+    "source": "DB1",
+    "sNo": 191,
+    "accNo": "ECESC406",
+    "author": "T. Joel",
+    "title": "Electronic Devices",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 192,
+    "accNo": "ECESC407",
+    "author": "Ramachandran, Ravichandran, Ravikumar",
+    "title": "Electronic Devices",
+    "publisher": "VRB"
+  },
+  {
+    "source": "DB1",
+    "sNo": 193,
+    "accNo": "ECESC408",
+    "author": "Faculty Reference",
+    "title": "A.K. Sawhney Electrical & Electronic Measurements & Instrumentation Dhanpat Rai & Co.",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 194,
+    "accNo": "ECESC409",
+    "author": "A. Chakrabarti",
+    "title": "Circuit Theory",
+    "publisher": "Dhanpat Rai & Co."
+  },
+  {
+    "source": "DB1",
+    "sNo": 195,
+    "accNo": "ECESC410",
+    "author": "Dr. B. Bhuvaneswari, D. Nithiya",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Sai"
+  },
+  {
+    "source": "DB1",
+    "sNo": 196,
+    "accNo": "ECESC411",
+    "author": "Dr. P. Kannan Integrated Wireless Sensor Networks",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 197,
+    "accNo": "ECESC412",
+    "author": "Suman Mishra, R. Ananda Control Systems Engineering",
+    "title": "Sai",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 198,
+    "accNo": "ECESC413",
+    "author": "S. Salivahanan, Rengaraj",
+    "title": "Control Systems",
+    "publisher": "Pearson"
+  },
+  {
+    "source": "DB1",
+    "sNo": 199,
+    "accNo": "ECESC414",
+    "author": "Ramesh Babu, Natarajan P. Control Systems Engineering",
+    "title": "Scitech",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 200,
+    "accNo": "ECESC415",
+    "author": "S.K. Bhattacharya",
+    "title": "Control Systems Engineering",
+    "publisher": "Pearson"
+  },
+  {
+    "source": "DB1",
+    "sNo": 201,
+    "accNo": "ECESC416",
+    "author": "S. Seshadhiri, B. Subathra Control Systems",
+    "title": "Tata McGraw Hill",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 202,
+    "accNo": "ECESC417",
+    "author": "R. Senthil Kumar, Dr. R.K. Gnanamurthy",
+    "title": "Analog & Digital Communication Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 203,
+    "accNo": "ECESC418",
+    "author": "S. Gayathri Optical Communication & Networking",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 204,
+    "accNo": "ECESC419",
+    "author": "S. Gayathri",
+    "title": "Wireless Communication",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 205,
+    "accNo": "ECESC420",
+    "author": "S. Vasuki, Margaret Helen, D. Rajeswari",
+    "title": "Microwave Engineering",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 206,
+    "accNo": "ECESC421",
+    "author": "S. Poornachandra, B. Sasikala",
+    "title": "Electronic Circuits - I",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 207,
+    "accNo": "ECESC422",
+    "author": "R. Dhananjayan",
+    "title": "Signals & Systems",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 208,
+    "accNo": "ECESC423",
+    "author": "A.P. Godse, U.A. Bakshi",
+    "title": "Electronic Circuits - I",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 209,
+    "accNo": "ECESC424",
+    "author": "U.A. Bakshi, A.V. Bakshi Transmission Lines & Waveguides",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 210,
+    "accNo": "ECESC425",
+    "author": "V.S. Bagad",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 211,
+    "accNo": "ECESC426",
+    "author": "Dr. J.S. Chitode Principles of Digital Signal Processing",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 212,
+    "accNo": "ECESC427",
+    "author": "U.A. Bakshi, A.V. Bakshi Electrical Engineering & Instrumentation",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 213,
+    "accNo": "ECESC428",
+    "author": "V.S. Bagad Optical Communication & Networking",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 214,
+    "accNo": "ECESC429",
+    "author": "A.P. Godse, Dr. D.A. Godse Digital Electronics",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 215,
+    "accNo": "ECESC430",
+    "author": "Dr. J.S. Chitode",
+    "title": "Digital Communication",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 216,
+    "accNo": "ECESC431",
+    "author": "Dr. J.S. Chitode",
+    "title": "Signals & Systems",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 217,
+    "accNo": "ECESC432",
+    "author": "A.A. Puntambekar Object Oriented Programming & Data Structures",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 218,
+    "accNo": "ECESC433",
+    "author": "Dr. K. Vinoth Babu, Dr. G. Ramachandra Reddy, M. Arthi Digital Communication",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 219,
+    "accNo": "ECESC434",
+    "author": "J.S. Leena Jasmin",
+    "title": "Microprocessor & Microcontroller Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 220,
+    "accNo": "ECESC435",
+    "author": "S. Kumaresan, T. Joel",
+    "title": "Digital Electronics",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 221,
+    "accNo": "ECESC436",
+    "author": "Dr. K.G. Shanthi Transmission Lines & Waveguides",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 222,
+    "accNo": "ECESC437",
+    "author": "Dr. M. Suchetha",
+    "title": "Digital Signal Processing",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 223,
+    "accNo": "ECESC438",
+    "author": "R.R. Gulati",
+    "title": "Modern Television Practice",
+    "publisher": "New Age International"
+  },
+  {
+    "source": "DB1",
+    "sNo": 224,
+    "accNo": "ECESC439",
+    "author": "S. Lakshmi Kantham",
+    "title": "Analog & Digital Communication Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 225,
+    "accNo": "ECESC440",
+    "author": "Dr. M. Suchetha, Ms. G. Meena, Ms. S. Sumathi",
+    "title": "Signals & Systems",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 226,
+    "accNo": "ECESC441",
+    "author": "K. Murali Babu Optical Communication & Networking",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 227,
+    "accNo": "ECESC442",
+    "author": "S. Jaya",
+    "title": "Wireless Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 228,
+    "accNo": "ECESC443",
+    "author": "S. Kanimozhi",
+    "title": "High Speed Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 229,
+    "accNo": "ECESC444",
+    "author": "Dr. V. Jayakumar, Dr. R. Raju Total Quality Management",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 230,
+    "accNo": "ECESC445",
+    "author": "L. Gopinath, S. Kanimozhi",
+    "title": "Microprocessor & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 231,
+    "accNo": "ECESC446",
+    "author": "L. Gopinath",
+    "title": "Digital Electronics",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 232,
+    "accNo": "ECESC447",
+    "author": "K. Murali Babu",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 233,
+    "accNo": "ECESC448",
+    "author": "Dr. R. Saravanan, Dr. M. Sivakumar Environmental Science & Engineering",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 234,
+    "accNo": "ECESC449",
+    "author": "L. Gopinath, S. Kanimozhi Principles of Digital Signal Processing",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 235,
+    "accNo": "ECESC449",
+    "author": "L. Gopinath Multimedia Compression & Communication",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 236,
+    "accNo": "ECESC450",
+    "author": "K. Brindha Object Oriented Programming & Data Structures",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 237,
+    "accNo": "ECESC451",
+    "author": "M. Somasundaram, M. Ramesh, T. Saravanan Electrical Engineering & Instrumentation",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 238,
+    "accNo": "ECESC452",
+    "author": "Dr. M. Suchetha",
+    "title": "Digital Signal Processing",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 239,
+    "accNo": "ECESC453",
+    "author": "Proakis, Salehi Fundamentals of Communication Systems",
+    "title": "Pearson",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 240,
+    "accNo": "ECESC454",
+    "author": "Dr. P. Dananjayan Transmission Lines & Waveguides",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 241,
+    "accNo": "ECESC455",
+    "author": "J.B. Gupta An Integrated Course in Electronics & Communication Engineering",
+    "title": "Kataria",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 242,
+    "accNo": "ECESC456",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Electronic Principles",
+    "publisher": "Kataria"
+  },
+  {
+    "source": "DB1",
+    "sNo": 243,
+    "accNo": "ECESC457",
+    "author": "Faculty Reference",
+    "title": "J.B. Gupta A Course in Electrical & Electronic Measurements & Instrumentation Kataria",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 244,
+    "accNo": "ECESC458",
+    "author": "Syed Hasan Saeed, Faizan, Arif Khan",
+    "title": "Electromagnetic Field Theory",
+    "publisher": "Kataria"
+  },
+  {
+    "source": "DB1",
+    "sNo": 245,
+    "accNo": "ECESC459",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Communication",
+    "publisher": "Kataria"
+  },
+  {
+    "source": "DB1",
+    "sNo": 246,
+    "accNo": "ECESC460",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Electronics & Logic Design Kataria",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 247,
+    "accNo": "ECESC461",
+    "author": "J.B. Gupta",
+    "title": "Basic Electronics",
+    "publisher": "Kataria"
+  },
+  {
+    "source": "DB1",
+    "sNo": 248,
+    "accNo": "ECESC462",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Signal Processing",
+    "publisher": "Kataria"
+  },
+  {
+    "source": "DB1",
+    "sNo": 249,
+    "accNo": "ECESC463",
+    "author": "S. Hasan Saeed Automatic Control Systems (with MATLAB)",
+    "title": "Kataria",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 250,
+    "accNo": "ECESC464",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Data & Computer Communication Kataria",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 251,
+    "accNo": "ECESC465",
+    "author": "Dr. Sanjay Sharma Wireless & Cellular Communication",
+    "title": "Kataria",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 252,
+    "accNo": "ECESC466",
+    "author": "S. Kumaresan",
+    "title": "Electromagnetic Field & Theory Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 253,
+    "accNo": "ECESC467",
+    "author": "M.K. Balachandran, M.K. Ramachandran",
+    "title": "Circuit Theory",
+    "publisher": "VRB"
+  },
+  {
+    "source": "DB1",
+    "sNo": 254,
+    "accNo": "ECESC468",
+    "author": "J. Gnanavadivel, C. Senthil Kumar, Dr. P. Maruthupandi Circuit Theory",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 255,
+    "accNo": "ECESC469",
+    "author": "M.K. Ramachandran, T. Ravikumar",
+    "title": "Electronic Devices",
+    "publisher": "VRB"
+  },
+  {
+    "source": "DB1",
+    "sNo": 256,
+    "accNo": "ECESC470",
+    "author": "R. Anandanatarajan, P. Ramesh Babu",
+    "title": "Control Systems Engineering",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 257,
+    "accNo": "ECESC471",
+    "author": "D. Sathiaiah, M. Anitha",
+    "title": "Electromagnetic Fields",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 258,
+    "accNo": "ECESC472",
+    "author": "P. Raja",
+    "title": "Digital Principles & System Design Scitech",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 259,
+    "accNo": "ECESC473",
+    "author": "Dr. G.K. Vijayaraghavan, Dr. M. Sivakumar",
+    "title": "Principles of Management",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 260,
+    "accNo": "ECESC474",
+    "author": "P. Ramesh Babu",
+    "title": "Circuit Theory",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 261,
+    "accNo": "ECESC475",
+    "author": "P. Ramesh Babu",
+    "title": "Circuit Theory",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 262,
+    "accNo": "ECESC476",
+    "author": "P. Ramesh Babu",
+    "title": "Digital Signal Processing",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 263,
+    "accNo": "ECESC477",
+    "author": "Smarajit Ghosh",
+    "title": "Electrical Machines",
+    "publisher": "Pearson"
+  },
+  {
+    "source": "DB1",
+    "sNo": 264,
+    "accNo": "ECESC478",
+    "author": "V.S. Bagad, I.A. Dhotre",
+    "title": "Computer Networks",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 265,
+    "accNo": "ECESC479",
+    "author": "U.A. Bakshi, A.V. Bakshi",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 266,
+    "accNo": "ECESC480",
+    "author": "I.A. Dhotre",
+    "title": "Operating Systems",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 267,
+    "accNo": "ECESC481",
+    "author": "Dr. J.S. Chitode",
+    "title": "Digital Signal Processing",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 268,
+    "accNo": "ECESC482",
+    "author": "V.S. Bagad, Anjali Bagad",
+    "title": "Principles of Management",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 269,
+    "accNo": "ECESC483",
+    "author": "U.A. Bakshi, A.P. Godse",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 270,
+    "accNo": "ECESC484",
+    "author": "U.A. Bakshi, M.U. Bakshi",
+    "title": "Control Systems Engineering",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 271,
+    "accNo": "ECESC485",
+    "author": "Anjali Bagad Environmental Science & Engineering",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 272,
+    "accNo": "ECESC486",
+    "author": "U.A. Bakshi, A.V. Bakshi",
+    "title": "Electromagnetic Fields",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 273,
+    "accNo": "ECESC487",
+    "author": "V.S. Bagad",
+    "title": "VLSI Design",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 274,
+    "accNo": "ECESC488",
+    "author": "Dr. J.S. Chitode",
+    "title": "Communication Theory",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 275,
+    "accNo": "ECESC489",
+    "author": "U.A. Bakshi, A.P. Godse",
+    "title": "Electronic Devices",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 276,
+    "accNo": "ECESC490",
+    "author": "Albert Paul Malvino",
+    "title": "Electronic Principles",
+    "publisher": "Tata McGraw Hill"
+  },
+  {
+    "source": "DB1",
+    "sNo": 277,
+    "accNo": "ECESC491",
+    "author": "M.K. Balachandran, Ravikumar",
+    "title": "Electronic Devices",
+    "publisher": "VRB"
+  },
+  {
+    "source": "DB1",
+    "sNo": 278,
+    "accNo": "ECESC492",
+    "author": "Stallings",
+    "title": "Cryptography & Network Security Pearson Education",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 279,
+    "accNo": "ECESC493",
+    "author": "Dr. H. Ranganathan, Mrs. N. Gayatri Rao",
+    "title": "Principles of Management",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 280,
+    "accNo": "ECESC494",
+    "author": "Dr. M. Suchetha",
+    "title": "Digital Signal Processing",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 281,
+    "accNo": "ECESC495",
+    "author": "S.P. Sasi Rekha",
+    "title": "Medical Electronics",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 282,
+    "accNo": "ECESC496",
+    "author": "J.S. Leena Jasmine",
+    "title": "Computer Architecture",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 283,
+    "accNo": "ECESC497",
+    "author": "D. Kokila, P. Rega",
+    "title": "Computer Networks",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 284,
+    "accNo": "ECESC498",
+    "author": "Dr. D. Rukumani Devi",
+    "title": "VLSI Design",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 285,
+    "accNo": "ECESC499",
+    "author": "N. Chidambaram",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 286,
+    "accNo": "ECESC500",
+    "author": "S.R. Trinity",
+    "title": "Electronic Devices",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 287,
+    "accNo": "ECESC501",
+    "author": "Dr. G.K. Vijayaraghavan, Dr. M. Sivakumar",
+    "title": "Principles of Management",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 288,
+    "accNo": "ECESC502",
+    "author": "L. Gopinath",
+    "title": "Control Systems",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 289,
+    "accNo": "ECESC503",
+    "author": "R.L. Reka, C. Ravikumar",
+    "title": "Medical Electronics",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 290,
+    "accNo": "ECESC504",
+    "author": "S. Kanimozhi",
+    "title": "Computer Architecture",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 291,
+    "accNo": "ECESC505",
+    "author": "K. Murali Babu",
+    "title": "Computer Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 292,
+    "accNo": "ECESC506",
+    "author": "L. Gopinath, S. Kanimozhi",
+    "title": "Embedded & Real Time Systems Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 293,
+    "accNo": "ECESC507",
+    "author": "Mr. J. Joel",
+    "title": "Electronic Circuits - II",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 294,
+    "accNo": "ECESC508",
+    "author": "Dr. M. Venkatesan, Dr. P. Meenakshi",
+    "title": "Computer Architecture",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 295,
+    "accNo": "ECESC509",
+    "author": "Prof. T. Nageswara Rao",
+    "title": "Circuit Theory",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 296,
+    "accNo": "ECESC510",
+    "author": "Dr. S. Latha Shanmuga Vadivu",
+    "title": "Medical Electronics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 297,
+    "accNo": "ECESC511",
+    "author": "B.S. Sathishkumar, P. Arul Linear Integrated Circuits",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 298,
+    "accNo": "ECESC512",
+    "author": "L. Mohanasundari, S.M. Raj Bharath, K.P. Senthilkumar Antenna & Wave Propagation",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 299,
+    "accNo": "ECESC513",
+    "author": "K. Murali Babu, L. Agilandeswari",
+    "title": "Communication Theory",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 300,
+    "accNo": "ECESC514",
+    "author": "Dr. C. Senthilkumar, C. Shanmuga Raja, P. Sivakumar",
+    "title": "Electromagnetic Fields",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 301,
+    "accNo": "ECESC515",
+    "author": "K. Murali Babu, L. Agilandeswari",
+    "title": "Computer Networks",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 302,
+    "accNo": "ECESC516",
+    "author": "Dr. C. Senthilkumar, C. Shanmuga Raja, P. Sivakumar",
+    "title": "Electromagnetic Fields",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 303,
+    "accNo": "ECESC517",
+    "author": "K. Murali Babu",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 304,
+    "accNo": "ECESC518",
+    "author": "Faculty Reference",
+    "title": "Dr. P. Kannan, M. Saraswathi Digital Principles & System Design Sree Kamalamani",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 305,
+    "accNo": "ECESC519",
+    "author": "A.P. Godse, Dr. D.A. Godse Digital Electronics",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 306,
+    "accNo": "ECESC520",
+    "author": "Mrs. Anjali Bagad Environmental Science & Engineering",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 307,
+    "accNo": "ECESC521",
+    "author": "A.A. Puntambekar Object Oriented Programming & Data Structures",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 308,
+    "accNo": "ECESC522",
+    "author": "A.P. Godse, U.A. Bakshi",
+    "title": "Electronic Circuits - I",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 309,
+    "accNo": "ECESC523",
+    "author": "U.A. Bakshi, A.V. Bakshi Electrical Engineering & Instrumentation",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 310,
+    "accNo": "ECESC524",
+    "author": "Faculty Reference",
+    "title": "A.P. Godse, Dr. D.A. Godse Microprocessor & Microcontroller Technical",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 311,
+    "accNo": "ECESC525",
+    "author": "L. Balaji, A. Dhanalakshmi",
+    "title": "Microprocessor & Microcontroller ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 312,
+    "accNo": "ECESC526",
+    "author": "D. Edwin Dhas",
+    "title": "Digital Electronics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 313,
+    "accNo": "ECESC527",
+    "author": "K. Murali Babu",
+    "title": "Analog & Digital Communication ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 314,
+    "accNo": "ECESC528",
+    "author": "Prabhu Devarathinam Environmental Science & Engineering",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 315,
+    "accNo": "ECESC529",
+    "author": "L. Gopinath, Dineshkumar",
+    "title": "Digital Communication",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 316,
+    "accNo": "ECESC530",
+    "author": "A.P. Godse, U.A. Bakshi",
+    "title": "Electronic Circuits - I",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 317,
+    "accNo": "ECESC531",
+    "author": "P. Ramesh Babu, R. Anandanatarajan",
+    "title": "Signals & Systems",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 318,
+    "accNo": "ECESC532",
+    "author": "T.R. Ganesh Babu, S. Lea Pauline",
+    "title": "Digital Communication",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 319,
+    "accNo": "ECESC533",
+    "author": "P. Raja",
+    "title": "Digital Electronics",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 320,
+    "accNo": "ECESC534",
+    "author": "Dr. J.S. Chitode",
+    "title": "Digital Communication",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 321,
+    "accNo": "ECESC535",
+    "author": "Dr. J.S. Chitode, V.A. Bakshi, A.V. Bakshi",
+    "title": "Principles of DSP",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 322,
+    "accNo": "ECESC536",
+    "author": "— Transmission Lines & Waveguides",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 323,
+    "accNo": "ECESC537",
+    "author": "Dr. J.S. Chitode",
+    "title": "Signals & Systems",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 324,
+    "accNo": "ECESC538",
+    "author": "A. Nagoor Kani",
+    "title": "Signals & Systems",
+    "publisher": "McGraw Hill"
+  },
+  {
+    "source": "DB1",
+    "sNo": 325,
+    "accNo": "ECESC539",
+    "author": "Dr. Helen Prabha",
+    "title": "Digital Signal Processing",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 326,
+    "accNo": "ECESC540",
+    "author": "Dr. T. Jayanthy, J. Navarajan, Dr. K. Shaji",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 327,
+    "accNo": "ECESC541",
+    "author": "Dr. B. Soumya Transmission Lines & Waveguides",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 328,
+    "accNo": "ECESC542",
+    "author": "R. Senthil Kumar, Dr. R.K. Gnanamurthy",
+    "title": "Analog & Digital Communication Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 329,
+    "accNo": "ECESC543",
+    "author": "S. Batmavady, Girivasan",
+    "title": "Signals & Systems",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 330,
+    "accNo": "ECESC544",
+    "author": "K. Padmapriya",
+    "title": "Opto Electronic Devices",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 331,
+    "accNo": "ECESC545",
+    "author": "L. Gopinath, S. Kanimozhi",
+    "title": "Embedded & Real Time Systems Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 332,
+    "accNo": "ECESC546",
+    "author": "L. Gopinath, S. Kanimozhi",
+    "title": "Microprocessor & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 333,
+    "accNo": "ECESC547",
+    "author": "Dr. P. Dananjayan Transmission Lines & Waveguides",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 334,
+    "accNo": "ECESC548",
+    "author": "S. Kanimozhi",
+    "title": "Digital Communication",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 335,
+    "accNo": "ECESC549",
+    "author": "M. Balasaraswathi",
+    "title": "Signals & Systems",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 336,
+    "accNo": "ECESC550",
+    "author": "S. Lakshmi Kantham",
+    "title": "Advanced Computer Architecture Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 337,
+    "accNo": "ECESC551",
+    "author": "S.J. Grace Shoba Optical Communication & Networks",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 338,
+    "accNo": "ECESC552",
+    "author": "Dr. D. Rukumani Devi",
+    "title": "Embedded & Real Time Systems Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 339,
+    "accNo": "ECESC553",
+    "author": "Dr. K.G. Shanthi Transmission Lines & Waveguides",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 340,
+    "accNo": "ECESC554",
+    "author": "S. Janani, R. Ramesh Kumar Electromagnetic Interference & Compatibility",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 341,
+    "accNo": "ECESC555",
+    "author": "Dr. D. Rukumani Devi",
+    "title": "DSP",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 342,
+    "accNo": "ECESC556",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "Digital Image Processing",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 343,
+    "accNo": "ECESC557",
+    "author": "Dr. G. Ramprabu",
+    "title": "Embedded & Real Time Systems ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 344,
+    "accNo": "ECESC558",
+    "author": "L. Balaji",
+    "title": "Satellite Communication",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 345,
+    "accNo": "ECESC559",
+    "author": "C. Shanmugaraja Transmission Lines & Waveguides",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 346,
+    "accNo": "ECESC560",
+    "author": "Faculty Reference",
+    "title": "R.L. Reka, Dr. S.M. Ramesh Embedded & Real Time Systems ALR",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 347,
+    "accNo": "ECESC561",
+    "author": "R.L. Reka",
+    "title": "Satellite Communication",
+    "publisher": "ALR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 348,
+    "accNo": "ECESC562",
+    "author": "R.L. Reka, C. Ravikumar",
+    "title": "Biomedical Instrumentation",
+    "publisher": "ALR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 349,
+    "accNo": "ECESC563",
+    "author": "Faculty Reference",
+    "title": "B.S. Sathishkumar, P. Arul Analog & Digital Communication ARS",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 350,
+    "accNo": "ECESC564",
+    "author": "Dr. N. Jayaprakash",
+    "title": "Computer Networks",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 351,
+    "accNo": "ECESC565",
+    "author": "S. Gayathri",
+    "title": "Communication Theory",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 352,
+    "accNo": "ECESC566",
+    "author": "Dr. K. Helenprabha, M.N. Vimal Kumar",
+    "title": "Control System Engineering",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 353,
+    "accNo": "ECESC567",
+    "author": "Dr. N. Jayaprakash",
+    "title": "Computer Architecture",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 354,
+    "accNo": "ECESC568",
+    "author": "Dr. K.R. Srinivasan",
+    "title": "Electronic Devices",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 355,
+    "accNo": "ECESC569",
+    "author": "Dr. N. Premkumar Basic Electrical & Electronics Engineering",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 356,
+    "accNo": "ECESC570",
+    "author": "A. Amasaveni",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 357,
+    "accNo": "ECESC571",
+    "author": "J.S. Leena Jasmine",
+    "title": "Computer Architecture",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 358,
+    "accNo": "ECESC572",
+    "author": "S. Kumaresan",
+    "title": "Electromagnetic Fields & Theory Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 359,
+    "accNo": "ECESC573",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 360,
+    "accNo": "ECESC574",
+    "author": "S. Kumaresan",
+    "title": "Digital Principles & System Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 361,
+    "accNo": "ECESC575",
+    "author": "Dr. D. Rukumani Devi",
+    "title": "VLSI Design",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 362,
+    "accNo": "ECESC576",
+    "author": "D. Kokila",
+    "title": "Computer Networks",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 363,
+    "accNo": "ECESC577",
+    "author": "Dr. H. Ranganathan",
+    "title": "Principles of Management",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 364,
+    "accNo": "ECESC578",
+    "author": "R. Lakshmi Reka",
+    "title": "Medical Electronics",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 365,
+    "accNo": "ECESC579",
+    "author": "K. Murali Babu",
+    "title": "Communication Theory",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 366,
+    "accNo": "ECESC580",
+    "author": "K. Murali Babu",
+    "title": "Computer Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 367,
+    "accNo": "ECESC581",
+    "author": "K. Ananda Kumar",
+    "title": "Computer Networks",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 368,
+    "accNo": "ECESC582",
+    "author": "B.V. Santhosh Krishna",
+    "title": "Wireless Network",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 369,
+    "accNo": "ECESC583",
+    "author": "L. Gopinath Multimedia Compression & Communication",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 370,
+    "accNo": "ECESC584",
+    "author": "Dr. M.S. Gayathri",
+    "title": "Principles of Management",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 371,
+    "accNo": "ECESC585",
+    "author": "Dr. M. Venkatesan, Dr. P. Meenakshi Devi",
+    "title": "Computer Architecture",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 372,
+    "accNo": "ECESC586",
+    "author": "Dr. V. Jayakumar",
+    "title": "Professional Ethics in Engineering Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 373,
+    "accNo": "ECESC587",
+    "author": "R. Rajagopal",
+    "title": "VLSI Design",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 374,
+    "accNo": "ECESC588",
+    "author": "L. Mohanasundari, S.M. Raj Bharath, K.P. Senthilkumar Antenna & Wave Propagation",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 375,
+    "accNo": "ECESC589",
+    "author": "Dr. C. Senthilkumar, C. Shanmuga Raja, P. Sivakumar",
+    "title": "Electromagnetic Fields",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 376,
+    "accNo": "ECESC590",
+    "author": "L. Gopinath",
+    "title": "Control System",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 377,
+    "accNo": "ECESC591",
+    "author": "Dr. V. Jayakumar, Dr. R. Raju Total Quality Management",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 378,
+    "accNo": "ECESC592",
+    "author": "Dr. P. Dananjayan",
+    "title": "Electromagnetic Fields",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 379,
+    "accNo": "ECESC593",
+    "author": "N. Chidambaram",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 380,
+    "accNo": "ECESC594",
+    "author": "K. Murali Babu",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 381,
+    "accNo": "ECESC595",
+    "author": "S. Jaya",
+    "title": "Wireless Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 382,
+    "accNo": "ECESC596",
+    "author": "Prof. P. Nageswara Rao",
+    "title": "Circuit Theory",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 383,
+    "accNo": "ECESC597",
+    "author": "B. Rajesh Kumar, R. Trinity Electronic Devices",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 384,
+    "accNo": "ECESC598",
+    "author": "Dr. R. Senthil Kumar",
+    "title": "Wireless Communication",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 385,
+    "accNo": "ECESC598",
+    "author": "S. Kanimozhi",
+    "title": "Computer Architecture",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 386,
+    "accNo": "ECESC599",
+    "author": "Dr. A. Janeera",
+    "title": "VLSI Design",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 387,
+    "accNo": "ECESC600",
+    "author": "Dr. S. Latha Shanmuga Vadivu",
+    "title": "Medical Electronics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 388,
+    "accNo": "ECESC601",
+    "author": "A.R. S. Maruthapraveen",
+    "title": "Wireless Communication",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 389,
+    "accNo": "ECESC602",
+    "author": "P. Ramesh Babu",
+    "title": "Electronic Circuits & Devices",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 390,
+    "accNo": "ECESC603",
+    "author": "Vijayaraghavan, Sivakumar Principles of Management",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 391,
+    "accNo": "ECESC604",
+    "author": "P. Ramesh Babu",
+    "title": "Electric Circuits & Devices",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 392,
+    "accNo": "ECESC605",
+    "author": "M. Ezhilarasan",
+    "title": "Control System",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 393,
+    "accNo": "ECESC606",
+    "author": "Soumitha Kumar, Mandal",
+    "title": "Microprocessor & Microcontroller Tata McGraw Hill",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 394,
+    "accNo": "ECESC607",
+    "author": "Dr. Ramakrishna Rao",
+    "title": "Analog Communication",
+    "publisher": "Tata McGraw Hill"
+  },
+  {
+    "source": "DB1",
+    "sNo": 395,
+    "accNo": "ECESC608",
+    "author": "S. Gayathri Optical Communication & Networking",
+    "title": "Anuradha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 396,
+    "accNo": "ECESC609",
+    "author": "S. Saravanan, S. Senthilnathan",
+    "title": "Digital Electronics",
+    "publisher": "VRA"
+  },
+  {
+    "source": "DB1",
+    "sNo": 397,
+    "accNo": "ECESC610",
+    "author": "E. Parameswamy, S. Jaya",
+    "title": "Digital Signal Processing",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 398,
+    "accNo": "ECESC611",
+    "author": "R. Lakshmi Reka, K. Padmapriya",
+    "title": "Digital Image Processing",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 399,
+    "accNo": "ECESC612",
+    "author": "K. Murali Babu, M. Vinoth Babu",
+    "title": "Principles of Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 400,
+    "accNo": "ECESC613",
+    "author": "S. Jaya Workspace Communication / Wireless Communication",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 401,
+    "accNo": "ECESC614",
+    "author": "M. Auxiliya Computer Architecture & Organizations",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 402,
+    "accNo": "ECESC615",
+    "author": "Dr. P. Dananjayan Transmission Lines & Waveguides",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 403,
+    "accNo": "ECESC616",
+    "author": "Dr. V. Jayakumar Professional Ethics & Human Values",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 404,
+    "accNo": "ECESC617",
+    "author": "M. Phemina Selvi, P. Sivagnanasundari",
+    "title": "High Speed Networks",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 405,
+    "accNo": "ECESC618",
+    "author": "Dr. Weslin, R. Vinothini Computer Architecture & Organizations",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 406,
+    "accNo": "ECESC619",
+    "author": "R.L. Reka",
+    "title": "Microprocessor & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 407,
+    "accNo": "ECESC620",
+    "author": "S. Jaya",
+    "title": "Digital Communication",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 408,
+    "accNo": "ECESC621",
+    "author": "M. Phemina Selvi",
+    "title": "Electronic Circuits I",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 409,
+    "accNo": "ECESC622",
+    "author": "Mr. S. Prabu & Mr. V. Pandimurugan",
+    "title": "Principles of Communication",
+    "publisher": "Bharathi Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 410,
+    "accNo": "ECESC623",
+    "author": "-",
+    "title": "Mobile Communications",
+    "publisher": "-"
+  },
+  {
+    "source": "DB1",
+    "sNo": 411,
+    "accNo": "ECESC624",
+    "author": "J.S.",
+    "title": "Microprocessor and Microcontrollers Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 412,
+    "accNo": "ECESC625",
+    "author": "J. Sathya Priya & Leena Jasmine",
+    "title": "Digital Principles and System Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 413,
+    "accNo": "ECESC626",
+    "author": "M.A. Padma Priya & K.R. Sarath Chandran & K.G. Shanthi",
+    "title": "Transmission Lines and Waveguides Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 414,
+    "accNo": "ECESC627",
+    "author": "Dr. Sanjay Sharma Question Bank in Electronics and Communication Engg.",
+    "title": "S.K. Kataria & Sons",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 415,
+    "accNo": "ECESC628",
+    "author": "Dr. Sanjay Sharma Communication Systems (Analog & Digital)",
+    "title": "S.K. Kataria & Sons",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 416,
+    "accNo": "ECESC629",
+    "author": "J.B. Gupta",
+    "title": "Electronic Devices & Circuits",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 417,
+    "accNo": "ECESC630",
+    "author": "M. Elangovan",
+    "title": "Electronic Circuits I",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 418,
+    "accNo": "ECESC631",
+    "author": "K. Murali Babu",
+    "title": "RF and Microwave Engineering Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 419,
+    "accNo": "ECESC632",
+    "author": "S. Kumaresan & G. Venkat Babu",
+    "title": "Electro Magnetic Fields",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 420,
+    "accNo": "ECESC633",
+    "author": "J.S. Leena Jasmine",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 421,
+    "accNo": "ECESC634",
+    "author": "U.A. Bakshi & A.V. Bakshi",
+    "title": "Electrical Engineering",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 422,
+    "accNo": "ECESC635",
+    "author": "Dr. Bommannaraja Electric Circuit & Electronic Devices",
+    "title": "HiTech",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 423,
+    "accNo": "ECESC636",
+    "author": "R. Shankar Sivakumar",
+    "title": "Electromagnetic Fields",
+    "publisher": "HiTech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 424,
+    "accNo": "ECESC637",
+    "author": "Madhari Priya",
+    "title": "Electronic Circuits",
+    "publisher": "HiTech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 425,
+    "accNo": "ECESC638",
+    "author": "S.J. Grace Shoba",
+    "title": "Electronic Circuits",
+    "publisher": "HiTech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 426,
+    "accNo": "ECESC639",
+    "author": "M.K. Balachandran",
+    "title": "Circuit Theory",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 427,
+    "accNo": "ECESC640",
+    "author": "Faculty Reference",
+    "title": "P. Manimegalai & P. Bhabitha Electronics and Microprocessor University Science",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 428,
+    "accNo": "ECESC641",
+    "author": "M. Phemina Selvi",
+    "title": "Electronic Circuit I",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 429,
+    "accNo": "ECESC642",
+    "author": "V. Jaya Shree Anrokiyasami Wireless Networks",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 430,
+    "accNo": "ECESC643",
+    "author": "V.S. Bagad",
+    "title": "VLSI Design",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 431,
+    "accNo": "ECESC644",
+    "author": "A.P. Godse & U.A. Bakshi",
+    "title": "Electronic Circuits",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 432,
+    "accNo": "ECESC645",
+    "author": "V.A. Bakshi & A.V. Bakshi",
+    "title": "Electromagnetic Fields",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 433,
+    "accNo": "ECESC646",
+    "author": "Dr. D. Rukmanidevi",
+    "title": "Digital Signal Processing",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 434,
+    "accNo": "ECESC647",
+    "author": "S. Lakshmi Kantham",
+    "title": "Advanced Computer Architecture Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 435,
+    "accNo": "ECSC648",
+    "author": "Dr. Sanjay Sharma Wireless & Cellular Communication",
+    "title": "S.K. Kataria & Sons",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 436,
+    "accNo": "ECESC649",
+    "author": "J.B. Gupta",
+    "title": "Electronics Engineering",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 437,
+    "accNo": "ECESC650",
+    "author": "-",
+    "title": "Electronic Circuits",
+    "publisher": "A.R. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 438,
+    "accNo": "ECEJC651",
+    "author": "Mr. B.S. Sathish Kumar & Mr. A.P. Prabaharan & Dr. C. Senthil Kumar & C. Shanmugaraja",
+    "title": "Electromagnetic Fields",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 439,
+    "accNo": "ECESC652",
+    "author": "Dr. J.S. Chitode",
+    "title": "Principles of DSP",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 440,
+    "accNo": "ECEJC653",
+    "author": "Dr. G. Tholkappia Arasu & M. Rajaramani",
+    "title": "Communication Theory",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 441,
+    "accNo": "ECESC654",
+    "author": "V.S. Bagad",
+    "title": "Optical Communication Networks Technical Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 442,
+    "accNo": "ECESC655",
+    "author": "J. Janani & R. Ramesh Kumar Electromagnetic Interference & Compatibility",
+    "title": "Sruthi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 443,
+    "accNo": "ECESC656",
+    "author": "Dr. P. Thirumurugan & S. Johana & S.R. Ashok Kumar Opto Electronic Devices",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 444,
+    "accNo": "ECEJC657",
+    "author": "U.A. Bakshi & A.V. Bakshi Transmission Lines & Waveguides",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 445,
+    "accNo": "ELESC658",
+    "author": "Anjali Bagad Environmental Science & Engineering",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 446,
+    "accNo": "ECESC659",
+    "author": "V.S. Bagad",
+    "title": "R.F. Microwave Engineering",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 447,
+    "accNo": "ECESC660",
+    "author": "Faculty Reference",
+    "title": "A.P. Godse & Dr. D.A. Godse Microprocessor & Microcontroller Technical",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 448,
+    "accNo": "ECESC661",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Digital Signal Processing",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 449,
+    "accNo": "ECESC662",
+    "author": "Janeera D.A.",
+    "title": "VLSI Design",
+    "publisher": "A.R. Public"
+  },
+  {
+    "source": "DB1",
+    "sNo": 450,
+    "accNo": "ECESC663",
+    "author": "Dr. D. Rukmani Devi",
+    "title": "Embedded & Real Time Systems Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 451,
+    "accNo": "ECESC664",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "Digital Image Processing",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 452,
+    "accNo": "ECESC665",
+    "author": "S. Lakshmi Kanthan",
+    "title": "Analog & Digital Communication Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 453,
+    "accNo": "ECSC666",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Opamps & LIC",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 454,
+    "accNo": "ECES667",
+    "author": "Dr. Sanjay Sharma Data Communication & Computer Networks",
+    "title": "S.K. Kataria & Sons",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 455,
+    "accNo": "ECEJC668",
+    "author": "Uday A. Bakshi",
+    "title": "Electrical & Instrumentation Engg. Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 456,
+    "accNo": "ECESC669",
+    "author": "A.A. Puntambekar Object Oriented Programming & Data Structures",
+    "title": "Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 457,
+    "accNo": "ECESC670",
+    "author": "Dr. K.G. Shanthi Transmission Lines & Waveguides",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 458,
+    "accNo": "ECESC671",
+    "author": "A.P. Godse & U.A. Bakshi",
+    "title": "Electronic Circuits I",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 459,
+    "accNo": "ECE672",
+    "author": "A.P. Godse & U.A. Bakshi",
+    "title": "Digital Electronics",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 460,
+    "accNo": "ECE11673",
+    "author": "Dr. Sanjay Sharma",
+    "title": "Communication System",
+    "publisher": "S.K. Kataria & Sons"
+  },
+  {
+    "source": "DB1",
+    "sNo": 461,
+    "accNo": "ECESC674",
+    "author": "Dr. J.S. Chitode",
+    "title": "Signals & Systems",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 462,
+    "accNo": "ECESC675",
+    "author": "Dr. C. Vinoth Babu",
+    "title": "Digital Communication",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 463,
+    "accNo": "ECESL676",
+    "author": "Dr. G. Ramachandralathy Optical Communication & Networks",
+    "title": "Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 464,
+    "accNo": "ECEJC677",
+    "author": "M. Arthi",
+    "title": "Soft Computing",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 465,
+    "accNo": "ECESC678",
+    "author": "Dr. V. Leena Jasmine",
+    "title": "Microprocessor & Microcontroller Suchitra Pub",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 466,
+    "accNo": "ECEJC679",
+    "author": "D. Edwin Dhas",
+    "title": "Digital Electronics",
+    "publisher": "ARS Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 467,
+    "accNo": "ECESC680",
+    "author": "Dr. G. Ramprabu",
+    "title": "Embedded & Real Time Systems ARS Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 468,
+    "accNo": "ECESC681",
+    "author": "L. Gopinath Advanced Microprocessor & Microcontroller",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 469,
+    "accNo": "ECESC682",
+    "author": "Dr. K. Murali Babu",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 470,
+    "accNo": "ECESC683",
+    "author": "V. Lakshmanan",
+    "title": "Digital Signal Processing",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 471,
+    "accNo": "ECESC684",
+    "author": "Dhananjeyan",
+    "title": "Signals & System",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 472,
+    "accNo": "ECESC685",
+    "author": "Dr. P.S. Manohar",
+    "title": "Microprocessor & Microcontroller Charulatha",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 473,
+    "accNo": "ECESC686",
+    "author": "L. Gopinath",
+    "title": "Satellite Communication",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 474,
+    "accNo": "ECESC687",
+    "author": "I. Poornima Thangam",
+    "title": "Digital Image Processing",
+    "publisher": "Charulatha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 475,
+    "accNo": "ECESC688",
+    "author": "N.S. J. Siva Sankari",
+    "title": "Cognitive Radio",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 476,
+    "accNo": "ECESC689",
+    "author": "L. Gopinath",
+    "title": "Digital Electronics",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 477,
+    "accNo": "ECESC690",
+    "author": "S. Kanimozhi",
+    "title": "Digital Communication",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 478,
+    "accNo": "ECESC691",
+    "author": "L. Gopinath",
+    "title": "Principles of DSP",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 479,
+    "accNo": "ELESC692",
+    "author": "C. Shanmugaraja Transmission Lines & Waveguides",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 480,
+    "accNo": "ECEC693",
+    "author": "L.R. Vinothini",
+    "title": "Principles of DSP",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 481,
+    "accNo": "ECESC694",
+    "author": "I. Balaji",
+    "title": "Microprocessor & Microcontroller ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 482,
+    "accNo": "ECESC695",
+    "author": "K. Balaji",
+    "title": "Electronic Circuits - I",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 483,
+    "accNo": "ECE1696",
+    "author": "Prabhu Devarathinam Environmental Science & Engineering",
+    "title": "AR Pub",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 484,
+    "accNo": "ECESC697",
+    "author": "S. Padmavathy",
+    "title": "Signals & System",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 485,
+    "accNo": "ECESC698",
+    "author": "S. Gayathri",
+    "title": "Optical Communication Networks Anuradha Pub",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 486,
+    "accNo": "ECESC699",
+    "author": "R. Rajarajani",
+    "title": "Adhoc and Sensor Networks",
+    "publisher": "Suchitra Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 487,
+    "accNo": "ECESC700",
+    "author": "V.S. Bagad",
+    "title": "Computer Networks",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 488,
+    "accNo": "ECESC701",
+    "author": "Dr. J.S. Chitode",
+    "title": "Communication Theory",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 489,
+    "accNo": "ECESC702",
+    "author": "A.P. Godse",
+    "title": "Electronic Circuits-I",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 490,
+    "accNo": "ECESC703",
+    "author": "U.A. Bakshi",
+    "title": "Control System Engineering",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 491,
+    "accNo": "ECESC704",
+    "author": "U.A. Bakshi",
+    "title": "Antennas & Wave Propagation Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 492,
+    "accNo": "FCESC705",
+    "author": "V.S. Bagad",
+    "title": "Principles of Management",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 493,
+    "accNo": "ECESC706",
+    "author": "R. Rajarajani & V. Jeyam & Arockia Mary",
+    "title": "Wireless Networks",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 494,
+    "accNo": "ECESC707",
+    "author": "L. Gopinath",
+    "title": "Wireless Networks",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 495,
+    "accNo": "ECESC708",
+    "author": "-",
+    "title": "VLSI Design",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 496,
+    "accNo": "ECESC709",
+    "author": "Dr. G.K. Vijayaraghavan",
+    "title": "Principles of Management",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 497,
+    "accNo": "ECESC710",
+    "author": "V. Sangeetha",
+    "title": "Communication Theory",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 498,
+    "accNo": "ECESC711",
+    "author": "K. Muralibaba",
+    "title": "Computer Networks",
+    "publisher": "A.L.R."
+  },
+  {
+    "source": "DB1",
+    "sNo": 499,
+    "accNo": "ECESC712",
+    "author": "R.L. Rekha",
+    "title": "VLSI Design",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 500,
+    "accNo": "ECESC713",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "VLSI Design",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 501,
+    "accNo": "ECESC714",
+    "author": "D. Kokila",
+    "title": "Computer Architecture",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 502,
+    "accNo": "ECESC715",
+    "author": "S. Kumaresan",
+    "title": "Electromagnetic Fields Theory Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 503,
+    "accNo": "ECESC716",
+    "author": "Dr. D. Rukmani Devi",
+    "title": "Communication Theory",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 504,
+    "accNo": "ECESC717",
+    "author": "Dr. K. Shanthi",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 505,
+    "accNo": "ECESC718",
+    "author": "Dr. D. Rukmani Devi",
+    "title": "Wireless Network",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 506,
+    "accNo": "ECESC719",
+    "author": "R.L. Rekha",
+    "title": "Wireless Networks",
+    "publisher": "A.R."
+  },
+  {
+    "source": "DB1",
+    "sNo": 507,
+    "accNo": "ECESC720",
+    "author": "Dr. V. Vijaya Bama",
+    "title": "Medical Electronics",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 508,
+    "accNo": "ECESC721",
+    "author": "S. Salivahanan",
+    "title": "Linear Integrated Circuits",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 509,
+    "accNo": "ECESC722",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "VLSI Design",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 510,
+    "accNo": "ECESC723",
+    "author": "Dr. D. Rukmani Devi",
+    "title": "VLSI Design",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 511,
+    "accNo": "ECESC724",
+    "author": "V.S. Bagad & S. Kanimozhi Computer Architecture",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 512,
+    "accNo": "ECESC725",
+    "author": "Dr. P. Danajayan",
+    "title": "Electromagnetic Fields",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 513,
+    "accNo": "ECESC726",
+    "author": "A.P. Godse",
+    "title": "Computer Architecture",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 514,
+    "accNo": "ECESC727",
+    "author": "Dr. Jayaraman",
+    "title": "Total Quality Management",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 515,
+    "accNo": "ECESC728",
+    "author": "Dr. K.G. Shanthi & K. Muralibaba",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 516,
+    "accNo": "ECESC729",
+    "author": "V. Jeyasi & Arokia Mary",
+    "title": "Wireless Communication",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 517,
+    "accNo": "ECESC730",
+    "author": "Dr. M. Suchitha",
+    "title": "Digital Signal Processing",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 518,
+    "accNo": "ECESC731",
+    "author": "Dr. C. Vinoth Babu Transmission Lines & Wave Guides",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 519,
+    "accNo": "ECESC732",
+    "author": "-",
+    "title": "Digital Communication",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 520,
+    "accNo": "ECESC733",
+    "author": "Dr. J.S. Leena Jasmine",
+    "title": "Digital Image Processing",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 521,
+    "accNo": "ECESC734",
+    "author": "Dr. P. Thirumurugan",
+    "title": "Opto Electronic Devices",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 522,
+    "accNo": "ECESC735",
+    "author": "S. Janani Electromagnetic Interference and Compatibility",
+    "title": "Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 523,
+    "accNo": "ECESC736",
+    "author": "Dr. F. Bleccin Sheeba",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 524,
+    "accNo": "ECESC737",
+    "author": "S.J. Grace Shoba",
+    "title": "Optical Communication Networks Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 525,
+    "accNo": "ECESC738",
+    "author": "Leena Jasmine",
+    "title": "Electronic Circuit-I",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 526,
+    "accNo": "ECESC739",
+    "author": "T. Joel",
+    "title": "Electronic Devices & Circuits",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 527,
+    "accNo": "ECESC740",
+    "author": "S. Kumaresan & T. Joel",
+    "title": "Digital System Principles & Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 528,
+    "accNo": "ECESC741",
+    "author": "Dr. G. Ramprabu & E. Gourishankar",
+    "title": "Embedded & Real Time Systems ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 529,
+    "accNo": "ECESC742",
+    "author": "D. Edwin Dhas",
+    "title": "Digital Electronics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 530,
+    "accNo": "ECESC743",
+    "author": "R.R. Vinothini & R. Ramya Principles of Digital Signal Processing",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 531,
+    "accNo": "ECESC744",
+    "author": "C. Shanmugaraja & P. Sivakumar Transmission Lines and Waveguides",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 532,
+    "accNo": "ECESC745",
+    "author": "Dr. Pradeep Santhiya",
+    "title": "Service Oriented Architecture",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 533,
+    "accNo": "FCESC746",
+    "author": "C. Saranya",
+    "title": "Radar & Navigational Aids",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 534,
+    "accNo": "ECESC747",
+    "author": "Dr. G. Ramprabu & S. Hemalatha",
+    "title": "Opto Electronic Devices",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 535,
+    "accNo": "ECESC748",
+    "author": "K. Anitha & Padmavathi",
+    "title": "Cyber Forensics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 536,
+    "accNo": "ECESC749",
+    "author": "Selva Kumar & Dr. T. Marimuthu",
+    "title": "Information Retrieval",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 537,
+    "accNo": "ECESC750",
+    "author": "C. Saranya Electromagnetic Interference & Compatibility",
+    "title": "AR",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 538,
+    "accNo": "ECESC751",
+    "author": "Faculty Reference",
+    "title": "L. Balaji & A. Dhanalakshmi Microprocessors & Microcontroller ARS",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 539,
+    "accNo": "ECESC752",
+    "author": "B.S. Sathishkumar & K.R. Vinothini",
+    "title": "RF & Microwave Engineering",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 540,
+    "accNo": "ECESC753",
+    "author": "C. Jeyasri",
+    "title": "Digital Communication",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 541,
+    "accNo": "ECESC754",
+    "author": "M. Mary Praveena Optical Communication and Network",
+    "title": "AR",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 542,
+    "accNo": "ECESC755",
+    "author": "S. Padmavathi & Karthikeyan Signals & Systems",
+    "title": "AR",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 543,
+    "accNo": "ECESC756",
+    "author": "T. Gnanasekaran",
+    "title": "Opto Electronic Devices",
+    "publisher": "AR"
+  },
+  {
+    "source": "DB1",
+    "sNo": 544,
+    "accNo": "ECESC757",
+    "author": "Santhosh Krishna & Ramprabu & Hema Malini",
+    "title": "Advanced Computer Architecture ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 545,
+    "accNo": "ECESC758",
+    "author": "L. Balaji & A. Dhanalakshmi Satellite Communication",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 546,
+    "accNo": "ECESC759",
+    "author": "Kanimozhi & L. Gopinath",
+    "title": "Advanced Computer Architecture Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 547,
+    "accNo": "ECESC760",
+    "author": "Dr. P. Danajayan Transmission Lines and Waveguides",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 548,
+    "accNo": "ECESC761",
+    "author": "Dr. M. Sivakumar Environmental Science & Engineering",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 549,
+    "accNo": "ECESC762",
+    "author": "L. Gopinath & S. Kanimozhi Advanced Microprocessor & Microcontroller",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 550,
+    "accNo": "ECESC763",
+    "author": "L. Gopinath & J. Kanimozhi Embedded and Real Time Systems",
+    "title": "Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 551,
+    "accNo": "ECESC766",
+    "author": "L. Gopinath",
+    "title": "Satellite Comm.",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 552,
+    "accNo": "ECESC767",
+    "author": "L. Gopinath",
+    "title": "Image Processing",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 553,
+    "accNo": "ECESC768",
+    "author": "K. Padmapriya",
+    "title": "Opto Electronic Devices",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 554,
+    "accNo": "ECESC769",
+    "author": "J. Siva Sankari",
+    "title": "Digital Cognitive Radio",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 555,
+    "accNo": "ECEJC770",
+    "author": "Dr. K. Murali Babu",
+    "title": "RF & Microwave Engineering",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 556,
+    "accNo": "ECESC771",
+    "author": "Dr. K. Murali Babu",
+    "title": "Optical Communication Network Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 557,
+    "accNo": "ECESC772",
+    "author": "Faculty Reference",
+    "title": "S. Devapriya & Anbarasan Optical Communication Networks Srikrishna",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 558,
+    "accNo": "ECESC773",
+    "author": "D. Edwin Dhas",
+    "title": "Digital Electronics",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 559,
+    "accNo": "ECESC774",
+    "author": "Dr. J. John Linear Algebra and Partial Differential Equations",
+    "title": "Jaison Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 560,
+    "accNo": "ECESC775",
+    "author": "Dr. P. Kannan",
+    "title": "Opto Electronic Devices",
+    "publisher": "Sri Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 561,
+    "accNo": "ECESC776",
+    "author": "Faculty Reference",
+    "title": "Mr. Anbarasan Ramamoorthy Embedded and Real Time System Sri Krishna",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 562,
+    "accNo": "ECESC777",
+    "author": "Dr. Nagarajan Velmurugan Transmission Lines and Wave Guides",
+    "title": "Sri Krishna",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 563,
+    "accNo": "ECEIC778",
+    "author": "L. Gopinath",
+    "title": "Microprocessor & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 564,
+    "accNo": "ECETC779",
+    "author": "M. Shakunthala",
+    "title": "Signals and Systems",
+    "publisher": "Shas Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 565,
+    "accNo": "ECEJC780",
+    "author": "M. Shakunthala",
+    "title": "Signals & System",
+    "publisher": "Shas Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 566,
+    "accNo": "ECESC781",
+    "author": "M. Shakunthala",
+    "title": "Signals & System",
+    "publisher": "Shas Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 567,
+    "accNo": "ECESC782",
+    "author": "Dr. P. Oliver",
+    "title": "Construction Materials",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 568,
+    "accNo": "ECER783",
+    "author": "Jeyaprakas-Gopinath & S. Palani",
+    "title": "Digital Principles & System Design Suchitra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 569,
+    "accNo": "ECESC784",
+    "author": "-",
+    "title": "Control System Engineering",
+    "publisher": "Vijay Nicole"
+  },
+  {
+    "source": "DB1",
+    "sNo": 570,
+    "accNo": "ECESC787",
+    "author": "M.P. Chitra",
+    "title": "Communication Engineering",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 571,
+    "accNo": "ECESC788",
+    "author": "R. Ramesh Babu",
+    "title": "Electronic Devices",
+    "publisher": "Scitech"
+  },
+  {
+    "source": "DB1",
+    "sNo": 572,
+    "accNo": "ECESC789",
+    "author": "L. Gopinath",
+    "title": "Medical Electronics",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 573,
+    "accNo": "ECESC790",
+    "author": "Dr. P. Danajayan",
+    "title": "Electromagnetic Field",
+    "publisher": "Lakshmi Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 574,
+    "accNo": "ECESC791",
+    "author": "T. Nageswara Rao",
+    "title": "Circuit Analysis",
+    "publisher": "AR Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 575,
+    "accNo": "ECESC792",
+    "author": "Dr. J. Carithe Fundamentals of Data Structures in C",
+    "title": "Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 576,
+    "accNo": "ECESC793",
+    "author": "Janeera D.A.",
+    "title": "VLSI Design",
+    "publisher": "AR Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 577,
+    "accNo": "ECESC794",
+    "author": "Dr. Latha Shanmugam",
+    "title": "Medical Electronics",
+    "publisher": "A.R.S. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 578,
+    "accNo": "ECESC795",
+    "author": "Dr. K. Murali Babu",
+    "title": "Antenna and Wave Propagation Suchitra Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 579,
+    "accNo": "ECESC796",
+    "author": "Dr. A. Ansar",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "Anuradha Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 580,
+    "accNo": "ECESC797",
+    "author": "Dr. K. Shanthavathy",
+    "title": "Antenna and Wave Propagation Sruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 581,
+    "accNo": "ECESC798",
+    "author": "Dr. T.V. Padmavathy",
+    "title": "Circuit Theory & Analysis",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 582,
+    "accNo": "ECESC799",
+    "author": "T. Joel",
+    "title": "Digital Electronics",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 583,
+    "accNo": "ECESC800",
+    "author": "S. Salivahanan",
+    "title": "Electronic Devices and Circuits McGraw Hill Education",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 584,
+    "accNo": "ECESC801",
+    "author": "S. Gayathri",
+    "title": "Wireless Communication",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 585,
+    "accNo": "ECESC802",
+    "author": "E. Punitha",
+    "title": "Wireless Network",
+    "publisher": "Anuradha"
+  },
+  {
+    "source": "DB1",
+    "sNo": 586,
+    "accNo": "ECESC803",
+    "author": "Ar Nayoorkani",
+    "title": "Circuit Theory",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 587,
+    "accNo": "ECETC804",
+    "author": "S. Salivahanan",
+    "title": "Electronic Devices",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 588,
+    "accNo": "ECETC805",
+    "author": "Dr. M. Sivakumar Environmental Science and Engineering",
+    "title": "Lakshmi Publication",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 589,
+    "accNo": "ECETC806",
+    "author": "Dr. J. Aldrinraj",
+    "title": "Principles of Management",
+    "publisher": "Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 590,
+    "accNo": "ECEJC807",
+    "author": "S. Salivahanan",
+    "title": "Linear Integrated Circuits",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 591,
+    "accNo": "ECESC808",
+    "author": "K. Padmapriya",
+    "title": "Opto Electronic Devices",
+    "publisher": "Suchitra Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 592,
+    "accNo": "ECESC809",
+    "author": "S. Kumaresan & T. Joel",
+    "title": "Digital Principles & System Design Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 593,
+    "accNo": "ECESC810",
+    "author": "K. Padmapriya",
+    "title": "Opto Electronic Devices",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 594,
+    "accNo": "ECESC811",
+    "author": "Dr. K. Murali Babu Optical Communication and Networks",
+    "title": "Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 595,
+    "accNo": "ECESC812",
+    "author": "T. Joel",
+    "title": "Electronic Devices",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 596,
+    "accNo": "ECESC813",
+    "author": "R. Senthil Kumar",
+    "title": "Digital Signal Processing",
+    "publisher": "Garuda Learning"
+  },
+  {
+    "source": "DB1",
+    "sNo": 597,
+    "accNo": "ECESC814",
+    "author": "B.V. Santhosh Krishna",
+    "title": "Wireless Network",
+    "publisher": "A.R. Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 598,
+    "accNo": "ECESC815",
+    "author": "Dr. S. Mary Praveena",
+    "title": "Wireless Communication",
+    "publisher": "ARS Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 599,
+    "accNo": "ECESC816",
+    "author": "B.S. Sathish Kumar",
+    "title": "Linear Integrated Circuits",
+    "publisher": "ARS Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 600,
+    "accNo": "ECESC817",
+    "author": "R. Raja Rajani",
+    "title": "AdHoc and Sensor Networks",
+    "publisher": "Suchitra Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 601,
+    "accNo": "ECESC818",
+    "author": "L. Gopinath",
+    "title": "Data Converter",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 602,
+    "accNo": "ECESC819",
+    "author": "Anandha Kumar",
+    "title": "Computer Network",
+    "publisher": "A.R.S Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 603,
+    "accNo": "ECESC820",
+    "author": "Dr. V. Jayakumar",
+    "title": "Professional Ethics in Engineering Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 604,
+    "accNo": "ECESC821",
+    "author": "J. Suriya",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "A.R.S"
+  },
+  {
+    "source": "DB1",
+    "sNo": 605,
+    "accNo": "ECESC822",
+    "author": "R. Raja Rajani",
+    "title": "VLSI Design",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 606,
+    "accNo": "ECESC823",
+    "author": "Dr. G.K. Vijayaraghavan",
+    "title": "Principles of Management",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 607,
+    "accNo": "ECESC824",
+    "author": "Dr. K. Murali Babu",
+    "title": "Computer Network",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 608,
+    "accNo": "ECESC825",
+    "author": "L. Gopinath",
+    "title": "Wireless Network",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 609,
+    "accNo": "ECESC826",
+    "author": "S. Kanimozhi",
+    "title": "Computer Architecture",
+    "publisher": "Suchitra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 610,
+    "accNo": "ECESC827",
+    "author": "Mrs. E. Indira",
+    "title": "Computer Architecture",
+    "publisher": "Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 611,
+    "accNo": "ECESC828",
+    "author": "Dr. R. Uma",
+    "title": "VLSI Design",
+    "publisher": "Sri Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 612,
+    "accNo": "ECESC829",
+    "author": "D.P. Kothari & Mrs. S. Deva Priya",
+    "title": "Wireless Communication",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 613,
+    "accNo": "ECESC830",
+    "author": "S. Salivahanan & N. Suresh Kumar",
+    "title": "Circuit Analysis",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 614,
+    "accNo": "ECESC831",
+    "author": "Nayoor Kani",
+    "title": "Basic Electrical & Electronics",
+    "publisher": "McGraw Hill Education"
+  },
+  {
+    "source": "DB1",
+    "sNo": 615,
+    "accNo": "ECESC832",
+    "author": "- Basic Electrical, Electronics & Measurement",
+    "title": "-",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 616,
+    "accNo": "ECESC833",
+    "author": "S. Salivahanan Basic Electrical & Instrumentation Engg.",
+    "title": "McGraw Hill Education",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 617,
+    "accNo": "ECESC834",
+    "author": "Faculty Reference",
+    "title": "Dr. Nagarajan & Velmurugan Antenna and Wave Propagation Sai Krishna",
+    "publisher": "Academic Publication"
+  },
+  {
+    "source": "DB1",
+    "sNo": 618,
+    "accNo": "ECESC835",
+    "author": "Dr. P. Kannan",
+    "title": "Cryptography & Network Security Sai Krishna",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 619,
+    "accNo": "ECESC836",
+    "author": "T. Joel",
+    "title": "Electromagnetic Fields",
+    "publisher": "Lakshmi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 620,
+    "accNo": "ECESC837",
+    "author": "D.A. Ramakrishnan & V. Thanammal",
+    "title": "Electronic Circuits-I",
+    "publisher": "Sri Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 621,
+    "accNo": "ECESC838",
+    "author": "Indu Environmental Science and Engineering",
+    "title": "Sri Krishna",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 622,
+    "accNo": "ECESC839",
+    "author": "Dr. P. Dananjayan",
+    "title": "Software Project Management",
+    "publisher": "Sri Krishna"
+  },
+  {
+    "source": "DB1",
+    "sNo": 623,
+    "accNo": "ECESC840",
+    "author": "J. Suriya",
+    "title": "Antenna & Wave Propagation",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 624,
+    "accNo": "ECESC841",
+    "author": "B.V. Santhosh Krishna",
+    "title": "Wireless Network",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 625,
+    "accNo": "ECESC842",
+    "author": "B.V. Santhosh Krishna",
+    "title": "Wireless Network",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 626,
+    "accNo": "ECESC843",
+    "author": "B.V. Santhosh Krishna",
+    "title": "Wireless Network",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 627,
+    "accNo": "ECESC844",
+    "author": "Venkatesan",
+    "title": "Computer Architecture",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 628,
+    "accNo": "ECESC845",
+    "author": "L. Gopinath Multimedia Compression and Communication",
+    "title": "Suchithra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 629,
+    "accNo": "ECESC846",
+    "author": "Jose Anand",
+    "title": "IC Design",
+    "publisher": "Vijay Nicole Imprints"
+  },
+  {
+    "source": "DB1",
+    "sNo": 630,
+    "accNo": "ECESC847",
+    "author": "K. Muralibaba",
+    "title": "Wireless Communication",
+    "publisher": "Suchithra"
+  },
+  {
+    "source": "DB1",
+    "sNo": 631,
+    "accNo": "ECESC848",
+    "author": "L. Gopinath",
+    "title": "Discrete-Time Signal Processing Suchithra",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 632,
+    "accNo": "ECESC849",
+    "author": "P. Thirumurugan",
+    "title": "Opto Electronic Devices",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 633,
+    "accNo": "ECESC850",
+    "author": "G. Ramprabu",
+    "title": "Advanced Computer Architecture ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 634,
+    "accNo": "ECESC851",
+    "author": "T. Gnanasekaran",
+    "title": "Opto Electronic Devices",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 635,
+    "accNo": "ECESC852",
+    "author": "Godse",
+    "title": "Digital Principles & System Design Technical",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 636,
+    "accNo": "ECESC853",
+    "author": "Gopinath",
+    "title": "Microprocessors & Microcontroller Lakshmi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 637,
+    "accNo": "ECESC854",
+    "author": "Bagath",
+    "title": "Total Quality Management",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 638,
+    "accNo": "ECESC855",
+    "author": "L. Balaji",
+    "title": "Satellite Communication",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 639,
+    "accNo": "ECESC856",
+    "author": "Leena Jasmine",
+    "title": "Electronic CKEs-I",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 640,
+    "accNo": "ECESC85",
+    "author": "Leena Jasmine",
+    "title": "Computer Arch. & Organization Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 641,
+    "accNo": "ECESC858",
+    "author": "Lakshmi Kanthan",
+    "title": "Advanced Computer Architecture Magnus",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 642,
+    "accNo": "ECESC859",
+    "author": "S. Jenani",
+    "title": "Communication Engg.",
+    "publisher": "Magnus"
+  },
+  {
+    "source": "DB1",
+    "sNo": 643,
+    "accNo": "ECESC860",
+    "author": "Grace Shoba",
+    "title": "Optical Comm. N/W",
+    "publisher": "Shruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 644,
+    "accNo": "ECESC861",
+    "author": "S. Janani Electromagnetic Interference & Compatibility",
+    "title": "Shruthi",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 645,
+    "accNo": "ECESC862",
+    "author": "Sathish Kumar",
+    "title": "RF & Microwave Engg.",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 646,
+    "accNo": "ECESC863",
+    "author": "Chithode",
+    "title": "Analog & Digital Commn.",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 647,
+    "accNo": "ECESC864",
+    "author": "L. Balaji",
+    "title": "Microprocessor & Microcontroller ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 648,
+    "accNo": "ECEBL865",
+    "author": "Nagarathina Fundamentals of Data Structure in C",
+    "title": "ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 649,
+    "accNo": "ECESC866",
+    "author": "Balaji",
+    "title": "Satellite Comm.",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 650,
+    "accNo": "ECESC867",
+    "author": "Balaji L.",
+    "title": "Microprocessor & Microcontroller ARS",
+    "publisher": "Department Library"
+  },
+  {
+    "source": "DB1",
+    "sNo": 651,
+    "accNo": "ECESC868",
+    "author": "Mary Raveena",
+    "title": "Optical Commn. N/W",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 652,
+    "accNo": "ECESC869",
+    "author": "K. Balaji",
+    "title": "Electronic CKE I",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 653,
+    "accNo": "ECESC870",
+    "author": "Ramprabu",
+    "title": "Embedded & Realtime",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 654,
+    "accNo": "ECESC871C",
+    "author": "Ravikumar",
+    "title": "Control System",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 655,
+    "accNo": "ECESC872",
+    "author": "Godse",
+    "title": "Digital Electronics",
+    "publisher": "Technical"
+  },
+  {
+    "source": "DB1",
+    "sNo": 656,
+    "accNo": "ECESC873",
+    "author": "Padmavathy",
+    "title": "Signals & Systems",
+    "publisher": "ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 657,
+    "accNo": "ECESC874",
+    "author": "Anandha Kumar",
+    "title": "Comm. N/W",
+    "publisher": "AMGI / ARS"
+  },
+  {
+    "source": "DB1",
+    "sNo": 658,
+    "accNo": "ECESC876",
+    "author": "Joel",
+    "title": "Digital Electronics",
+    "publisher": "Sruthi"
+  },
+  {
+    "source": "DB1",
+    "sNo": 659,
+    "accNo": "ECESC876",
+    "author": "Gnanasekaran",
+    "title": "Comm. Engineering",
+    "publisher": "ARS"
+  }
+]

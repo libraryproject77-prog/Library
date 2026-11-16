@@ -1,0 +1,263 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+  STUDENT
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum BookCopyStatus {
+  AVAILABLE
+  RESERVED
+  BORROWED
+  DAMAGED
+  LOST
+}
+
+enum ReservationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+  EXPIRED
+}
+
+enum TransactionStatus {
+  BORROWED
+  RETURNED
+  OVERDUE
+}
+
+enum FineStatus {
+  UNPAID
+  PAID
+  WAIVED
+}
+
+enum NotificationType {
+  RESERVATION
+  DUE_REMINDER
+  OVERDUE
+  ANNOUNCEMENT
+  GENERAL
+}
+
+enum ScheduleType {
+  REMINDER_15D
+  REMINDER_7D
+  REMINDER_3D
+  REMINDER_1D
+  DUE_DAY
+  OVERDUE
+}
+
+model Profile {
+  id                 String              @id @default(uuid())
+  email              String              @unique
+  name               String
+  role               Role                @default(STUDENT)
+  department         String              @default("ECE")
+  rollNumber         String?             @unique
+  staffId            String?             @unique
+  avatarUrl          String?
+  status             UserStatus          @default(ACTIVE)
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  reservations       Reservation[]
+  borrowTransactions BorrowTransaction[]
+  fines              Fine[]
+  notifications      Notification[]
+  notificationLogs   NotificationLog[]
+  announcements      Announcement[]
+  activityLogs       ActivityLog[]
+
+  @@index([role])
+  @@index([department])
+  @@map("profiles")
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  code        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  books       Book[]
+
+  @@map("categories")
+}
+
+model Book {
+  id             String      @id @default(uuid())
+  isbn           String      @unique
+  title          String
+  author         String
+  publisher      String?
+  edition        String?
+  coverImage     String?
+  description    String?
+  rackLocation   String      @default("Rack ECE-01, Shelf A")
+  categoryId     String
+  category       Category    @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  copies         BookCopy[]
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@index([title])
+  @@index([author])
+  @@index([isbn])
+  @@index([categoryId])
+  @@map("books")
+}
+
+model BookCopy {
+  id                 String              @id @default(uuid())
+  bookId             String
+  book               Book                @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  copyNumber         String              @unique // Unique Copy ID e.g., ECE-DBMS-001
+  status             BookCopyStatus      @default(AVAILABLE)
+  conditionNotes     String?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+
+  reservations       Reservation[]
+  borrowTransactions BorrowTransaction[]
+
+  @@index([bookId])
+  @@index([status])
+  @@index([copyNumber])
+  @@map("book_copies")
+}
+
+model Reservation {
+  id              String            @id @default(uuid())
+  copyId          String
+  copy            BookCopy          @relation(fields: [copyId], references: [id], onDelete: Cascade)
+  userId          String
+  user            Profile           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status          ReservationStatus @default(PENDING)
+  requestDate     DateTime          @default(now())
+  expiresAt       DateTime
+  rejectionReason String?
+  approvedAt      DateTime?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+
+  @@index([userId])
+  @@index([copyId])
+  @@index([status])
+  @@map("reservations")
+}
+
+model BorrowTransaction {
+  id               String            @id @default(uuid())
+  copyId           String
+  copy             BookCopy          @relation(fields: [copyId], references: [id], onDelete: Restrict)
+  userId           String
+  user             Profile           @relation(fields: [userId], references: [id], onDelete: Restrict)
+  issueDate        DateTime          @default(now())
+  dueDate          DateTime
+  returnDate       DateTime?
+  status           TransactionStatus @default(BORROWED)
+  issuedBy         String            // Admin user id
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  fine             Fine?
+  notificationLogs NotificationLog[]
+
+  @@index([userId])
+  @@index([copyId])
+  @@index([status])
+  @@index([dueDate])
+  @@map("borrow_transactions")
+}
+
+model Fine {
+  id            String            @id @default(uuid())
+  transactionId String            @unique
+  transaction   BorrowTransaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  userId        String
+  user          Profile           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount        Float             @default(0.0)
+  overdueDays   Int               @default(0)
+  status        FineStatus        @default(UNPAID)
+  paidAt        DateTime?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@map("fines")
+}
+
+model Notification {
+  id        String           @id @default(uuid())
+  userId    String
+  user      Profile          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  message   String
+  type      NotificationType @default(GENERAL)
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  @@index([userId, isRead])
+  @@map("notifications")
+}
+
+model NotificationLog {
+  id            String            @id @default(uuid())
+  userId        String
+  user          Profile           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transactionId String?
+  transaction   BorrowTransaction? @relation(fields: [transactionId], references: [id], onDelete: SetNull)
+  scheduleType  ScheduleType
+  sentAt        DateTime          @default(now())
+  status        String            @default("SENT")
+
+  @@unique([transactionId, scheduleType])
+  @@index([userId])
+  @@map("notification_logs")
+}
+
+model Announcement {
+  id        String   @id @default(uuid())
+  title     String
+  content   String
+  authorId  String
+  author    Profile  @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  priority  String   @default("NORMAL")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("announcements")
+}
+
+model ActivityLog {
+  id        String   @id @default(uuid())
+  userId    String
+  user      Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action    String
+  details   String
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
